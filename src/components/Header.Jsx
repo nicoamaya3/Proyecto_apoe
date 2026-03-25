@@ -6,7 +6,7 @@ export const Header = () => {
 
             <nav className="navbar navbar-dark bg-dark fixed-top">
                 <div className="container-fluid">
-                    <img src="" alt="" />
+                    <img src="Logo.png" alt="" />
                     <a className="navbar-brand" href="#">APOE!</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
