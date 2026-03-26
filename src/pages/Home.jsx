@@ -5,7 +5,7 @@ export const Home = () => {
 
       <div className="container">
         <div className="row">
-          <div className="col-7">
+          <div className="col">
             a
           </div>
         </div>
