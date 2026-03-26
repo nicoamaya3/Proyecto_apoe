@@ -6,7 +6,7 @@ export const Home = () => {
       <div className="container">
         <div className="row">
           <div className="col">
-            a
+            <h1>AHdh</h1>
           </div>
         </div>
       </div>
