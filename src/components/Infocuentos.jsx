@@ -1,6 +1,6 @@
 import "../stylesheets/Infocuentos.css"
 
-export const Infocuentos = () => {
+export const Infocuentos = ({titi , des , personajesUno, personajesDos, personajesTres, categoria , back}) => {
     return (
         <>
 
@@ -12,7 +12,7 @@ export const Infocuentos = () => {
                                 backgroundImage: "url(./gato.jpg)",
                             }}>
                                 <div className="w-50 p-3">
-                                    <p className="bg-success w-75 text-center rounded-4">Terror Psicológico</p>
+                                    <p className="bg-success w-75 text-center rounded-4">{categoria}</p>
                                 </div>
                                 <div className="p-3">
                                     <img className="tama" src="cora.png" alt="" />
@@ -20,12 +20,12 @@ export const Infocuentos = () => {
                             </div>
                             <div>
                                 <div className="p-3 text-white">
-                                    <h5 className="fw-bold">El Gato Negro</h5>
-                                    <p>Un hombre bondadoso se transforma en un ser monstruoso bajo el influjo del alcohol. Su crueldad hacia su gato Plutón desencadena una espiral de horror y culpa que culmina en...</p>
+                                    <h5 className="fw-bold">{titi}</h5>
+                                    <p>{des}</p>
                                     <div className="d-flex gap-2">
-                                        <p className="osq w-25 text-center rounded-4">Frank</p>
-                                        <p className="osq w-25 text-center rounded-4">Katherine</p>
-                                        <p className="osq w-25 text-center rounded-4">Plutón</p>
+                                        <p className="osq w-25 text-center rounded-4">{personajesUno}</p>
+                                        <p className="osq w-25 text-center rounded-4">{personajesDos}</p>
+                                        <p className="osq w-25 text-center rounded-4">{personajesTres}</p>
                                     </div>
                                     <button className="btn btn-success text-black w-100 p-2 fw-bold">EMPEZAR</button>
                                 </div>
