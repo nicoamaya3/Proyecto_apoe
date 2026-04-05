@@ -19,7 +19,19 @@ export const Problemas = () => {
                     </div>
                 </div>
 
-                <Problema />
+                <div className="section">
+                    <div className="row">
+                        <div className="col">
+                            <Problema icon="Libro.png" tituloo="FALTA DE TIEMPO" descripcion="El 31% identifica la falta de tiempo como la principal barrera para leer" />
+                        </div>
+                        <div className="col">
+                            <Problema icon="Rayo.png" tituloo="LA SOLUCIÓN" descripcion="Lectura visual, interactiva y ágil adaptada al ritmo de vida actual" />
+                        </div>
+                        <div className="col">
+                            <Problema icon="Ojo.png" tituloo="EXPERIENCIA INMERSIVA" descripcion="Ilustraciones, audio y elementos interactivos que enriquecen cada cuento" />
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
