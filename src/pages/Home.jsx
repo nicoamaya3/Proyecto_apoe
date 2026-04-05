@@ -1,3 +1,4 @@
+import { Cuentos } from "../components/Cuentos"
 import { Problemas } from "../components/Problemas"
 
 export const Home = () => {
@@ -21,6 +22,8 @@ export const Home = () => {
       </div>
 
       <Problemas/>
+
+      <Cuentos/>
 
     </>
   )
