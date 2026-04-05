@@ -1,4 +1,4 @@
-
+import "../stylesheets/Problemas.css"
 
 export const Problema = ({tituloo , descripcion , icon}) => {
   return (
@@ -12,7 +12,7 @@ export const Problema = ({tituloo , descripcion , icon}) => {
 
                 <div className="d-flex flex-column text-white p-3 text-center gap-1">
                     <div>
-                        <img className="w-25" src={icon} alt="" />
+                        <img className="ico" src={icon} alt="" />
                     </div>
                     <h5>{tituloo}</h5>
                     <p>{descripcion}</p>
