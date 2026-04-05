@@ -8,6 +8,9 @@ export const Cuentos = () => {
 
 
             <div className="fondoo p-5 d-flex flex-column gap-4">
+
+
+
                 <div className="container">
                     <div className="row">
                         <div className="col">
@@ -29,13 +32,7 @@ export const Cuentos = () => {
                         </div>
                     </div>
                 </div>
-
-
-
-
-               
-                
-            
+                                           
 
             </div>
 
