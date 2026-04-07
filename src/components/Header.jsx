@@ -33,7 +33,6 @@ export const Header = () => {
                     </div>
                 </div>
             </nav>
-            {/* dhsk */}
         </>
     )
 }
