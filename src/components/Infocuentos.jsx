@@ -1,6 +1,6 @@
 import "../stylesheets/Infocuentos.css"
 
-export const Infocuentos = ({ titi, des, personajesUno, personajesDos, personajesTres, categoria, back }) => {
+export const Infocuentos = ({ titi, des, personajesUno, personajesDos, personajesTres, categoria }) => {
     return (
         <>
             {/* a */}
