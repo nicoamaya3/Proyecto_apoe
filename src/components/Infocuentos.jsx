@@ -1,9 +1,9 @@
 import "../stylesheets/Infocuentos.css"
 
-export const Infocuentos = ({titi , des , personajesUno, personajesDos, personajesTres, categoria , back}) => {
+export const Infocuentos = ({ titi, des, personajesUno, personajesDos, personajesTres, categoria, back }) => {
     return (
         <>
-
+            {/* a */}
             <div className="container">
                 <div className="row d-flex flex-column align-items-center">
                     <div className="col-10">
