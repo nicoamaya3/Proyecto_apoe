@@ -1,5 +1,6 @@
 import "../stylesheets/Home.css"
 import "../stylesheets/Text.css"
+import { Link } from "react-router-dom"
 
 export const Nosotros = () => {
     return (

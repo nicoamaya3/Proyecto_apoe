@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "../stylesheets/Infocuentos.css"
 
 export const Infocuentos = ({ titi, des, personajesUno, personajesDos, personajesTres, categoria }) => {
