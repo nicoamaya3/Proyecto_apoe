@@ -1,5 +1,7 @@
 
 import "../stylesheets/Cuentos.css"
+import "../stylesheets/Text.css"
+
 import { Infocuentos } from "../components/Infocuentos"
 
 export const Cuentos = () => {
@@ -15,7 +17,7 @@ export const Cuentos = () => {
                     <div className="row">
                         <div className="col">
                             <div className="text-white text-center d-flex flex-column align-items-center gap-2">
-                                <h1 className="fw-bold" >CUENTOS</h1>
+                                <h1 className="fw-bold ttxx" >CUENTOS</h1>
                                 <p className="w-50">Dos obras maestras de Edgar Allan Poe reimaginadas como experiencias visuales interactivas</p>
                             </div>
                         </div>
