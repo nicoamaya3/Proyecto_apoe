@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import "../stylesheets/Infocuentos.css"
 
-export const Infocuentos = ({ titi, des, personajesUno, personajesDos, personajesTres, categoria }) => {
+export const Infocuentos = ({ titi, des, personajesUno, personajesDos, personajesTres, categoria, back }) => {
     return (
         <>
             <div className="container">
@@ -9,7 +9,7 @@ export const Infocuentos = ({ titi, des, personajesUno, personajesDos, personaje
                     <div className="col-10">
                         <div className="rounded fon">
                             <div className="p-2 d-flex rounded justify-content-between gat" style={{
-                                backgroundImage: "url(./gato.jpg)",
+                                backgroundImage: back 
                             }}>
                                 <div className="w-50 p-3">
                                     <p className="bg-success w-75 text-center rounded-4">{categoria}</p>
