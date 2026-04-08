@@ -20,7 +20,7 @@ export const Cuentos = () => {
                         </div>
                     </div>
                 </div>
-
+                {/*  */}
                 <div className="section">
                     <div className="row">
                         <div className="col">
