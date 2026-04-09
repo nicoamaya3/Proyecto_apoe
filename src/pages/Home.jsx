@@ -1,7 +1,6 @@
 import { Cuentos } from "../components/Cuentos"
 import { Problemas } from "../components/Problemas"
 import "../stylesheets/Home.css"
-import { Link } from "react-router-dom"
 
 export const Home = () => {
   return (
