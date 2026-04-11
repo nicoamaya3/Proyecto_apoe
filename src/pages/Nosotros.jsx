@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "../stylesheets/Home.css"
 import "../stylesheets/Text.css"
 
@@ -10,7 +11,8 @@ export const Nosotros = () => {
                     <div className="row">
                         <div className="col-12 p-5">
                             <div className="p-5">
-                                <a className=" text-white link-offset-2 link-underline link-underline-opacity-0 " href=""> ← Volver al inicio</a>
+        
+                                <Link className=" text-white link-offset-2 link-underline link-underline-opacity-0 " to='/'>← Volver al inicio</Link>
                             </div>
                             <div className="p-5 d-flex flex-column justify-content-center gap-3 text-center">
                                 <div className="p-5 d-flex justify-content-center">

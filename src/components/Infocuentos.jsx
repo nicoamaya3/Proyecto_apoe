@@ -1,7 +1,8 @@
 
+import { Link } from "react-router-dom"
 import "../stylesheets/Infocuentos.css"
 
-export const Infocuentos = ({ titi, des, personajesUno, personajesDos, personajesTres, categoria, back }) => {
+export const Infocuentos = ({ titi, des, personajesUno, personajesDos, personajesTres, categoria, back, lii , tbt }) => {
     return (
         <>
             <div className="container">
@@ -27,7 +28,8 @@ export const Infocuentos = ({ titi, des, personajesUno, personajesDos, personaje
                                         <p className="osq w-25 text-center rounded-4">{personajesDos}</p>
                                         <p className="osq w-25 text-center rounded-4">{personajesTres}</p>
                                     </div>
-                                    <button className="btn btn-success text-black w-100 p-2 fw-bold">EMPEZAR</button>
+                                    
+                                    <Link className="btn btn-success text-black w-100 p-2 fw-bold" to={lii} > {tbt} </Link>
                                 </div>
                             </div>
                         </div>

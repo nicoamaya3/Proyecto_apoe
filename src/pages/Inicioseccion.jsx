@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "../stylesheets/Seccion.css"
 
 export const Inicioseccion = () => {
@@ -5,7 +6,8 @@ export const Inicioseccion = () => {
         <>
             <div className="p-5 bg-black ">
                 <div className="p-5">
-                <a className=" text-white link-offset-2 link-underline link-underline-opacity-0" href=""> ← Volver al inicio</a>
+               
+                <Link className=" text-white link-offset-2 link-underline link-underline-opacity-0 " to='/'>← Volver al inicio</Link>
                 </div>
                 <div className="d-flex justify-content-center p-5 flex-column align-items-center text-white ">
                     <div className="text-center p-3">

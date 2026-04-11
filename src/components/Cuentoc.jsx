@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom"
 import "../stylesheets/Cuentocora.css"
 import "../stylesheets/Text.css"
 
-export const Cuentoc = ({ fon, cat, titu, sinop, img1, img2, img3 }) => {
+export const Cuentoc = ({ fon, cat, titu, sinop, img1, img2, img3,linkk , txbtn }) => {
     return (
         <>
 
@@ -13,7 +14,8 @@ export const Cuentoc = ({ fon, cat, titu, sinop, img1, img2, img3 }) => {
                     <div className="row">
                         <div className="col">
                             <div>
-                                <button className="btn btn-outline-secondary text-white">← Volver</button>
+                                
+                                <Link className="btn btn-outline-secondary text-white" to='/' >← Volver</Link>
                             </div>
                         </div>
                     </div>
@@ -41,7 +43,8 @@ export const Cuentoc = ({ fon, cat, titu, sinop, img1, img2, img3 }) => {
                                 <h5 className="fw-bold ttxx">SINOPSIS</h5>
                                 <p className="text-white">{sinop}</p>
                                 <div className="d-flex gap-3">
-                                    <button className="btn btn-success">Empezar a leer</button>
+                                    
+                                    <Link className="btn btn-success" to={linkk} > {txbtn} </Link>
                                     <button className="btn btn-outline-danger">Favorito</button>
                                 </div>
                             </div>
