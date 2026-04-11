@@ -1,0 +1,86 @@
+import "../stylesheets/Cuentocora.css"
+import "../stylesheets/Text.css"
+
+export const Cuentoc = ({ fon, cat, titu, sinop, img1, img2, img3 }) => {
+    return (
+        <>
+
+
+            <div className="gatt p-5" style={{
+                backgroundImage: fon
+            }}>
+                <div className="container p-5">
+                    <div className="row">
+                        <div className="col">
+                            <div>
+                                <button className="btn btn-outline-secondary text-white">← Volver</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="bg-black">
+                <div className="section p-5">
+                    <div className="row">
+                        <div className="col">
+                            <div>
+                                <div className="w-25">
+                                    <p className="bg-success w-50 text-center rounded-4 text-white">{cat}</p>
+                                </div>
+                                <h1 className="text-white fw-bold">{titu}</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="section p-5">
+                    <div className="row">
+                        <div className="col">
+                            <div className="d-flex flex-column gap-3">
+                                <h5 className="fw-bold ttxx">SINOPSIS</h5>
+                                <p className="text-white">{sinop}</p>
+                                <div className="d-flex gap-3">
+                                    <button className="btn btn-success">Empezar a leer</button>
+                                    <button className="btn btn-outline-danger">Favorito</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col">
+                            <div>
+                                <h5 className="fw-bold ttxx">PERSONAJES</h5>
+                                <div id="carouselExampleIndicators" class="carousel slide">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src= {img1} class="d-block w-100" alt="..." />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src={img2} class="d-block w-100" alt="..." />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src={img3} class="d-block w-100" alt="..." />
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </>
+    )
+}

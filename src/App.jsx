@@ -6,6 +6,7 @@ import { Inicioseccion } from "./pages/Inicioseccion.jsx"
 import { Nosotros } from "./pages/Nosotros.jsx"
 import { Foter } from "./components/Foter.jsx"
 import { Cuentocora } from "./pages/Cuentocora.jsx"
+import { Cuentogato } from "./pages/Cuentogato.jsx"
 
 
 
@@ -35,6 +36,7 @@ export const App = () => {
       <Inicioseccion />
       <Nosotros />
       <Cuentocora/>
+      <Cuentogato/>
       <Foter/>
 
 
