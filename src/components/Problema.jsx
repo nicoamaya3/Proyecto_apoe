@@ -7,7 +7,7 @@ export const Problema = ({tituloo , descripcion , icon}) => {
     
     <div className="container">
         <div className="row d-flex flex-column align-items-center">
-            <div className="col-10 bg-dark  rounded-4">
+            <div className="col-10 col-sm col-md  bg-dark  rounded-4">
                 
 
                 <div className="d-flex flex-column text-white p-3 text-center gap-1">

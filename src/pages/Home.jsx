@@ -11,7 +11,7 @@ export const Home = () => {
       }}>
         <div className="container">
           <div className="row">
-            <div className="col p-5">
+            <div className="col col-sm col-md p-5">
               <div className="d-flex flex-column align-items-center gap-5 p-5">
                 <div className="bg rounded">
                   <img className="p-2 apoel" src="Logooo.png" alt="" />
@@ -31,7 +31,7 @@ export const Home = () => {
 
         <div className="container">
           <div className="row">
-            <div className="col text-white">
+            <div className="col col-sm col-md  text-white">
               <div className="text-center">
                 <h2 className="fw-bold">ACERCA DE NOSOTROS</h2>
               </div>

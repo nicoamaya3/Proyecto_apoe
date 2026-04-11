@@ -12,7 +12,7 @@ export const Lect = ({cuento , llin}) => {
             <div className="fon">
                 <div className="container">
                     <div className="row">
-                        <div className="col">
+                        <div className="col col-sm col-md">
                             <div className="d-flex justify-content-between m-2">
                                 <div className="d-flex gap-3" >
                                     

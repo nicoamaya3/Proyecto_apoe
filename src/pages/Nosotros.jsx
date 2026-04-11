@@ -9,7 +9,7 @@ export const Nosotros = () => {
             <div className="bg-black">
                 <div className="container">
                     <div className="row">
-                        <div className="col-12 p-5">
+                        <div className="col-12 col-sm col-md p-5">
                             <div className="p-5">
         
                                 <Link className=" text-white link-offset-2 link-underline link-underline-opacity-0 " to='/'>← Volver al inicio</Link>
@@ -31,7 +31,7 @@ export const Nosotros = () => {
                     </div>
                     <div className="section">
                         <div className="row">
-                            <div className="col text-white">
+                            <div className="col col-sm col-md text-white">
                                 <div className="text-center">
                                     <h2 className="fw-bold ">NUESTRO EQUIPO</h2>
                                 </div>
