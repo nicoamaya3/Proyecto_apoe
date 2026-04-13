@@ -19,15 +19,15 @@ export const Problemas = () => {
                     </div>
                 </div>
 
-                <div className="section">
+                <div className="container">
                     <div className="row">
-                        <div className="col col-sm col-md">
+                        <div className="col-12 col-md-6 mt-4 col-lg-4">
                             <Problema icon="Libro.png" tituloo="FALTA DE TIEMPO" descripcion="El 31% identifica la falta de tiempo como la principal barrera para leer" />
                         </div>
-                        <div className="col col-sm col-md">
+                        <div className="col-12 col-md-6 mt-4 col-lg-4">
                             <Problema icon="Rayo.png" tituloo="LA SOLUCIÓN" descripcion="Lectura visual, interactiva y ágil adaptada al ritmo de vida actual" />
                         </div>
-                        <div className="col col-sm col-md">
+                        <div className="col-12 col-md-12 mt-4 col-lg-4">
                             <Problema icon="Ojo.png" tituloo="EXPERIENCIA INMERSIVA" descripcion="Ilustraciones, audio y elementos interactivos que enriquecen cada cuento" />
                         </div>
                     </div>
