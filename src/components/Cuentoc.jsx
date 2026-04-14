@@ -23,9 +23,9 @@ export const Cuentoc = ({ fon, cat, titu, sinop, img1, img2, img3,linkk , txbtn 
             </div>
 
             <div className="bg-black">
-                <div className="section p-5">
+                <div className="container p-5">
                     <div className="row">
-                        <div className="col">
+                        <div className="col-12">
                             <div>
                                 <div className="w-25">
                                     <p className="bg-success w-50 text-center rounded-4 text-white">{cat}</p>
@@ -36,9 +36,9 @@ export const Cuentoc = ({ fon, cat, titu, sinop, img1, img2, img3,linkk , txbtn 
                     </div>
                 </div>
 
-                <div className="section p-5">
+                <div className="container p-5">
                     <div className="row">
-                        <div className="col">
+                        <div className="col-12 col-md-6 ">
                             <div className="d-flex flex-column gap-3">
                                 <h5 className="fw-bold ttxx">SINOPSIS</h5>
                                 <p className="text-white">{sinop}</p>
@@ -49,7 +49,7 @@ export const Cuentoc = ({ fon, cat, titu, sinop, img1, img2, img3,linkk , txbtn 
                                 </div>
                             </div>
                         </div>
-                        <div className="col">
+                        <div className="col-12 col-md-6">
                             <div>
                                 <h5 className="fw-bold ttxx">PERSONAJES</h5>
                                 <div id="carouselExampleIndicators" class="carousel slide">

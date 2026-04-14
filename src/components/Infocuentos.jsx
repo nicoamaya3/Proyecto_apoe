@@ -7,7 +7,7 @@ export const Infocuentos = ({ titi, des, personajesUno, personajesDos, personaje
         <>
             <div className="container">
                 <div className="row d-flex flex-column align-items-center">
-                    <div className="col-10">
+                    <div className="">
                         <div className="rounded fon">
                             <div className="p-2 d-flex rounded justify-content-between gat" style={{
                                 backgroundImage: back 
