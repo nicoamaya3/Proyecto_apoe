@@ -12,5 +12,10 @@
 
 .dd{
     width: 50px;
+
+}
+
+.cc{
+    min-width:100px;
 }
 
