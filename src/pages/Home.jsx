@@ -31,7 +31,7 @@ export const Home = () => {
           <div className="row">
             <div className="text-white">
               <div className="text-center">
-                <h2 className="fw-bold">ACERCA DE NOSOTROS</h2>
+                <h2 className="fw-bold">NOSOTROS</h2>
               </div>
               <div className="d-flex align-items-center justify-content-center">
                 <div className="col-12 col-md-12 mt-4 w-25 text-center p-5 ">
