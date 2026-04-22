@@ -23,6 +23,8 @@ export const Home = () => {
 
       <Problemas />
 
+      {/*  */}
+
       <Cuentos />
 
       <div className="bg-black">
