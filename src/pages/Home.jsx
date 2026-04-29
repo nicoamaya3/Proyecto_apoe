@@ -23,7 +23,7 @@ export const Home = () => {
 
       <Problemas />
 
-      {/*  */}
+      
 
       <Cuentos />
 
@@ -60,3 +60,5 @@ export const Home = () => {
     </>
   )
 }
+
+/*  */
