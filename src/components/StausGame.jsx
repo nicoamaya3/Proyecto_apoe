@@ -1,10 +1,8 @@
 import { useState } from "react"
 
-
-
-const [gemas, setGemas] = useState({}) 
-
 export const StausGame = () => {
+  const [gemas, setGemas] = useState({}) 
+  const [vidas, setVidas] = useState({})
   return (
     <>
     
