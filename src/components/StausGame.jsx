@@ -8,7 +8,7 @@ export const StausGame = () => {
     <>
 
       <div className="gemas">
-        <h1 style={{color : "white"}} >Gemas : {gemas} </h1>
+        <h1 style={{color : "black"}} >Gemas:{gemas}🦟 </h1>
         <button onClick={() => setGemas(prev => prev + 1)}>Gema 1</button>
         <button onClick={() => setGemas(prev => prev + 2)}>Gema 2</button>
         <button onClick={() => setGemas(prev => prev + 3)}>Gema 3</button>
