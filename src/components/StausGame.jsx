@@ -16,7 +16,7 @@ export const StausGame = () => {
 
 
       <div className="vidas">
-        <h1 style={{color: "white" }}>❤️Vidas:{vidas}</h1>
+        <h1 style={{color: "Black" }}>Vidas:{vidas}❤️</h1>
         <button onClick={() => setVidas(prev => prev + 1)}>Vida 1</button>
         <button onClick={() => setVidas(prev => prev + 3)}>Vida 2</button>
         <button onClick={() => setVidas(prev => prev + 2)}>Vida 3</button>
