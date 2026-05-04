@@ -10,9 +10,9 @@ export const StausGame = () => {
 
       <div className="gemas">
         <h1>Gemas</h1>
-        <button>Gema 1</button>
-        <button>Gema 2</button>
-        <button>Gema 3</button>
+        <button onClick={() => setGemas(prev => prev + 1)}>Gema 1</button>
+        <button onClick={() => setGemas(prev => prev + 2)}>Gema 2</button>
+        <button onClick={() => setGemas(prev => prev + 3)}>Gema 3</button>
       </div>
 
 
