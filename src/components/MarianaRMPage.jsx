@@ -18,7 +18,6 @@ export const MarianaRMPage = () => {
         getCharacters()
     }, [])
     
-    
 
   return (
     <>
