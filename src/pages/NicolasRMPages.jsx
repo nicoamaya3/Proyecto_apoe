@@ -6,7 +6,7 @@ export const NicolasRMPages = () => {
   const getCharacter = async () => {
 
     const res = await fetch("https://rickandmortyapi.com/api/character")
-    const data = res.json()
+    const data = await res.json()
 
     console.log(data)
 
@@ -15,7 +15,7 @@ export const NicolasRMPages = () => {
   useEffect(() => {
     getCharacter()
   }, [])
-  ()
+  
 
 
   return (
