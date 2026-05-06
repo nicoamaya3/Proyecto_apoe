@@ -11,6 +11,8 @@ export const MarianaRMPage = () => {
         const res  = await fetch("https://rickandmortyapi.com/api/character")
         const data = await res.json()
 
+        setCharacters(data.results)
+
         console.log(data)
     }
 
@@ -22,7 +24,14 @@ export const MarianaRMPage = () => {
   return (
     <>
     
-
+    <h1 className=' m-5 text-success  text-3xl fw-bold'>PERSONAJES DE RICK AND MORTY</h1>
+    <ul>
+      {characters.map((char, index) => (
+        <li key={index}>
+            <p>{char.name}</p>
+        </li>
+      ))}
+    </ul>
 
     </>
 )
