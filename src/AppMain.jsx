@@ -7,7 +7,7 @@ export const AppMain = () => {
     <>
     
       <StausGame />
-      <MarianaRMPage/>
+      <MarianaRMPage />
 
     </>
   )

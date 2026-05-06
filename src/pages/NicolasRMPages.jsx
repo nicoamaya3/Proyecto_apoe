@@ -1,21 +1,26 @@
 import { useEffect, useState } from "react"
 
-export const AndresRMPage = () => {
+export const NicolasRMPages = () => {
+  const [character, setCharacter] = useState([])
 
-  const [characters, setCharacters] = useState([])
+  const getCharacter = async () => {
 
-  const getCharacters = async () => {
     const res = await fetch("https://rickandmortyapi.com/api/character")
     const data = res.json()
 
     console.log(data)
+
   }
 
   useEffect(() => {
-    getCharacters()
+    getCharacter()
   }, [])
-  
+  ()
+
+
   return (
-    <div>AndresRMPage</div>
+    <>
+    
+    </>
   )
 }
