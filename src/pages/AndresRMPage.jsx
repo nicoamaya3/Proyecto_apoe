@@ -7,7 +7,7 @@ export const AndresRMPage = () => {
   const getCharacters = async () => {
     const res = await fetch("https://rickandmortyapi.com/api/character")
     const data = await res.json()
-
+    setCharacters(data.results)
     console.log(data)
   }
 
@@ -16,6 +16,15 @@ export const AndresRMPage = () => {
   }, [])
   
   return (
-    <div>AndresRMPage</div>
+    <>
+      <h1>Personajes de Rick and Morty</h1>
+      <ul>
+        {characters.map( (char, index) => (
+          <li key={index}>
+            <p>{char.name}</p>
+          </li>
+        ) )}
+      </ul>
+    </>
   )
 }
