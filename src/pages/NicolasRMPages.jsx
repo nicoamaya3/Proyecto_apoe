@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 
 export const NicolasRMPages = () => {
   const [character, setCharacter] = useState([])
+   const [pokemon, setPokemon] = useState([])
 
   const getCharacter = async () => {
 
@@ -15,6 +16,21 @@ export const NicolasRMPages = () => {
   useEffect(() => {
     getCharacter()
   }, [])
+
+  const getPokemon = async () => {
+
+    const res = await fetch("https://pokeapi.co/api/v2/pokemon/")
+    const data = await res.json()
+    setPokemon(data.results)
+    console.log(data)
+
+  }
+
+  useEffect(() => {
+    getCharacter()
+    getPokemon()
+  }, [])
+
 
 
 
