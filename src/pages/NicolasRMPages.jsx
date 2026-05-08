@@ -65,6 +65,8 @@ export const NicolasRMPages = () => {
 
       <h1>Personajes de Rick and  Morty </h1>
 
+      <div className="container">
+        <div className="row">
 
       {character.map((char, index) => (
         <div key={index} className="card m-5 w-25 p-1" style={{ width: "12rem" }}>
@@ -76,20 +78,27 @@ export const NicolasRMPages = () => {
           </div>
         </div>
       ))}
+        </div>
+      </div>
 
       <h1>Tarjetas Pokemon (Nicolás) </h1>
 
-      {pokemon.map((poke, index) => (
-        <div key={index} className="card m-5 p-1" style={{width: "12rem"}}>
-          <img src={poke.image} class="card-img-top" alt="..."/>
-            <div className="card-body">
-              <h5 className="card-title">{poke.name}</h5>
-              <p className="card-text">{poke.id}</p>
-              <p className="card-text">{poke.type}</p>
-              
+      <div className="container">
+        <div className="row">
+
+          {pokemon.map((poke, index) => (
+            <div key={index} className="card m-5 p-1" style={{ width: "12rem" }}>
+              <img src={poke.image} className="card-img-top" alt="..." />
+              <div className="card-body">
+                <h5 className="card-title">{poke.name}</h5>
+                <p className="card-text">{poke.id}</p>
+                <p className="card-text">{poke.type}</p>
+
+              </div>
             </div>
+          ))}
         </div>
-      ))}
+      </div>
 
 
     </>
