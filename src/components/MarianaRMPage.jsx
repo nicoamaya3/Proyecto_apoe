@@ -16,9 +16,7 @@ export const MarianaRMPage = () => {
     console.log(data)
   }
 
-  useEffect(() => {
-    getCharacters()
-  }, [])
+ 
 
   const [pokemon, setPokemon] = useState([])
 
@@ -45,9 +43,13 @@ export const MarianaRMPage = () => {
 
 
     setPokemon(detallesPokemon)
-    console.log(data)
+    
   }
 
+   useEffect(() => {
+    getCharacters()
+    getPokemon()
+  }, [])
 
 
   return (
@@ -55,11 +57,10 @@ export const MarianaRMPage = () => {
       <div className='container'>
         <div className="row">
 
-
-          <h1 className=' m-5 text-success  text-3xl fw-bold'>PERSONAJES DE RICK AND MORTY (Mariana)</h1>
+          <h1 className='m-5 text-success  text-3xl fw-bold'>PERSONAJES DE RICK AND MORTY (Mariana)</h1>
 
           {characters.map((char, index) => (
-            <div key={index} className="col-6 card m-5 p-1" style={{ width: '18rem' }}>
+            <div key={index} className="card m-5 p-1" style={{ width: '18rem' }}>
               <img src={char.image} className="card-img-top" alt="" />
               <div className="card-body">
                 <h5 className="card-title">{char.name}</h5>
@@ -74,10 +75,12 @@ export const MarianaRMPage = () => {
       </div>
 
 
-      <div className="container d-flex flex-wrap">
+      <div className="container ">
+          <div className="row">
+
 
         <h1 className=' m-5 text-success text-center text-3xl fw-bold'>POKEMONES (Mariana)</h1>
-        <p>{pokemon}</p>
+
 
         {pokemon.map((poke, index) => (
           <div key={index} className="card m-5 p-1" style={{ width: '18rem' }}>
@@ -88,6 +91,7 @@ export const MarianaRMPage = () => {
             </div>
           </div>
         ))}
+        </div>
 
       </div>
 
