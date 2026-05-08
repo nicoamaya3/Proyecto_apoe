@@ -20,27 +20,41 @@ export const MarianaRMPage = () => {
         getCharacters()
     }, [])
     
-    const [pokemons, setPokemons] = useState([])
+    const [pokemon, setPokemon] = useState([])
     
-    const getPokemons = async () => {
+    const getPokemon = async () => {
 
         const res  = await fetch("https://pokeapi.co/api/v2/pokemon")
         const data = await res.json()
 
-        setPokemons(data.results)
+        const detallesPokemon = await Promise.all(
 
+            data.results.map(async (pokemon) => {
+              const res = await fetch(pokemon.url)
+              const detalles = await res.json()
+
+              return {
+                id: detalles.id,
+                name: detalles.name,
+                image: detalles.sprites.other["official-artwork"].front_default,
+                type: detalles.types[0].type.name,
+              }
+            })
+
+        )
+
+        
+        setPokemon(detallesPokemon)
         console.log(data)
     }
 
-    useEffect(() => {   
-        getPokemons()
-    }, [])
+
 
   return (
     <>
     <div className='container d-flex flex-wrap'>
 
-    <h1 className=' m-5 text-success  text-3xl fw-bold'>PERSONAJES DE RICK AND MORTY</h1>
+    <h1 className=' m-5 text-success  text-3xl fw-bold'>PERSONAJES DE RICK AND MORTY (Mariana)</h1>
     
       {characters.map((char, index) => (
     <div key={index} className="card m-5 p-1" style={{ width: '18rem' }}>
@@ -59,14 +73,14 @@ export const MarianaRMPage = () => {
 
     <div className="container d-flex flex-wrap">
 
-    <h1 className=' m-5 text-success text-center text-3xl fw-bold'>POKEMONES</h1>
+    <h1 className=' m-5 text-success text-center text-3xl fw-bold'>POKEMONES (Mariana)</h1>
 
-     {pokemons.map((poke, index) => (
+     {pokemon.map((poke, index) => (
        <div key={index} className="card m-5 p-1" style={{ width: '18rem' }}>
-      <img src={poke.url} className="card-img-top" alt=""/>
+      <img src={poke.image} className="card-img-top" alt=""/>
       <div className="card-body">
       <h5 className="card-title">{poke.name}</h5>
-      <p className="card-text">Weight: {poke.weight}</p>
+      <p className="card-text">Type: {poke.type}</p>
       </div>
     </div>
       ))}
