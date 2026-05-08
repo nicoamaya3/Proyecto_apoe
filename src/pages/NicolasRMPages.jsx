@@ -35,7 +35,7 @@ export const NicolasRMPages = () => {
           id: detalles.id,
           name: detalles.name,
           image: detalles.sprites.other["official-artwork"].front_default,
-          type: detalles.type[0].type.name
+          type: detalles.types[0].type.name,
 
         }
 
@@ -47,7 +47,7 @@ export const NicolasRMPages = () => {
 
 
 
-    setPokemon(detallesPokemon.results)
+    setPokemon(detallesPokemon)
     console.log(data)
 
   }
@@ -67,7 +67,7 @@ export const NicolasRMPages = () => {
 
 
       {character.map((char, index) => (
-        <div key={index} className="card m-5 w-25 p-1" style={{ width: "10rem" }}>
+        <div key={index} className="card m-5 w-25 p-1" style={{ width: "12rem" }}>
           <img src={char.image} className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title fw-bold">{char.name}</h5>
@@ -80,7 +80,7 @@ export const NicolasRMPages = () => {
       <h1>Tarjetas Pokemon (Nicolás) </h1>
 
       {pokemon.map((poke, index) => (
-        <div key={index} className="card" style={{width: "10rem"}}>
+        <div key={index} className="card m-5 p-1" style={{width: "12rem"}}>
           <img src={poke.image} class="card-img-top" alt="..."/>
             <div className="card-body">
               <h5 className="card-title">{poke.name}</h5>
