@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 
 export const NicolasRMPages = () => {
   const [character, setCharacter] = useState([])
-   const [pokemon, setPokemon] = useState([])
+  const [pokemon, setPokemon] = useState([])
 
   const getCharacter = async () => {
 
@@ -19,9 +19,35 @@ export const NicolasRMPages = () => {
 
   const getPokemon = async () => {
 
-    const res = await fetch("https://pokeapi.co/api/v2/pokemon/")
+    const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=12")
     const data = await res.json()
-    setPokemon(data.results)
+
+    const detallesPokemon = await Promise.all(
+
+
+      data.results.map(async (pokemon) => {
+
+        const res = await fetch(pokemon.url)
+        const detalles = await res.json()
+
+        return {
+
+          id: detalles.id,
+          name: detalles.name,
+          image: detalles.sprites.other["official-artwork"].front_default,
+          type: detalles.type[0].type.name
+
+        }
+
+      })
+
+
+
+    )
+
+
+
+    setPokemon(detallesPokemon.results)
     console.log(data)
 
   }
@@ -41,7 +67,7 @@ export const NicolasRMPages = () => {
 
 
       {character.map((char, index) => (
-        <div key={index} className="card m-5 w-25 p-1" style={{ width: "18rem;" }}>
+        <div key={index} className="card m-5 w-25 p-1" style={{ width: "10rem" }}>
           <img src={char.image} className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title fw-bold">{char.name}</h5>
@@ -51,6 +77,19 @@ export const NicolasRMPages = () => {
         </div>
       ))}
 
+      <h1>Tarjetas Pokemon (Nicolás) </h1>
+
+      {pokemon.map((poke, index) => (
+        <div key={index} className="card" style={{width: "10rem"}}>
+          <img src={poke.image} class="card-img-top" alt="..."/>
+            <div className="card-body">
+              <h5 className="card-title">{poke.name}</h5>
+              <p className="card-text">{poke.id}</p>
+              <p className="card-text">{poke.type}</p>
+              
+            </div>
+        </div>
+      ))}
 
 
     </>
