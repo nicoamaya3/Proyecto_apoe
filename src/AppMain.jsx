@@ -12,7 +12,7 @@ export const AppMain = () => {
       <StausGame />
       <MarianaRMPage />
       <NicolasRMPages />
-      <AndresRMPage />
+      {/* <AndresRMPage /> */}
       
 
     </>
