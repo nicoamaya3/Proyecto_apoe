@@ -1,12 +1,17 @@
 import { Link } from "react-router-dom"
 import "../stylesheets/Cuentos.css"
 
-export const Lect = ({cuento , llin}) => {
+export const Lect = ({ cuento, llin }) => {
     return (
         <>
             <div className="bacLec" style={{
                 backgroundImage: cuento,
             }}>
+                <div className="p-5">
+                    <div className="p-3 ">
+                        <Link className className="p-5 text-white text-black  fs-4 link-offset-2 link-underline link-underline-opacity-0" to={llin}>X</Link>
+                    </div>
+                </div>
             </div>
 
             <div className="fon">
@@ -15,8 +20,7 @@ export const Lect = ({cuento , llin}) => {
                         <div className="col col-sm col-md">
                             <div className="d-flex justify-content-between m-2">
                                 <div className="d-flex gap-3" >
-                                    
-                                    <Link className= " text-black fw-bold fs-4 link-offset-2 link-underline link-underline-opacity-0" to={llin}>X</Link>
+
                                     <p className="text-white">Capítulo I — La confesión</p>
                                 </div>
 
