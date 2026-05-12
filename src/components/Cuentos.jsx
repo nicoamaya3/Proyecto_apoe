@@ -22,11 +22,11 @@ export const Cuentos = () => {
                 <div className="bg-black">
 
                 <div className="container">
-                    <div className="row">
-                        <div className="col-12  ">
+                    <div className="row justify-content-center gap-5">
+                        <div className="col-10 ">
                              <Infocuentos titi= " El Gato Negro " des= " Un hombre bondadoso se transforma en un ser monstruoso bajo el influjo del alcohol. Su crueldad hacia su gato Plutón desencadena una espiral de horror y culpa que culmina en... " personajesUno= " Frank " personajesDos= " Katherine " personajesTres= " Plutón " categoria= " Terror Psicológico " back= "url(./gato.jpg)" lii="/GatoNegro" tbt="EMPEZAR"    />
                         </div>
-                        <div className="col-12  ">
+                        <div className="col-10 ">
                              <Infocuentos titi= " El Corazón Delator " des= " En el Japón feudal, Takeshi asesina al anciano Satoshi, atormentado por su ojo de buitre. Tras ocultar el cuerpo bajo las tablas del suelo, el latido fantasmal del corazón... " categoria= " Terror Japonés " back= "url(./coraa.jpg)" personajesUno= " Takeshi " personajesDos= " Satoshi " personajesTres= " Shogun" lii="/Delator" tbt="EMPEZAR"   />
                         </div>
                     </div>
