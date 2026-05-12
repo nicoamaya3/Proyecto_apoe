@@ -15,6 +15,7 @@ import { Gleyendo } from "./pages/Gleyendo.jsx"
 
 
 
+
 export const App = () => {
   return (
 
@@ -31,7 +32,7 @@ export const App = () => {
           <Route path="/GatoNegro" element= {<Cuentogato />} />
           <Route path="/LecturaC" element= {<Leyendo />} />
           <Route path="/LecturaG" element= {<Gleyendo />} />
-
+          
         </Routes>
 
         <Foter />
