@@ -22,7 +22,7 @@ export const Header = () => {
 
                         </div>
                         <div className='logo bg-white rounded-circle p-2 p-md-3 mx-auto'>
-                            <img src="/apoe.png" alt="" />
+                            <img src="/logo.png" alt="" />
                         </div>
                         <div style={{ background: 'transparent' }} className="offcanvas-body">
                             <ul className="navbar-nav flex-grow-1 fs-5">
