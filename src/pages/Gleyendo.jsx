@@ -6,7 +6,6 @@ export const Gleyendo = () => {
     return (
         <>
             <Lect cuento="url(./gatoN.jpg)" llin="/GatoNegro" />
-            <div className="container"></div>
             <Tutorial/>
         </>
     )

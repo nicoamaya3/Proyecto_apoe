@@ -4,12 +4,14 @@ import "../stylesheets/Cuentos.css"
 export const Lect = ({ cuento, llin }) => {
     return (
         <>
-            <div className="bacLec" style={{
-                backgroundImage: cuento,
-            }}>
-                <div className="p-5">
-                    <div className="p-3 ">
-                        <Link className className="p-5 text-white text-black  fs-4 link-offset-2 link-underline link-underline-opacity-0" to={llin}>X</Link>
+            <div className="d-flex justify-content-center bg-black">
+                <div className="bacLec w-75" style={{
+                    backgroundImage: cuento,
+                }}>
+                    <div className="p-5">
+                        <div className="p-3 ">
+                            <Link className className="p-5 text-white text-black  fs-4 link-offset-2 link-underline link-underline-opacity-0" to={llin}>X</Link>
+                        </div>
                     </div>
                 </div>
             </div>

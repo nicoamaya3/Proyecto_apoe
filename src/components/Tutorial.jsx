@@ -8,7 +8,7 @@ export const Tutorial = () => {
         <div className="row">
             <div className="col-12">
                 <div className='bg-black'>
-                    tutooto
+                    asa
                 </div>
             </div>
         </div>

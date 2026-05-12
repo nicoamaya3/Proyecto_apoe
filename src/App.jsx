@@ -9,6 +9,7 @@ import { Cuentogato } from "./pages/Cuentogato.jsx"
 import { Lect } from "./components/Lect.jsx"
 import { Leyendo } from "./pages/Leyendo.jsx"
 import { Gleyendo } from "./pages/Gleyendo.jsx"
+import { Cuentos } from "./components/Cuentos.jsx"
 
 
 
@@ -32,6 +33,8 @@ export const App = () => {
           <Route path="/GatoNegro" element= {<Cuentogato />} />
           <Route path="/LecturaC" element= {<Leyendo />} />
           <Route path="/LecturaG" element= {<Gleyendo />} />
+          <Route path="/Cuentos" element= {<Cuentos />} />
+
           
         </Routes>
 
