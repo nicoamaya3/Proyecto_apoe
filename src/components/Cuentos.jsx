@@ -1,6 +1,5 @@
 
-import "../stylesheets/Cuentos.css"
-import "../stylesheets/Text.css"
+import "../stylesheets/General.css"
 
 import { Infocuentos } from "../components/Infocuentos"
 

@@ -1,4 +1,4 @@
-import "../stylesheets/Problemas.css"
+import "../stylesheets/General.css"
 
 export const Problema = ({ tituloo, descripcion, icon }) => {
     return (
