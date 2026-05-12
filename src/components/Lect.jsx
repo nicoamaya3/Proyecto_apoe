@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import "../stylesheets/Cuentos.css"
+import "../stylesheets/General.css"
 
 export const Lect = ({ cuento, llin }) => {
     return (

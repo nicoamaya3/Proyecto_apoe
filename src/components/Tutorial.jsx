@@ -1,4 +1,5 @@
 import React from 'react'
+import "../stylesheets/General.css"
 
 export const Tutorial = () => {
     return (

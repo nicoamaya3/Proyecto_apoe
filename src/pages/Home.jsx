@@ -1,6 +1,6 @@
 import { Cuentos } from "../components/Cuentos"
 import { Problemas } from "../components/Problemas"
-import "../stylesheets/Home.css"
+import "../stylesheets/General.css"
 
 export const Home = () => {
   return (

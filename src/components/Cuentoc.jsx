@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
-import "../stylesheets/Cuentocora.css"
-import "../stylesheets/Text.css"
+import "../stylesheets/General.css"
 
 export const Cuentoc = ({ fon, cat, titu, sinop, img1, img2, img3,linkk , txbtn }) => {
     return (
