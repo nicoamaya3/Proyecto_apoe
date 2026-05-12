@@ -7,9 +7,7 @@ import { Infocuentos } from "../components/Infocuentos"
 export const Cuentos = () => {
     return (
         <>
-
-            
-
+        
                 <div className="container-fluid fondoo p-5 gap-4">
                     <div className="row">
                         <div className="col">
