@@ -6,7 +6,13 @@ export const Gleyendo = () => {
     return (
         <>
             <Lect cuento="url(./gatoN.jpg)" llin="/GatoNegro" />
-            <Tutorial/>
+            <div className="container">
+                <div className="row">
+                    <div className="col">
+                        <Tutorial />
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
