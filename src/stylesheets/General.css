@@ -1,3 +1,16 @@
+@font-face {
+    font-family:'Candara' ;
+    src: url(../public/tipografias/Candara.otf);
+}
+
+@font-face {
+    font-family:'Butter_Haunted' ;
+    src: url(../public/tipografias/Butter_Haunted.otf);
+}
+
+p{
+    font-family: 'Candara';
+}
 
 .gatt{
     height: 60vh;
@@ -71,4 +84,6 @@
 
 .ttxx{
     color: #6DBF56;
+    font-family: 'Butter_Haunted';
+    letter-spacing: 5px;
 }
