@@ -21,7 +21,7 @@ export const Infocuentos = ({ titi, des, personajesUno, personajesDos, personaje
                             </div>
                             <div>
                                 <div className="p-3 text-white">
-                                    <h5 className="fw-bold">{titi}</h5>
+                                    <h5 className="fw-bold fontCard">{titi}</h5>
                                     <p>{des}</p>
                                     <div className="d-flex gap-2">
                                         <p className="osq w-25 text-center rounded-4">{personajesUno}</p>
@@ -29,7 +29,7 @@ export const Infocuentos = ({ titi, des, personajesUno, personajesDos, personaje
                                         <p className="osq w-25 text-center rounded-4">{personajesTres}</p>
                                     </div>
                                     
-                                    <Link className="btn btn-success text-black w-100 p-2 fw-bold" to={lii} > {tbt} </Link>
+                                    <Link className="btn btn-success text-black w-100 p-2 fw-bold " to={lii} > {tbt} </Link>
                                 </div>
                             </div>
                         </div>

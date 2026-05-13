@@ -11,7 +11,7 @@ export const Header = () => {
                     <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <Link to='/' className="parrafo navbar-brand" href="#">Apoe!</Link>
+                    <Link to='/' className="parrafo navbar-brand fontCard" href="#">Apoe!</Link>
 
                     <div style={{
                         background: 'linear-gradient(135deg, #1d0b0b 0%, #0d0d0d 100%)', borderRadius: '15px'

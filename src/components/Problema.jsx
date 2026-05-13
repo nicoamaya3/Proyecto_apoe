@@ -14,7 +14,7 @@ export const Problema = ({ tituloo, descripcion, icon }) => {
                             <div>
                                 <img className="ico" src={icon} alt="" />
                             </div>
-                            <h5>{tituloo}</h5>
+                            <h5 className="fontCard">{tituloo}</h5>
                             <p>{descripcion}</p>
                         </div>
 

@@ -30,7 +30,7 @@ export const Nosotros = () => {
                         <div className="row">
                             <div className="col col-sm col-md text-white">
                                 <div className="text-center">
-                                    <h2 className="fw-bold ">NUESTRO EQUIPO</h2>
+                                    <h2 className="fw-bold fontTitu ">NUESTRO EQUIPO</h2>
                                 </div>
                                 <div className="d-flex align-items-center justify-content-center">
                                     <div className="w-25 text-center p-5 ">

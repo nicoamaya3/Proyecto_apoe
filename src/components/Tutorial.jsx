@@ -16,14 +16,14 @@ export const Tutorial = () => {
                                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                 </div>
                                 <div className="carousel-inner">
-                                    <div className="carousel-item active">
+                                    <div className="carousel-item active tuto">
                                         <img src="/controles.png" className="d-block w-100" alt="..."/>
                                             <div className="carousel-caption d-none d-md-block">
                                                 <h5 className='fw-bold'>CONTROLES</h5>
                                                 <p>Estos son los controles diseñados para gestionar la interactividad dentro del cuento, pantalla completa para una experiencia inmersiva.</p>
                                             </div>
                                     </div>
-                                    <div className="carousel-item">
+                                    <div className="carousel-item tuto">
                                         <img src="/Subtitulos.png" className="d-block w-100" alt="..."/>
                                             <div className="carousel-caption d-none d-md-block">
                                                 <h5 className='fw-bold'>NAVEGACIÓN</h5>

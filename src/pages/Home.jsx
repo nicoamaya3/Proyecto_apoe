@@ -33,21 +33,21 @@ export const Home = () => {
           <div className="row">
             <div className="text-white">
               <div className="text-center">
-                <h2 className="fw-bold">NOSOTROS</h2>
+                <h2 className="fw-bold fontTitu">NOSOTROS</h2>
               </div>
               <div className="d-flex align-items-center justify-content-center">
                 <div className="col-12 col-md-12 mt-4 w-25 text-center p-5 ">
                   <div className="cc p-2 bg-success rounded">
                     <img className="dd  w-50 " src="./usuario.png" alt="" />
                   </div>
-                  <h5>Nicolás Atehortúa</h5>
+                  <h5 className="fontCard">Nicolás Atehortúa</h5>
                   <p>Desarrollo Web</p>
                 </div>
                 <div className="col-12 col-md-12 mt-4  w-25 text-center p-5 ">
                   <div className="cc p-2 bg-success rounded">
                     <img className="dd  w-50 " src="./usuario.png" alt="" />
                   </div>
-                  <h5>Mariana Martínez</h5>
+                  <h5 className="fontCard">Mariana Martínez</h5>
                   <p>Diseño & Contenido</p>
                 </div>
               </div>

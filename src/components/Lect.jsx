@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import "../stylesheets/General.css"
 
-export const Lect = ({ cuento, llin }) => {
+export const Lect = ({ cuento, llin , nombreCap }) => {
     return (
         <>
             <div className="d-flex justify-content-center bg-black">
@@ -23,7 +23,7 @@ export const Lect = ({ cuento, llin }) => {
                             <div className="d-flex justify-content-between m-2">
                                 <div className="d-flex gap-3" >
 
-                                    <p className="text-white">Capítulo I — La confesión</p>
+                                    <p className="text-white fontCard">{nombreCap}</p>
                                 </div>
 
                                 <div className="d-flex gap-3">
