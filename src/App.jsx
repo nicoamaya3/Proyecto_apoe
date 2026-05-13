@@ -13,10 +13,6 @@ import { Cuentos } from "./components/Cuentos.jsx"
 
 
 
-
-
-
-
 export const App = () => {
   return (
 
