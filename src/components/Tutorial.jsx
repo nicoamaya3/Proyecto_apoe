@@ -17,16 +17,17 @@ export const Tutorial = () => {
                                 </div>
                                 <div className="carousel-inner">
                                     <div className="carousel-item active">
-                                        <img src="..." className="d-block w-100" alt="..."/>
+                                        <img src="/controles.png" className="d-block w-100" alt="..."/>
                                             <div className="carousel-caption d-none d-md-block">
-                                                <h5>Estos son los controles diseñados para gestionar la interactividad dentro del cuento, pantalla completa para una experiencia inmersiva.</p>
+                                                <h5 className='fw-bold'>CONTROLES</h5>
+                                                <p>Estos son los controles diseñados para gestionar la interactividad dentro del cuento, pantalla completa para una experiencia inmersiva.</p>
                                             </div>
                                     </div>
                                     <div className="carousel-item">
                                         <img src="anci.png" className="d-block w-100" alt="..."/>
                                             <div className="carousel-caption d-none d-md-block">
-                                                <h5>Second slide label</h5>
-                                                <p>Some representative placeholder content for the second slide.</p>
+                                                <h5 className='fw-bold'>NAVEGACIÓN</h5>
+                                                <p>La navegación permite moverse entre las diferentes páginas del cuento, facilitando la exploración de la historia.</p>
                                             </div>
                                     </div>
                                     <div className="carousel-item">
