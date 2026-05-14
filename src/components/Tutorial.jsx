@@ -5,7 +5,7 @@ export const Tutorial = () => {
     return (
         <>
 
-            <div classNameName="container z-3 d-flex jsutofy-content-center" style={{ background: 'linear-gradient(135deg, #1d0b0b 0%, #0d0d0d 100%)', borderRadius: '15px' }}>
+            <div classNameName="container d-flex jsutofy-content-center" style={{ background: 'linear-gradient(135deg, #1d0b0b 0%, #0d0d0d 100%)', borderRadius: '15px' }}>
                 <div classNameName="row">
                     <div classNameName="col">
                         <div classNameName='bg-black '>
@@ -26,14 +26,14 @@ export const Tutorial = () => {
                                     <div className="carousel-item tuto">
                                         <img src="/Subtitulos.png" className="d-block w-100" alt="..."/>
                                             <div className="carousel-caption d-none d-md-block">
-                                                <h5 className='fw-bold'>NAVEGACIÓN</h5>
+                                                <h5 className='fw-bold'>SUBTÍTULOS</h5>
                                                 <p>La navegación permite moverse entre las diferentes páginas del cuento, facilitando la exploración de la historia.</p>
                                             </div>
                                     </div>
                                     <div className="carousel-item">
-                                        <img src="..." className="d-block w-100" alt="..."/>
+                                        <img src="/telefono.png" className="d-block w-100" alt="..."/>
                                             <div className="carousel-caption d-none d-md-block">
-                                                <h5>Third slide label</h5>
+                                                <h5 className='fw-bold'>INTERACCIONES</h5>
                                                 <p>Some representative placeholder content for the third slide.</p>
                                             </div>
                                     </div>

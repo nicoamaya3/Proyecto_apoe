@@ -16,8 +16,11 @@ export const Lect = ({ cuento, llin , nombreCap }) => {
                 </div>
             </div>
 
-            <div className="fon">
-                <div className="container">
+            <div className="fon bg-transparent  d-flex justify-content-center">
+                <div className="img">
+                <img className="w-75 d-flex justify-conte" src="/controles.png" alt=""/>
+                </div>
+                {/* <div className="container">
                     <div className="row">
                         <div className="col col-sm col-md">
                             <div className="d-flex justify-content-between m-2">
@@ -44,7 +47,7 @@ export const Lect = ({ cuento, llin , nombreCap }) => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
 
         </>
