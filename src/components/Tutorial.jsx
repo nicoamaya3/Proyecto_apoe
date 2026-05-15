@@ -30,7 +30,7 @@ export const Tutorial = () => {
                                                 <p>La navegación permite moverse entre las diferentes páginas del cuento, facilitando la exploración de la historia.</p>
                                             </div>
                                     </div>
-                                    <div className="carousel-item">
+                                    <div className="carousel-item tuto">
                                         <img src="/telefono.png" className="d-block w-100" alt="..."/>
                                             <div className="carousel-caption d-none d-md-block">
                                                 <h5 className='fw-bold'>INTERACCIONES</h5>
