@@ -1,7 +1,7 @@
 :root{
     --vinotinto: #40131f;
     --rojo: #be3636;
-    --rosa: #eeded6;
+    --rosa: #edddd5;
     --verde: #6DBF56;
     --verdeOsc: #30592e;
     --blanco: #ffffff;
@@ -45,7 +45,7 @@ p{
 }
 
 .apoel{
-    width: 160px;
+    width: 200px;
 }
 
 .bg{
@@ -116,7 +116,9 @@ p{
     font-family: 'Candara_Bold';
 }
 
-
+.iconos{
+    width: 40px;
+}
 
 .barra{
     display: flex;
@@ -131,6 +133,8 @@ p{
 }
 
 
+/*Header*/
+
 /* Contenedor invisible para centrar el menú verticalmente en la pantalla */
 .sidebar-container {
   z-index: 1050; /* Por encima del contenido de la página */
@@ -140,7 +144,7 @@ p{
 /* El menú con forma de cápsula */
 .custom-sidebar {
   pointer-events: auto; /* Reactiva los clicks dentro del menú */
-  background-color: #e6b2b2; /* El color rosa/marrón pastel de tu imagen */
+  background-color: var(--rosa); /* El color rosa/marrón pastel de tu imagen */
   width: 70px; /* Ancho de la barra */
   height: 80vh; /* Altura (80% de la pantalla para que parezca flotante) */
   border-radius: 50px; /* Bordes completamente redondeados (cápsula) */
@@ -166,3 +170,9 @@ p{
   transform: scale(1.15); /* Crece un poco al pasar el mouse */
   color: var(--vinotinto); /* Cambia sutilmente el color si usas fuentes de iconos */
 }
+
+/* Inicio */
+
+/* .degradado{
+  background: radial-gradient(circle, #edddd5, #edddd5);
+} */

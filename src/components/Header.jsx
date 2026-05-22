@@ -5,30 +5,25 @@ import "../stylesheets/General.css"
 export const Header = () => {
     return (
         <>
-
-        <div className="bg-black barra rounded-bottom-5 ">
-        <p className="bg-black text-white fontCard fs-5 text-center pt-2">Apoe!</p>
-        </div>
+            <section className="bg-transparent">
+                <div className="bg-black barra rounded-bottom-5 ">
+                    <p className="bg-black text-white fontCard fs-5 text-center pt-2">Apoe!</p>
+                </div>
+            </section>
 
             <div className="sidebar-container position-fixed top-0 start-0 d-flex align-items-center justify-content-center h-100 px-3">
                 <div className="custom-sidebar d-flex flex-column align-items-center justify-content-between py-4">
 
+                    <Link to='/' className="sidebar-icon">
+                        <img className="iconos" src="iconos/home.svg" alt="" />
+                    </Link>
+                    
                     <a href="#" className="sidebar-icon">
-                        
-                        <a href="#">
-                            <span className="icon">
-                                <ion-icon name="home-outline"></ion-icon>
-                            </span>
-                        </a>
-
-                        {/* <i className="bi bi-house-door-fill"><img src="iconos/Recurso1.svg" alt="" /></i> */} </a>
-
-                    <a href="#" className="sidebar-icon">
-                        <span className="icon-cat">🐈‍⬛</span>
+                        <img className="iconos" src="iconos/gato.svg" alt="" />
                     </a>
 
                     <a href="#" className="sidebar-icon">
-                        <span className="icon-heart">🫀</span>
+                        <img className="iconos" src="iconos/corazon.svg" alt="" />
                     </a>
 
                     <a href="#" className="sidebar-icon">
