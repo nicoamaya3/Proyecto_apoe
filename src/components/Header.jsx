@@ -18,17 +18,17 @@ export const Header = () => {
                         <img className="iconos" src="iconos/home.svg" alt="" />
                     </Link>
                     
-                    <a href="#" className="sidebar-icon">
+                    <Link to='/GatoNegro' href="#" className="sidebar-icon">
                         <img className="iconos" src="iconos/gato.svg" alt="" />
-                    </a>
+                    </Link>
 
-                    <a href="#" className="sidebar-icon">
+                    <Link to='/Delator' href="#" className="sidebar-icon">
                         <img className="iconos" src="iconos/corazon.svg" alt="" />
-                    </a>
+                    </Link>
 
-                    <a href="#" className="sidebar-icon">
+                    <Link to='/Nosotros' href="#" className="sidebar-icon">
                         <span className="icon-barrel">☠️</span>
-                    </a>
+                    </Link>
 
                     <a href="#" className="sidebar-icon">
                         <span className="icon-handcuffs">⛓️</span>

@@ -14,7 +14,7 @@ export const Nosotros = () => {
                             </div>
                             <div className="p-5 d-flex flex-column justify-content-center gap-3 text-center">
                                 <div className="p-5 d-flex justify-content-center">
-                                    <img className="bg p-3 rounded-5 apoel" src="Logooo.png" alt="" />
+                                    <img className="bg p-3 rounded-5 apoel" src="iconos/logo.png" alt="" />
                                 </div>
 
                                 <div className="text-success">
