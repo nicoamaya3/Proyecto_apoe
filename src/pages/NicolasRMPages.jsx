@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { motion } from "motion/react"
 
 export const NicolasRMPages = () => {
   const [character, setCharacter] = useState([])
@@ -63,23 +64,48 @@ export const NicolasRMPages = () => {
   return (
     <>
 
+      <motion.div style={{
+        width: 100,
+        height: 100,
+        backgroundColor: "black",
+        borderRadius: 5,
+      }}
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.4,
+          scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+        }}>
+      </motion.div>
+
+
+
+
+
+
       <h1>Personajes de Rick and  Morty </h1>
 
-      <div className="container">
+      <motion.div className="container"
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.4,
+          scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+        }}>
         <div className="row">
 
-      {character.map((char, index) => (
-        <div key={index} className="card m-5 w-25 p-1" style={{ width: "12rem" }}>
-          <img src={char.image} className="card-img-top" alt="..." />
-          <div className="card-body">
-            <h5 className="card-title fw-bold">{char.name}</h5>
-            <p className="card-text ">Status:{char.status}</p>
-            <p className="card-text ">Especies:{char.species}</p>
-          </div>
+          {character.map((char, index) => (
+            <div key={index} className="card m-5 w-25 p-1" style={{ width: "12rem" }}>
+              <img src={char.image} className="card-img-top" alt="..." />
+              <div className="card-body">
+                <h5 className="card-title fw-bold">{char.name}</h5>
+                <p className="card-text ">Status:{char.status}</p>
+                <p className="card-text ">Especies:{char.species}</p>
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
-        </div>
-      </div>
+      </motion.div>
 
       <h1>Tarjetas Pokemon (Nicolás) </h1>
 
