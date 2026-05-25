@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
+import { motion } from "motion/react"
 
 export const MarianaRMPage = () => {
 
@@ -16,7 +17,7 @@ export const MarianaRMPage = () => {
     console.log(data)
   }
 
- 
+
 
   const [pokemon, setPokemon] = useState([])
 
@@ -43,10 +44,10 @@ export const MarianaRMPage = () => {
 
 
     setPokemon(detallesPokemon)
-    
+
   }
 
-   useEffect(() => {
+  useEffect(() => {
     getCharacters()
     getPokemon()
   }, [])
@@ -54,13 +55,35 @@ export const MarianaRMPage = () => {
 
   return (
     <>
+
+      <motion.div style={{
+        width: 100,
+        height: 100,
+        backgroundColor: 'green',
+        borderRadius: 5,
+      }} 
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1}}
+       transition={{
+        duration: 0.4,
+        scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+        }}>
+
+
+      </motion.div>
+
+
+
+
       <div className='container'>
         <div className="row">
 
           <h1 className='m-5 text-success  text-3xl fw-bold'>PERSONAJES DE RICK AND MORTY (Mariana)</h1>
 
           {characters.map((char, index) => (
-            <div key={index} className="card m-5 p-1" style={{ width: '18rem' }}>
+            <motion.dev key={index} className="card m-5 p-1" style={{ width: '18rem' }}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}>
               <img src={char.image} className="card-img-top" alt="" />
               <div className="card-body">
                 <h5 className="card-title">{char.name}</h5>
@@ -68,7 +91,7 @@ export const MarianaRMPage = () => {
                 <p className="card-text">Species: {char.species}</p>
                 <p className="card-text">Gender: {char.gender}</p>
               </div>
-            </div>
+            </motion.dev>
           ))}
         </div>
 
@@ -76,21 +99,21 @@ export const MarianaRMPage = () => {
 
 
       <div className="container ">
-          <div className="row">
+        <div className="row">
 
 
-        <h1 className=' m-5 text-success text-center text-3xl fw-bold'>POKEMONES (Mariana)</h1>
+          <h1 className=' m-5 text-success text-center text-3xl fw-bold'>POKEMONES (Mariana)</h1>
 
 
-        {pokemon.map((poke, index) => (
-          <div key={index} className="card m-5 p-1" style={{ width: '18rem' }}>
-            <img src={poke.image} className="card-img-top" alt="" />
-            <div className="card-body">
-              <h5 className="card-title">{poke.name}</h5>
-              <p className="card-text">Type: {poke.type}</p>
+          {pokemon.map((poke, index) => (
+            <div key={index} className="card m-5 p-1" style={{ width: '18rem' }}>
+              <img src={poke.image} className="card-img-top" alt="" />
+              <div className="card-body">
+                <h5 className="card-title">{poke.name}</h5>
+                <p className="card-text">Type: {poke.type}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
         </div>
 
       </div>
