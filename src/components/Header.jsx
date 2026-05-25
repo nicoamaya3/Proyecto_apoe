@@ -5,11 +5,7 @@ import "../stylesheets/General.css"
 export const Header = () => {
     return (
         <>
-            <section className="bg-transparent">
-                <div className="bg-black barra rounded-bottom-5 ">
-                    <p className="bg-black text-white fontCard fs-5 text-center pt-2">Apoe!</p>
-                </div>
-            </section>
+            
 
             <div className="sidebar-container position-fixed top-0 start-0 d-flex align-items-center justify-content-center h-100 px-3">
                 <div className="custom-sidebar d-flex flex-column align-items-center justify-content-between py-4">
