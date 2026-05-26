@@ -6,13 +6,13 @@ export const Home = () => {
   return (
     <>
       <div className="container-fluid foo" style={{
-        backgroundColor : "var(--vinotinto)"
+        backgroundColor: "var(--vinotinto)"
       }}>
         <section className="bg-transparent">
-                <div className="bg-black barra rounded-bottom-5 ">
-                    <p className="bg-black text-white fontCard fs-5 text-center pt-2">Apoe!</p>
-                </div>
-            </section>
+          <div className="bg-black barra rounded-bottom-5 ">
+            <p className="bg-black text-white fontCard fs-5 text-center pt-2">Apoe!</p>
+          </div>
+        </section>
         <div className="row" >
           <div className="col-8 p-5">
             <div className="degradado d-flex flex-column align-items-center w-75  gap-5 p-5">
@@ -32,7 +32,7 @@ export const Home = () => {
 
       <Problemas />
 
-      
+
 
       <Cuentos />
 
@@ -64,6 +64,14 @@ export const Home = () => {
           </div>
         </div>
 
+        
+      <section className="navbar rounded-top-5 position-relative bg-black ">
+        <div class="col text-center">
+          <h2 className="fontCard footer fs-4 fw-bold">
+            APOE! · SENA · Producción Multimedia · 2025
+          </h2>
+        </div>
+      </section>
       </div>
 
     </>

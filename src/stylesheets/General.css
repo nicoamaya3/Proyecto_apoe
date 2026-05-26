@@ -132,6 +132,12 @@ p{
   object-fit: contain;
 }
 
+/* Footer */
+
+.footer{
+    color: var(--rosa);
+    font-family: 'Candara' ;
+}
 
 /*Header*/
 
