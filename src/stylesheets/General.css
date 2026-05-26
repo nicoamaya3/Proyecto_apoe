@@ -168,7 +168,7 @@ p{
 /* Efecto al pasar el mouse por encima (Hover) */
 .sidebar-icon:hover {
   transform: scale(1.15); /* Crece un poco al pasar el mouse */
-  color: var(--vinotinto); /* Cambia sutilmente el color si usas fuentes de iconos */
+  color: var(--vinotinto), 100%; /* Cambia sutilmente el color si usas fuentes de iconos */
 }
 
 /* Inicio */

@@ -1,14 +1,16 @@
 import { Link } from "react-router-dom"
 import "../stylesheets/General.css"
-
+import { motion } from "motion/react"
 
 export const Header = () => {
     return (
         <>
             
-
             <div className="sidebar-container position-fixed top-0 start-0 d-flex align-items-center justify-content-center h-100 px-3">
-                <div className="custom-sidebar d-flex flex-column align-items-center justify-content-between py-4">
+                <motion.div className="custom-sidebar d-flex flex-column align-items-center justify-content-between py-4"
+                initial={{ opacity: 0, x:-100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, ease: "easeInOut", duration: 1 }}>
 
                     <Link to='/' className="sidebar-icon">
                         <img className="iconos" src="iconos/home.svg" alt="" />
@@ -30,7 +32,7 @@ export const Header = () => {
                         <span className="icon-handcuffs">⛓️</span>
                     </a>
 
-                </div>
+                </motion.div>
             </div>
 
 

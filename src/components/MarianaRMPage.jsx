@@ -62,7 +62,7 @@ export const MarianaRMPage = () => {
         backgroundColor: 'green',
         borderRadius: 5,
       }} 
-      initial={{ opacity: 0, scale: 0 }}
+      initial={{ opacity: 0, scale: 0, direction: screenLeft, }}
       animate={{ opacity: 1, scale: 1}}
        transition={{
         duration: 0.4,
