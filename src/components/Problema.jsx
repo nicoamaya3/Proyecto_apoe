@@ -1,11 +1,24 @@
 import "../stylesheets/General.css"
+import { motion } from "motion/react"
 
 export const Problema = ({ tituloo, descripcion, icon }) => {
     return (
         <>
 
 
-            <div className="container">
+            <motion.div className="container"
+             whileHover={{
+                scale: [null, 1.0, 1.1],
+                transition: {
+                    duration: 0.5,
+                    times: [0, 0.6, 1],
+                    ease: ["easeInOut", "easeOut"],
+                },
+            }}
+            transition={{
+                duration: 0.3,
+                ease: "easeOut",
+            }}>
                 <div className="row d-flex flex-column align-items-center">
                     <div className="bg-dark  rounded-4">
 
@@ -21,7 +34,7 @@ export const Problema = ({ tituloo, descripcion, icon }) => {
 
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
         </>
     )
