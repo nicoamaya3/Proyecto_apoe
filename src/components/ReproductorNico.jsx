@@ -1,0 +1,23 @@
+import React from 'react'
+
+export const ReproductorNico = () => {
+    return (
+        <>
+
+            <h1>Reproductor interactivo</h1>
+
+            <video width={700}>
+                <source
+                    src='https://www.w3schools.com/tags/movie.mp4'
+                    type='video/mp4'
+                />
+            </video>
+
+            <div>
+                <button>Play</button>
+                <button>Pause</button>
+            </div>
+
+        </>
+    )
+}
