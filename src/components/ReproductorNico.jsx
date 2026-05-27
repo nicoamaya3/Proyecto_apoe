@@ -8,7 +8,7 @@ export const ReproductorNico = () => {
 
             <video width={700}>
                 <source
-                    src='https://www.w3schools.com/tags/movie.mp4'
+                    src="https://www.w3schools.com/Html/mov_bbb.mp4"
                     type='video/mp4'
                 />
             </video>
