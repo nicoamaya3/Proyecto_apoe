@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import "../stylesheets/General.css"
+import { Controles } from "./Controles"
 
 export const Lect = ({ cuento, llin , nombreCap }) => {
     return (
@@ -15,12 +16,18 @@ export const Lect = ({ cuento, llin , nombreCap }) => {
                     </div>
                 </div>
             </div>
+            
+            <div className="bg-black">
+            <Controles />
+            </div>
+            
 
-            <div className="fon bg-transparent  d-flex justify-content-center">
-                <div className="img">
+           {/*  <div className="fon bg-transparent  d-flex justify-content-center">
+                {/* <div className="img">
                 <img className="w-75 d-flex justify-conte" src="/controles.png" alt=""/>
-                </div>
-                {/* <div className="container">
+                </div> 
+
+                 <div className="container">
                     <div className="row">
                         <div className="col col-sm col-md">
                             <div className="d-flex justify-content-between m-2">
@@ -47,8 +54,8 @@ export const Lect = ({ cuento, llin , nombreCap }) => {
                             </div>
                         </div>
                     </div>
-                </div> */}
-            </div>
+                </div> 
+            </div> */}
 
         </>
     )

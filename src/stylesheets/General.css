@@ -182,3 +182,8 @@ p{
 /* .degradado{
   background: radial-gradient(circle, #edddd5, #edddd5);
 } */
+
+/* Controles */
+.controles{
+    background-color: #30592e;
+}
