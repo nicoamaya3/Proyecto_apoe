@@ -29,7 +29,7 @@ export const Header = () => {
                     </Link>
 
                     <a href="#" className="sidebar-icon">
-                        <span className="icon-handcuffs">⛓️</span>
+                        <img className="iconos" src="iconos/cuervo.svg" alt="" />
                     </a>
 
                 </motion.div>

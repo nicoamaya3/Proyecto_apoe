@@ -1,6 +1,7 @@
 import { Cuentos } from "../components/Cuentos"
 import { Problemas } from "../components/Problemas"
 import "../stylesheets/General.css"
+import { motion } from "motion/react"
 
 export const Home = () => {
   return (
@@ -9,9 +10,12 @@ export const Home = () => {
         backgroundColor: "var(--vinotinto)"
       }}>
         <section className="bg-transparent">
-          <div className="bg-black barra rounded-bottom-5 ">
+          <motion.div className="bg-black barra rounded-bottom-5 "
+            initial={{ opacity: 0, y:-100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut", duration: 1 }}>
             <p className="bg-black text-white fontCard fs-5 text-center pt-2">Apoe!</p>
-          </div>
+          </motion.div>
         </section>
         <div className="row" >
           <div className="col-8 p-5">

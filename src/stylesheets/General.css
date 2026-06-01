@@ -124,6 +124,7 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 5vh;
 }
 
 .sidebar-svg {
