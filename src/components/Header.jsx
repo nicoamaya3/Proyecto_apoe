@@ -25,7 +25,7 @@ export const Header = () => {
                     </Link>
 
                     <Link to='/Nosotros' href="#" className="sidebar-icon">
-                        <span className="icon-barrel">☠️</span>
+                        <img className="iconos" src="iconos/nosotros.svg" alt="" />
                     </Link>
 
                     <a href="#" className="sidebar-icon">
