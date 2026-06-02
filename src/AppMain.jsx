@@ -5,6 +5,7 @@ import { NicolasRMPages } from './pages/NicolasRMPages'
 import { AndresRMPage } from './pages/AndresRMPage'
 import { ReproductorNico } from './components/ReproductorNico'
 import { LotieNicolas } from './components/LotieNicolas'
+import { LootieMari } from './components/LootieMari'
 /* import { ReproductorMari } from './components/ReproductorMari' */
 
 
@@ -18,6 +19,7 @@ export const AppMain = () => {
       {/* <AndresRMPage /> */}
       {/* <ReproductorNico/> */}
       <LotieNicolas/>
+      <LootieMari/>
       {/* <ReproductorMari/> */}
       
 
