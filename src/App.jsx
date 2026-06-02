@@ -35,7 +35,6 @@ export const App = () => {
           <Route path="/LotieNico" element= {<LotieNicolas />} />
           <Route path="/LotieMari" element= {<LootieMari />} />
 
-          
         </Routes>
 
 

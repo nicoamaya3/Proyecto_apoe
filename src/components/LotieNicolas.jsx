@@ -1,5 +1,5 @@
 import Lottie from "lottie-react";
-import dataNico from "..assets/dataNico.json"
+import dataNico from "../assets/dataNico.json"
 
 
 export const LotieNicolas = () => {
