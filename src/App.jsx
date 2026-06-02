@@ -24,17 +24,18 @@ export const App = () => {
       <Header />
 
         <Routes>
-          <Route path="/" element= {<Home />} />
+          {/* <Route path="/" element= {<Home />} />
           <Route path="/Perfil" element= {<Inicioseccion />} />
           <Route path="/Nosotros" element= {<Nosotros />} />
           <Route path="/Delator" element= {<Cuentocora />} />
           <Route path="/GatoNegro" element= {<Cuentogato />} />
           <Route path="/LecturaC" element= {<Leyendo />} />
           <Route path="/LecturaG" element= {<Gleyendo />} />
-          <Route path="/Cuentos" element= {<Cuentos />} />
-          <Route path="/LotieNico" element= {<LotieNicolas />} />
-          <Route path="/LotieMari" element= {<LootieMari />} />
+          <Route path="/Cuentos" element= {<Cuentos />} /> */}
+          <Route path="/LootieNico" element= {<LotieNicolas />} />
+          <Route path="/LootieMari" element= {<LootieMari />} />
 
+          
         </Routes>
 
 
