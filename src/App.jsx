@@ -10,6 +10,8 @@ import { Lect } from "./components/Lect.jsx"
 import { Leyendo } from "./pages/Leyendo.jsx"
 import { Gleyendo } from "./pages/Gleyendo.jsx"
 import { Cuentos } from "./components/Cuentos.jsx"
+import { LotieNicolas } from "./components/LotieNicolas.jsx"
+import { LootieMari } from "./components/LootieMari.jsx"
 
 
 
@@ -30,6 +32,8 @@ export const App = () => {
           <Route path="/LecturaC" element= {<Leyendo />} />
           <Route path="/LecturaG" element= {<Gleyendo />} />
           <Route path="/Cuentos" element= {<Cuentos />} />
+          <Route path="/LotieNico" element= {<LotieNicolas />} />
+          <Route path="/LotieMari" element= {<LootieMari />} />
 
           
         </Routes>
