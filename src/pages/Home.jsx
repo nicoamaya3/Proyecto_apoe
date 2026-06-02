@@ -6,6 +6,8 @@ import { motion } from "motion/react"
 export const Home = () => {
   return (
     <>
+      <section className="bg-black">
+
       <div className="container-fluid foo" style={{
         backgroundColor: "var(--vinotinto)"
       }}>
@@ -77,6 +79,9 @@ export const Home = () => {
         </div>
       </section>
       </div>
+
+      </section>
+
 
     </>
   )
