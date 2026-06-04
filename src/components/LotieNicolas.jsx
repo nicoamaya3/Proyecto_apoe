@@ -19,7 +19,7 @@ export const LotieNicolas = () => {
   return (
     <>
     
-    <div onClick={reproducir} className="bg-black">
+    <div onClick={reproducir} className="bg-black d-flex justify-content-center">
         <Lottie
         lottieRef={lottieRef}
         animationData={dataNico}
