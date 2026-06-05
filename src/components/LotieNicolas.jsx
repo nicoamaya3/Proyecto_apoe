@@ -1,5 +1,5 @@
 import LottieModule from "lottie-react";
-import dataNico from "../assets/dataNico.json"
+import dataNico from "../assets/Osooo.json"
 import { useRef } from "react";
 
 const Lottie = LottieModule.default;
@@ -23,7 +23,7 @@ export const LotieNicolas = () => {
         <Lottie
         lottieRef={lottieRef}
         animationData={dataNico}
-        loop={true}
+        loop={false}
         autoplay={false}
         style={{ width: 500, height: 500 }}
         />
