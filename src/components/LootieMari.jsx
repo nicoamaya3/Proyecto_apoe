@@ -1,5 +1,5 @@
 import LottieModule from "lottie-react"
-import ejercicioAnimation from "../assets/ejercicio.json"
+import ejercicioAnimation from "../assets/oso.json"
 import { useRef } from "react";
 
 const Lottie = LottieModule.default;
@@ -18,7 +18,7 @@ export const LootieMari = () => {
       <Lottie 
       lottieRef={lottieRef}
       animationData={ejercicioAnimation} 
-      loop={true}
+      loop={false}
       autoplay={false}
       style={{ width: 500, height: 500 }}
       />
