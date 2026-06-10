@@ -1,5 +1,5 @@
 import LottieModule from "lottie-react";
-import dataNico from "../assets/Osooo.json"
+import dataNico from "../assets/pingui.json"
 import { useRef } from "react";
 
 const Lottie = LottieModule.default;
@@ -14,7 +14,7 @@ export const LotieNicolas = () => {
     lottieRef.current.stop()
     lottieRef.current.play()
   }
-  
+
 
   return (
     <>
