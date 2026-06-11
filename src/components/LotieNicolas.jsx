@@ -1,3 +1,4 @@
+
 import LottieModule from "lottie-react";
 import dataNico from "../assets/Osooo.json"
 import { useRef } from "react";
@@ -32,8 +33,9 @@ export const LotieNicolas = () => {
 
     <div className="screen">
       <img className="fondo" src="fondo.webp" alt="" />
+      <img className="nube1" src="nube1.webp" alt="" />
+      <img className="nube2" src="nube2.webp" alt="" />
     </div>
-    
     </>
   )
 }
