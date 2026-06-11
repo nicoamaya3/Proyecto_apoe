@@ -23,13 +23,6 @@ export const LootieMari = () => {
       autoplay={false}
       style={{ width: 500, height: 500 }}
       />
-      <Lottie 
-      lottieRef={lottieRef}
-      animationData={pinguinoAnimation} 
-      loop={false}
-      autoplay={false}
-      style={{ width: 500, height: 500 }}
-      />
     </div>
   )
 }
