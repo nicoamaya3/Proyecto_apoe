@@ -24,12 +24,12 @@ export const LotieNicolas = () => {
   }
   const lanzarHielo = () => {
     lottieRefP.current.stop()
-    lottieRefP.current.playSegments([0,11], true)
+    lottieRefP.current.playSegments([0,20], true)
   }
   
   const lanzarPez = () => {
     lottieRefP.current.stop()
-    lottieRefP.current.playSegments([11,16])
+    lottieRefP.current.playSegments([30,70], true)
   }
 
 
@@ -47,7 +47,7 @@ export const LotieNicolas = () => {
         <img className="hielo"
         onClick={lanzarHielo}
         src="hielo1.webp" alt="" />
-        <div onClick={reproducir} className="oso">
+        <div onClick={reproducir} className="osoN">
           <Lottie
             lottieRef={lottieRef}
             animationData={dataNico}
@@ -56,7 +56,7 @@ export const LotieNicolas = () => {
 
           />
         </div>
-        <div onClick={reproducirP} className="pinguino">
+        <div onClick={reproducirP} className="pinguinoN">
           <Lottie
             lottieRef={lottieRefP}
             animationData={dataPin}

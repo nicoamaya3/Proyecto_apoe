@@ -26,16 +26,16 @@
 
 }
 
-.oso {
+.osoN {
     position: absolute;
     left: 450px;
     width: 350px;
     top: -1px;
 }
 
-.pinguino{
+.pinguinoN{
     position: absolute;
-    top: 220px;
+    top: 200px;
     left: 140px ;
 }
 
