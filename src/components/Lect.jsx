@@ -8,7 +8,7 @@ export const Lect = ({ cuento, llin, nombreCap }) => {
             <div className="d-flex flex-column gap-3 bg-black">
                 <div className="d-flex justify-content-center bg-black">
                     <div className="bacLec w-75" style={{
-                        backgroundImage: cuento,
+                        
                     }}>
                         <div className="p-5">
                             <div className="p-3 ">
