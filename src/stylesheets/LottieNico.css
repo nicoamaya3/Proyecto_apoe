@@ -1,4 +1,4 @@
-.screen {
+/* .screen {
     width: 1000px;
     height: 408px;
     position: relative;
@@ -33,19 +33,19 @@
     top: -1px;
 }
 
-.pinguinoN{
+.pinguinoN {
     position: absolute;
     top: 200px;
-    left: 140px ;
+    left: 140px;
 }
 
-.hielo{
+.hielo {
     position: absolute;
     top: 340px;
-    left:100px ;
+    left: 100px;
 }
 
-.pezM{
+.pezM {
     position: absolute;
     left: 270px;
     top: 340px;
@@ -79,4 +79,4 @@
         transform: translateX(0);
     }
 
-}
+} */
