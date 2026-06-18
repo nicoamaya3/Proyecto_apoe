@@ -7,10 +7,11 @@ export const Header = () => {
         <>
             
             <div className="sidebar-container position-fixed top-0 start-0 d-flex align-items-center justify-content-center h-100 px-3">
-                <motion.div className="custom-sidebar d-flex flex-column align-items-center justify-content-between py-4"
-                initial={{ opacity: 0, x:-100 }}
+                <motion.div className="custom-sidebar ms-4 d-flex flex-column align-items-center justify-content-between py-4"
+                initial={{ opacity: 0, x:-90 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, ease: "easeInOut", duration: 1 }}>
+                transition={{ duration: 0.5, duration: 1.2, type: "spring", stiffness: 100, 
+                }}>
 
                     <Link to='/' className="sidebar-icon">
                         <img className="iconos" src="iconos/home.svg" alt="" />

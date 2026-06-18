@@ -8,30 +8,25 @@ export const Home = () => {
     <>
       <section className="bg-black">
 
-      <div className="container-fluid foo" style={{
-        backgroundColor: "var(--vinotinto)"
-      }}>
-        <section className="bg-transparent">
-          <motion.div className="bg-black barra rounded-bottom-5 "
+      <div className="container-fluid foo">
+        <section className="bg-transparent d-flex flex-row-reverse">
+          <motion.div className="bg-black me-5 barra rounded-bottom-5 "
             initial={{ opacity: 0, y:-100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeInOut", duration: 1 }}>
-            <p className="bg-black text-white fontCard fs-5 text-center pt-2">Apoe!</p>
+            <p className="bg-black p-home text-white fs-6  text-center pt-3">Apoe!</p>
           </motion.div>
         </section>
         <div className="row" >
-          <div className="col-8 p-5">
-            <div className="degradado d-flex flex-column align-items-center w-75  gap-5 p-5">
+          <div className="col p-5 d-flex align-items-center justify-content-center ">
+            <div className="degradado d-flex flex-row-reverse w-75 bg-black gap-5 p-5 mt-5 rounded-5">
+              <div className="d-flex align-items-center justify-content-center flex-column">
               <div className="">
                 <img className="p-2 apoel" src="iconos/logo.png" alt="" />
               </div>
-              <p className="w-50 fs-5 text-center text-white">Reconecta con el placer de la lectura a través de cuentos ilustrados e interactivos basados en las obras maestras de Edgar Allan Poe</p>
+              <p className="w-50 fs-5 text-center text-white p-2 ">Reconecta con el placer de la lectura a través de cuentos ilustrados e interactivos basados en las obras maestras de Edgar Allan Poe</p>
             </div>
-          </div>
-          <div className="col-4 p-5">
-            <div className="d-flex flex-column align-items-center  gap-5 p-5">
-              <h1>dakhdb</h1>
-            </div>
+              </div>
           </div>
         </div>
       </div>

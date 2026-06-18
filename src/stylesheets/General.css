@@ -14,8 +14,13 @@
 }
 
 @font-face {
+    font-family:'Candara_Italic' ;
+    src: url(public/tipografias/Candara_Italic.ttf);
+}
+
+@font-face {
     font-family:'Candara_Bold' ;
-    src: url(../public/tipografias/Candara.otf);
+    src: url(../public/tipografias/Candara_Bold.ttf);
 }
 
 @font-face {
@@ -23,8 +28,17 @@
     src: url(../public/tipografias/Butter_Haunted.otf);
 }
 
+@font-face {
+    font-family:'Ananda' ;
+    src: url(../public/tipografias/Ananda.ttf);
+}
+
 p{
-    font-family: 'Candara';
+    font-family: 'Candara_Italic';
+}
+
+.p-home{
+    font-family: 'Ananda';
 }
 
 .gatt{
@@ -54,6 +68,7 @@ p{
 
 .foo{
     height: 95vh;
+    background: linear-gradient(to bottom, var(--vinotinto), #000000 70%);
 }
 
 .dd{
@@ -117,10 +132,11 @@ p{
 }
 
 .iconos{
-    width: 40px;
+    width: 50px;
 }
 
 .barra{
+    width: 85%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -140,12 +156,13 @@ p{
     font-family: 'Candara' ;
 }
 
+
 /*Header*/
 
-/* Contenedor invisible para centrar el menú verticalmente en la pantalla */
+
 .sidebar-container {
-  z-index: 1050; /* Por encima del contenido de la página */
-  pointer-events: none; /* Permite hacer click detrás del contenedor si es necesario */
+  z-index: 1050; 
+  pointer-events: none; 
 }
 
 /* El menú con forma de cápsula */
