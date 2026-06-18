@@ -72,7 +72,7 @@ export const Home = () => {
 
         
       <section className="navbar rounded-top-5 position-relative bg-black ">
-        <div class="col text-center">
+        <div className="col text-center">
           <h2 className="fontCard footer fs-4 fw-bold">
             APOE! · SENA · Producción Multimedia · 2025
           </h2>

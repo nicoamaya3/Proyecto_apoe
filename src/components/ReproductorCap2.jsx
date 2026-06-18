@@ -1,9 +1,9 @@
 
 import { useRef } from "react"
-
+import LottieModule from "lottie-react";
 import dataFondo from "../assets/Fondo.json"
 
-const Lottie = LottieModule.defaul
+const Lottie = LottieModule.defaul ;
 
 export const ReproductorCap2 = () => {
 
