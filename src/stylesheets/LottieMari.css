@@ -59,8 +59,13 @@
 .oso {
     width: 400px;
     position: absolute;
+<<<<<<< HEAD
+    left: 40%; 
+    bottom: 10%;
+=======
     left: 40%;
     bottom: 10 %;
+>>>>>>> 00ca3593edc274871ee1e4e2bcc2008de23aaca1
     z-index: 1;
 }
 
