@@ -205,3 +205,10 @@ p{
 .controles{
     background-color: #30592e;
 }
+
+.pantalla{
+    width: 1000px;
+    height: 408px;
+    position: relative;
+    overflow: hidden;
+}

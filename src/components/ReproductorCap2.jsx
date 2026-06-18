@@ -1,24 +1,33 @@
 
 import { useRef } from "react"
 import LottieModule from "lottie-react";
-import dataFondo from "../assets/Fondo.json"
+import dataTakeshi from "../assets/dataTakeshi.json"
+import "../stylesheets/General.css"
 
-const Lottie = LottieModule.defaul ;
+const Lottie = LottieModule.default;
 
 export const ReproductorCap2 = () => {
 
-    const lottieRef = useRef()
+    const lottieRefTake = useRef()
 
     const reproducirF = () => {
-        lottieRef.current.stop()
-        lottieRef.current.play()
+        lottieRefTake.current.stop()
+        lottieRefTake.current.play()
     }
 
     return (
 
-
         <>
-            
+            <div className="pantalla">
+                <div onClick={reproducirF} className="takeshi">
+                <Lottie
+                    lottieRef={lottieRefTake}
+                    animationData={dataTakeshi}
+                    loop={false}
+                    autoplay={false}
+                />
+                </div>
+            </div>
         </>
     )
 }
