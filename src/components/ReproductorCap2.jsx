@@ -2,32 +2,47 @@
 import { useRef } from "react"
 import LottieModule from "lottie-react";
 import dataTakeshi from "../assets/dataTakeshi.json"
-import "../stylesheets/General.css"
+import dataPuerta from "../assets/dataPuerta.json"
+import "../stylesheets/AnimacionCorazon.css"
 
 const Lottie = LottieModule.default;
 
 export const ReproductorCap2 = () => {
 
     const lottieRefTake = useRef()
+    const lottieRefPuerta = useRef()
 
-    const reproducirF = () => {
+    const reproducirTa = () => {
         lottieRefTake.current.stop()
         lottieRefTake.current.play()
+    }
+    const reproducirP = () => {
+        lottieRefPuerta.current.stop()
+        lottieRefPuerta.current.play()
     }
 
     return (
 
         <>
             <div className="pantalla">
-                <div onClick={reproducirF} className="takeshi">
-                <Lottie
-                    lottieRef={lottieRefTake}
-                    animationData={dataTakeshi}
-                    loop={false}
-                    autoplay={false}
-                />
+                <img className="cuartoTakeshi" src="CuartoTakeshi.webp" alt="" />
+                 <div onClick={reproducirP} className="puerta">
+                    <Lottie
+                        lottieRef={lottieRefPuerta}
+                        animationData={dataPuerta}
+                        loop={false}
+                        autoplay={false}
+                    />
+                </div> 
+                <div onClick={reproducirTa} className="takeshi">
+                    <Lottie
+                        lottieRef={lottieRefTake}
+                        animationData={dataTakeshi}
+                        loop={false}
+                        autoplay={false}
+                    />
                 </div>
-            </div>
+            </div >
         </>
     )
 }

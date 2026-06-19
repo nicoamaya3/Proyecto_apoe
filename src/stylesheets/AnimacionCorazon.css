@@ -1,0 +1,26 @@
+.pantalla{
+    width: 1000px;
+    height: 408px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cuartoTakeshi{
+    position: absolute;
+    width: 830px;
+    left: 80px;
+}
+
+.takeshi{
+    position: absolute;
+    width: 300px;
+    left: 320px;
+    top: 140px;
+}
+
+.puerta{
+    position: absolute;
+    width: 800px;
+    left: 90px;
+    top: 10px;
+}
