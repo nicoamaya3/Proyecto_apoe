@@ -6,7 +6,7 @@ export const Problemas = () => {
 
         <>
 
-            <div className="fondo p-5">
+            <div className="bg-black z-3 p-5">
 
                 <div className="container">
                     <div className="row">

@@ -15,7 +15,7 @@
 
 @font-face {
     font-family:'Candara_Italic' ;
-    src: url(public/tipografias/Candara_Italic.ttf);
+    src: url(../public/tipografias/Candara_Italic.ttf);
 }
 
 @font-face {
@@ -33,12 +33,42 @@
     src: url(../public/tipografias/Ananda.ttf);
 }
 
+/* home */
+
 p{
     font-family: 'Candara_Italic';
 }
 
 .p-home{
     font-family: 'Ananda';
+}
+
+.poe{
+    position: absolute;
+    left: 60%;
+    top: 10%;
+    z-index: 1;
+    transform: scaleX(-1);
+}
+
+.btn:hover{
+    transform: scale(1.1); 
+}
+
+.info-home{
+    background-color: color-mix(in srgb, var(--rosa) 15%, transparent);
+    
+}
+
+.problema{
+
+}
+
+.deco{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    opacity: 20%;
 }
 
 .gatt{
@@ -135,13 +165,7 @@ p{
     width: 50px;
 }
 
-.barra{
-    width: 85%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 5vh;
-}
+
 
 .sidebar-svg {
   width: 32px; 
