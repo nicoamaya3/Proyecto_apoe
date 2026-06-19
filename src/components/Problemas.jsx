@@ -28,7 +28,7 @@ export const Problemas = () => {
                             <Problema icon="Rayo.png" tituloo="LA SOLUCIÓN" descripcion="Lectura visual, interactiva y ágil adaptada al ritmo de vida actual" />
                         </div>
                         <div className="col-12 col-md-12 mt-4 col-lg-4">
-                            <Problema icon="Ojo.png" tituloo="EXPERIENCIA INMERSIVA" descripcion="Ilustraciones, audio y elementos interactivos que enriquecen cada cuento" />
+                            <Problema icon="Ojo.png" tituloo="EXPERIENCIA INMERSIVA" descripcion="Ilustraciones, audio y elementos que enriquecen cada cuento" />
                         </div>
                     </div>
                 </div>
