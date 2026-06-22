@@ -6,10 +6,12 @@ import { motion } from "motion/react"
 export const Home = () => {
   return (
     <>
+    
       <section className="bg-black">
         <img className="deco" src="recursos/deco.png" alt="" />
 
         <div className="container-fluid foo">
+
           <section className="bg-transparent d-flex justify-content-center ">
             <motion.div className="w-25" 
               initial={{ opacity: 0, y: -100 }}
@@ -22,13 +24,13 @@ export const Home = () => {
           </section>
           <img className="poe" src="recursos/poe.png" alt="" />
           <div className="row">
-            <div className="col p-5 d-flex align-items-center justify-content-center ">
-              <div className="info-home d-flex flex-row-reverse w-75 gap-5 p-5 mt-5 rounded-5">
+            <div className="col p-5 d-flex align-items-center justify-content-center">
+              <div className="info-home d-flex flex-row-reverse w-75 p-5  rounded-5">
                 <div className="d-flex align-items-center justify-content-center flex-column">
                   <div className="">
-                    <img className="p-2 apoel" src="iconos/logo.png" alt="" />
+                    <img className="apoel pb-3" src="iconos/logo.png" alt="" />
                   </div>
-                  <p className="w-50 fs-5 text-center text-white p-2 ">Reconecta con el placer de la lectura a través de cuentos ilustrados e interactivos basados en las obras maestras de Edgar Allan Poe</p>
+                  <p className="w-50 fs-5 text-center text-white ">Reconecta con el placer de la lectura a través de cuentos ilustrados e interactivos basados en las obras maestras de Edgar Allan Poe</p>
                   <button className="btn btn-outline-danger">Leer cuentos</button>
                 </div>
               </div>
@@ -72,6 +74,7 @@ export const Home = () => {
             </div>
           </div>
 
+    
 
           <section className="navbar rounded-top-5 position-relative bg-black ">
             <div className="col text-center">
