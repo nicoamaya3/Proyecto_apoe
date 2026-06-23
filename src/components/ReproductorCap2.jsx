@@ -5,6 +5,8 @@ import dataTakeshi from "../assets/dataTakeshi.json"
 import dataPuerta from "../assets/dataPuerta.json"
 import "../stylesheets/AnimacionCorazon.css"
 
+/* ajksxnjksnx */
+
 const Lottie = LottieModule.default;
 
 export const ReproductorCap2 = () => {
