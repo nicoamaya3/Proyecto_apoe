@@ -4,8 +4,7 @@ import "../stylesheets/General.css"
 export const Cuentoc = ({ fon, cat, titu, sinop, img1, img2, img3,linkk , txbtn }) => {
     return (
         <>
-
-
+        
             <div className="gatt p-5" style={{
                 backgroundImage: fon
             }}>
