@@ -3,6 +3,8 @@ import { useRef } from "react"
 import LottieModule from "lottie-react";
 import dataTakeshi from "../assets/dataTakeshi.json"
 import dataPuerta from "../assets/dataPuerta.json"
+import dataDragon from "../assets/dataDragon.json"
+import dataSamurai from "../assets/dataSamurai.json"
 import "../stylesheets/AnimacionCorazon.css"
 
 /* ajksxnjksnx */
@@ -13,6 +15,8 @@ export const ReproductorCap2 = () => {
 
     const lottieRefTake = useRef()
     const lottieRefPuerta = useRef()
+    const lottieRefDragon = useRef()
+    const lottieRefSamurai = useRef()
 
     const reproducirTa = () => {
         lottieRefTake.current.stop()
@@ -21,6 +25,14 @@ export const ReproductorCap2 = () => {
     const reproducirP = () => {
         lottieRefPuerta.current.stop()
         lottieRefPuerta.current.play()
+    }
+    const reproducirDra = () => {
+        lottieRefDragon.current.stop()
+        lottieRefDragon.current.play()
+    }
+    const reproducirSa = () => {
+        lottieRefSamurai.current.stop()
+        lottieRefSamurai.current.play()
     }
 
     return (
@@ -32,6 +44,22 @@ export const ReproductorCap2 = () => {
                     <Lottie
                         lottieRef={lottieRefPuerta}
                         animationData={dataPuerta}
+                        loop={false}
+                        autoplay={false}
+                    />
+                </div> 
+                 <div onClick={reproducirDra} className="cuadroDragon">
+                    <Lottie
+                        lottieRef={lottieRefDragon}
+                        animationData={dataDragon}
+                        loop={false}
+                        autoplay={false}
+                    />
+                </div> 
+                 <div onClick={reproducirSa} className="cuadroSamurai">
+                    <Lottie
+                        lottieRef={lottieRefSamurai}
+                        animationData={dataSamurai}
                         loop={false}
                         autoplay={false}
                     />

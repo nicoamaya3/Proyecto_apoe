@@ -24,3 +24,22 @@
     left: 90px;
     top: 10px;
 }
+
+.cap2Corazon{
+    left: 180px;
+    top: 50px;
+}
+
+.cuadroDragon{
+    position: absolute;
+    width: 115px;
+    top: 95px;
+    left: 295px;
+}
+
+.cuadroSamurai{
+    position: absolute;
+    width: 115px;
+    top: 135px;
+    left: 535px;
+}
