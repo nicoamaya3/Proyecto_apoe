@@ -8,7 +8,7 @@ export const Leyendo = () => {
             <div className="container">
                 <div className="row">
                     <div className="col z-3 position-absolute w-75 top-50 start-50 translate-middle rounded-3">
-                        <Tutorial />
+                       {/*  <Tutorial /> */}
                     </div> 
                     <div className="col cap2Corazon position-absolute w-75">
                     <ReproductorCap2/>

@@ -5,6 +5,7 @@ import dataTakeshi from "../assets/dataTakeshi.json"
 import dataPuerta from "../assets/dataPuerta.json"
 import dataDragon from "../assets/dataDragon.json"
 import dataSamurai from "../assets/dataSamurai.json"
+import dataLamparas from "../assets/dataLamparas.json"
 import "../stylesheets/AnimacionCorazon.css"
 
 /* ajksxnjksnx */
@@ -17,6 +18,7 @@ export const ReproductorCap2 = () => {
     const lottieRefPuerta = useRef()
     const lottieRefDragon = useRef()
     const lottieRefSamurai = useRef()
+    const lottieRefLamparas = useRef()
 
     const reproducirTa = () => {
         lottieRefTake.current.stop()
@@ -33,6 +35,10 @@ export const ReproductorCap2 = () => {
     const reproducirSa = () => {
         lottieRefSamurai.current.stop()
         lottieRefSamurai.current.play()
+    }
+    const reproducirLa = () => {
+        lottieRefLamparas.current.stop()
+        lottieRefLamparas.current.play()
     }
 
     return (
@@ -68,6 +74,14 @@ export const ReproductorCap2 = () => {
                     <Lottie
                         lottieRef={lottieRefTake}
                         animationData={dataTakeshi}
+                        loop={false}
+                        autoplay={false}
+                    />
+                </div>
+                <div onClick={reproducirLa} className="lampara">
+                    <Lottie
+                        lottieRef={lottieRefLamparas}
+                        animationData={dataLamparas}
                         loop={false}
                         autoplay={false}
                     />

@@ -43,3 +43,9 @@
     top: 135px;
     left: 535px;
 }
+
+.lampara{
+    position: absolute;
+    width: 300px;
+    left: 310px;
+}
