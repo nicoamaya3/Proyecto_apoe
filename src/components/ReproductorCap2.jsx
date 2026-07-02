@@ -6,6 +6,7 @@ import dataPuerta from "../assets/dataPuerta.json"
 import dataDragon from "../assets/dataDragon.json"
 import dataSamurai from "../assets/dataSamurai.json"
 import dataLamparas from "../assets/dataLamparas.json"
+import dataMaceta from "../assets/dataMaceta.json"
 import "../stylesheets/AnimacionCorazon.css"
 
 /* ajksxnjksnx */
@@ -19,6 +20,7 @@ export const ReproductorCap2 = () => {
     const lottieRefDragon = useRef()
     const lottieRefSamurai = useRef()
     const lottieRefLamparas = useRef()
+    const lottieRefMaceta = useRef()
 
     const reproducirTa = () => {
         lottieRefTake.current.stop()
@@ -40,12 +42,17 @@ export const ReproductorCap2 = () => {
         lottieRefLamparas.current.stop()
         lottieRefLamparas.current.play()
     }
+    const reproducirMa = () => {
+        lottieRefMaceta.current.stop()
+        lottieRefMaceta.current.play()
+    }
 
     return (
 
         <>
             <div className="pantalla">
                 <img className="cuartoTakeshi" src="CuartoTakeshi.webp" alt="" />
+                
                  <div onClick={reproducirP} className="puerta">
                     <Lottie
                         lottieRef={lottieRefPuerta}
@@ -58,6 +65,14 @@ export const ReproductorCap2 = () => {
                     <Lottie
                         lottieRef={lottieRefDragon}
                         animationData={dataDragon}
+                        loop={false}
+                        autoplay={false}
+                    />
+                </div>
+                <div onClick={reproducirMa} className="maceta">
+                    <Lottie
+                        lottieRef={lottieRefMaceta}
+                        animationData={dataMaceta}
                         loop={false}
                         autoplay={false}
                     />
@@ -86,6 +101,7 @@ export const ReproductorCap2 = () => {
                         autoplay={false}
                     />
                 </div>
+                
             </div >
         </>
     )
