@@ -13,12 +13,12 @@
 
 .takeshi {
     position: absolute;
-    width: 300px;
-    left: 330px;
-    top: 120px;
+    width: 270px;
+    left: 360px;
+    top: 90px;
     color: white;
     border-radius: 10px;
-    filter: drop-shadow(0 0 10px #ffffff);
+    filter: drop-shadow(0 0 6px #c7f12e);
 }
 
 .puerta {
@@ -28,7 +28,7 @@
     top: -2px;
     color: white;
     border-radius: 10px;
-    filter: drop-shadow(0 0 10px #ffffff);
+    filter: drop-shadow(0 0 10px  #c7f12e);
 }
 
 .cap2Corazon {
@@ -43,7 +43,7 @@
     left: 285px;
     color: white;
     border-radius: 10px;
-    filter: drop-shadow(0 0 10px #ffffff);
+    filter: drop-shadow(0 0 10px  #c7f12e);
 }
 
 .cuadroSamurai {
@@ -53,7 +53,7 @@
     left: 520px;
     color: white;
     border-radius: 10px;
-    filter: drop-shadow(0 0 10px #ffffff);
+    filter: drop-shadow(0 0 10px #c7f12e);
 }
 
 .lampara {
@@ -63,7 +63,7 @@
     top: -38px;
     color: white;
     border-radius: 10px;
-    filter: drop-shadow(0 0 10px #ffffff);
+    filter: drop-shadow(0 0 10px  #c7f12e);
 }
 
 .maceta {
@@ -73,5 +73,5 @@
     left: 230px;
     color: white;
     border-radius: 10px;
-    filter: drop-shadow(0 0 10px #ffffff);
+    filter: drop-shadow(0 0 10px #c7f12e);
 }
