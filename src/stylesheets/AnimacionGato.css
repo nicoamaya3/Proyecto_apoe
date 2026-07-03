@@ -6,12 +6,62 @@
 .exterior{
     position: absolute;
     width: 800px;
-    top: 15px;
+    top: 50px;
     left: 160px;
+}
+.arbustosdel{
+    position: absolute;
+    width: 78%;
+    top: 292px;
+    left: 172px;
+    z-index: 3;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 6px #c7f12e);
+}
+.nubes{
+    position: absolute;
+    width: 78%;
+    top: 50px;
+    left: 17%;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 6px #c7f12e);
 }
 .luz{
     position: absolute;
-    width: 200px;
-    top: 350px;
+    width: 26%;
+    top: 71%;
+    left: 209px;
+    z-index: 2;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 6px #c7f12e);
+    cursor: pointer;
+}
+.casa{
+    position: absolute;
+    width: 14%;
+    top: 40%;
+    left: 171px;
+    z-index: 2;
+}
+.valla{
+    position: absolute;
+    width: 60%;
+    top: 63%;
+    left: 28%;
+    z-index: 2;
+}
+.suelo{
+    position: absolute;
+    width: 78%;
+    top: 338px;
+    left: 17%;
+    z-index: 1;
+}
+.arbustostra{
+    position: absolute;
+    width: 75%;
+    top: 50%;
     left: 200px;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 6px #c7f12e);
 }
