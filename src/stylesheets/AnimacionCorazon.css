@@ -1,40 +1,52 @@
+.cap2Corazon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .pantalla {
     width: 910px;
-    height: 508px;
+    height: 500px;
     position: relative;
+    overflow: hidden;
 }
 
 .cuartoTakeshi {
     position: absolute;
     width: 830px;
-    left: 80px;
-    top: -40px;
 }
 
 .takeshi {
     position: absolute;
-    width: 300px;
-    left: 330px;
+    width: 270px;
+    left: 280px;
     top: 120px;
-    color: white;
     border-radius: 10px;
-    filter: drop-shadow(0 0 10px #ffffff);
+    filter: drop-shadow(0 0 6px #c7f12e);
+    animation: desplazarYDesaparecer 5s ease-in-out 7s forwards;
 }
+
+@keyframes desplazarYDesaparecer {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-490px);
+      }
+    }
 
 .puerta {
     position: absolute;
     width: 118px;
-    left: 92px;
-    top: -2px;
+    left: 12px;
+    top: 40px ;
     color: white;
     border-radius: 10px;
-    filter: drop-shadow(0 0 10px #ffffff);
+    filter: drop-shadow(0 0 10px  #c7f12e);
 }
 
-.cap2Corazon {
-    left: 180px;
-    top: 50px;
-}
+
 
 .cuadroDragon {
     position: absolute;
@@ -43,7 +55,7 @@
     left: 285px;
     color: white;
     border-radius: 10px;
-    filter: drop-shadow(0 0 10px #ffffff);
+    filter: drop-shadow(0 0 10px  #c7f12e);
 }
 
 .cuadroSamurai {
@@ -53,7 +65,7 @@
     left: 520px;
     color: white;
     border-radius: 10px;
-    filter: drop-shadow(0 0 10px #ffffff);
+    filter: drop-shadow(0 0 10px #c7f12e);
 }
 
 .lampara {
@@ -63,7 +75,7 @@
     top: -38px;
     color: white;
     border-radius: 10px;
-    filter: drop-shadow(0 0 10px #ffffff);
+    filter: drop-shadow(0 0 10px  #c7f12e);
 }
 
 .maceta {
@@ -73,5 +85,5 @@
     left: 230px;
     color: white;
     border-radius: 10px;
-    filter: drop-shadow(0 0 10px #ffffff);
+    filter: drop-shadow(0 0 10px #c7f12e);
 }
