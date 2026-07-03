@@ -1,6 +1,7 @@
 import { Lect } from "../components/Lect"
 import { ReproductorCap2 } from "../components/ReproductorCap2.jsx"
 import { Tutorial } from "../components/Tutorial.jsx"
+import "../stylesheets/AnimacionCorazon.css";
 
 export const Leyendo = () => {
     return (
@@ -8,7 +9,7 @@ export const Leyendo = () => {
             <div className="container">
                 <div className="row">
                     <div className="col z-3 position-absolute w-75 top-50 start-50 translate-middle rounded-3">
-                        <Tutorial />
+                        {/* <Tutorial /> */}
                     </div> 
                     <div className="col cap2Corazon position-absolute w-75">
                     <ReproductorCap2/>
