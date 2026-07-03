@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import LottieModule from "lottie-react";
 import dataTakeshi from "../assets/dataTakeshi.json";
 import dataPuerta from "../assets/dataPuerta.json";
@@ -97,6 +97,7 @@ export const ReproductorCap2 = () => {
         <div onClick={reproducirTa} className="takeshi">
           <Lottie
             onClick={iniciarAnimacion}
+            className={`takeshi ${animar ? 'activar-animacion' : ''}`}
             lottieRef={lottieRefTake}
             animationData={dataTakeshi}
             loop={false}

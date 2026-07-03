@@ -19,11 +19,13 @@
 .takeshi {
     position: absolute;
     width: 270px;
-    left: 280px;
-    top: 120px;
     border-radius: 10px;
     filter: drop-shadow(0 0 6px #c7f12e);
-    animation: desplazarYDesaparecer 5s ease-in-out 7s forwards;
+}
+
+.activar-animacion {
+  animation: desplazarYDesaparecer 5s ease-in-out 7s forwards;
+  pointer-events: none;
 }
 
 @keyframes desplazarYDesaparecer {
