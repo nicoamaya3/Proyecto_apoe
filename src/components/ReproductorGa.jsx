@@ -15,6 +15,8 @@ export const ReproductorGa = () => {
   const lottieRefarbustosdel = useRef()
   const lottieRefnubes = useRef()
   const lottieRefarbustostra = useRef()
+  const refAudiogato = useRef(new Audio(audio));
+
 
 
   const reproducirarbustosdel = () => {
@@ -29,12 +31,18 @@ export const ReproductorGa = () => {
         lottieRefarbustostra.current.stop()
         lottieRefarbustostra.current.play()
   }
+  const reproducirAudiogato = () => {
+    refAudiogato.current.play();
+  };
+  const pausarAudiogato = () => {
+    refAudiogato.current.pause();
+  };
 
   return (
     <>
-    <div className="escenario py-5">
-      <img className='exterior' src="escenario.webp" alt="" />
-    </div>
+    <div className="escenario py-5 ">
+      <img onClick={reproducirAudiogato} className='exterior' src="escenario.webp" alt="" />
+    
       <div>
         <Lottie onClick={reproducirarbustosdel} className="arbustosdel"
           lottieRef={lottieRefarbustosdel}
@@ -51,15 +59,15 @@ export const ReproductorGa = () => {
           autoplay={false}
         />
       </div>
-      <div>
+      
         <img className="casa" src="src/assets/casa.png" alt="" />
-      </div>
-      <div>
+      
+      
         <img onClick={reproducirarbustostra} className="arbustostra" className="valla" src="src/assets/valla.png" alt="" />
-      </div>
-      <div>
+      
+     
         <img className="suelo" src="src/assets/suelo.png" alt="" />
-      </div>
+    
 
       <motion.div 
                 initial={{ opacity: 0, }}
@@ -67,6 +75,7 @@ export const ReproductorGa = () => {
                 exit={{ opacity: 0, scale: 0.8 }}>
         <img className="luz" src="src/assets/luz.png" alt="" />
       </motion.div>
+      
     <div>
         <Lottie onClick={reproducirarbustostra} className="arbustostra"
           lottieRef={lottieRefarbustostra}
@@ -75,7 +84,8 @@ export const ReproductorGa = () => {
           autoplay={false}
         />
     </div>
-    
+</div>
+    <button onClick={pausarAudiogato}>Pausar</button>
     
     </>
   )

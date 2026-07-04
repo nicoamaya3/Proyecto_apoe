@@ -9,7 +9,6 @@ import dataMaceta from "../assets/dataMaceta.json";
 import "../stylesheets/AnimacionCorazon.css";
 import soundfile from "../../public/audios/Capitulo2Corazon.mp3";
 
-/* ajksxnjksnx */
 
 const Lottie = LottieModule.default;
 

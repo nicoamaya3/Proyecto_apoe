@@ -11,7 +11,7 @@ export const Gleyendo = () => {
                     {/* <div className="col z-3 position-absolute w-75 top-50 start-50 translate-middle rounded-3">
                         <Tutorial />
                     </div> */}
-                    <div className="col position-absolute w-75">
+                    <div className="col position-absolute w-75 gatonegro">
                         <ReproductorGa/>
                     </div>
                 </div>
