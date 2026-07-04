@@ -12,7 +12,7 @@ export const Lect = ({ cuento, llin, nombreCap }) => {
                     }}>
                         <div className="p-5">
                             <div className="p-3 ">
-                                <Link className className="p-5 text-white text-black  fs-4 link-offset-2 link-underline link-underline-opacity-0" to={llin}>X</Link>
+                                
                             </div>
                         </div>
                     </div>

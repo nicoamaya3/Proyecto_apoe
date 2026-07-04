@@ -1,7 +1,9 @@
 .cap2Corazon{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: end;
+    justify-content: center;
+    height: 100vh;
 }
 
 .pantalla {
@@ -19,12 +21,14 @@
 .takeshi {
     position: absolute;
     width: 270px;
+    left: 140px;
+    top: 65px;
     border-radius: 10px;
     filter: drop-shadow(0 0 6px #c7f12e);
 }
 
 .activar-animacion {
-  animation: desplazarYDesaparecer 5s ease-in-out 7s forwards;
+  animation: desplazarYDesaparecer 8s ease-in-out 6s forwards;
   pointer-events: none;
 }
 
@@ -53,8 +57,8 @@
 .cuadroDragon {
     position: absolute;
     width: 155px;
-    top: 22px;
-    left: 285px;
+    top: 65px;
+    left: 200px;
     color: white;
     border-radius: 10px;
     filter: drop-shadow(0 0 10px  #c7f12e);
@@ -63,8 +67,8 @@
 .cuadroSamurai {
     position: absolute;
     width: 145px;
-    top: 70px;
-    left: 520px;
+    top: 105px;
+    left: 438px;
     color: white;
     border-radius: 10px;
     filter: drop-shadow(0 0 10px #c7f12e);
@@ -73,8 +77,7 @@
 .lampara {
     position: absolute;
     width: 300px;
-    left: 310px;
-    top: -38px;
+    left: 255px;
     color: white;
     border-radius: 10px;
     filter: drop-shadow(0 0 10px  #c7f12e);
@@ -82,9 +85,9 @@
 
 .maceta {
     position: absolute;
-    width: 300px;
-    top: 145px;
-    left: 230px;
+    width: 270px;
+    top: 195px;
+    left: 160px;
     color: white;
     border-radius: 10px;
     filter: drop-shadow(0 0 10px #c7f12e);
