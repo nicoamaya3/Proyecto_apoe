@@ -18,7 +18,6 @@
     position: absolute;
     width: 100%;
     top: 305px;
-    z-index: 3;
     border-radius: 10px;
     filter: drop-shadow(0 0 6px #c7f12e);
 }
@@ -35,31 +34,26 @@
     height: 30%;
     top: 71%;
     left: 40px;
-    z-index: 2;
     border-radius: 10px;
     filter: drop-shadow(0 0 6px #c7f12e);
     cursor: pointer;
-    z-index: 4;
 }
 
 .casa{
     position: absolute;
     width: 18%;
     top: 40%;
-    z-index: 2;
 }
 .valla{
     position: absolute;
     width: 75%;
     top: 63%;
     left: 15%;
-    z-index: 2;
 }
 .suelo{
     position: absolute;
     width: 100%;
     top: 351px;
-    z-index: 1;
 }
 .arbustostra{
     position: absolute;

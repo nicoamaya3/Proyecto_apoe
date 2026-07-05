@@ -49,14 +49,6 @@ export const ReproductorGa = () => {
       <img onClick={reproducirAudiogato} className='exterior' src="escenario.webp" alt="" />
     
       <div>
-        <Lottie onClick={reproducirarbustosdel} className="arbustosdel"
-          lottieRef={lottieRefarbustosdel}
-          animationData={arbustosdel}
-          loop={false}
-          autoplay={false}
-        />
-      </div>
-      <div>
         <Lottie onClick={reproducirnubes} className="nubes"
           lottieRef={lottieRefnubes}
           animationData={nubes}
@@ -65,21 +57,6 @@ export const ReproductorGa = () => {
         />
       </div>
       
-        <img className="casa" src={casa} alt="" />
-      
-      
-        <img onClick={reproducirarbustostra} className="arbustostra" className="valla" src={valla} alt="" />
-      
-     
-        <img className="suelo" src={suelo} alt="" />
-    
-
-      <motion.div 
-                initial={{ opacity: 0, }}
-                animate={{ opacity: 1,}}
-                exit={{ opacity: 0, scale: 0.8 }}>
-        <img className="luz" src={luz} alt="" />
-      </motion.div>
       
     <div>
         <Lottie onClick={reproducirarbustostra} className="arbustostra"
@@ -89,6 +66,27 @@ export const ReproductorGa = () => {
           autoplay={false}
         />
     </div>
+
+    <img className="suelo" src={suelo} alt="" />
+    <img className="casa" src={casa} alt="" />
+
+    <img onClick={reproducirarbustostra} className="arbustostra" className="valla" src={valla} alt="" />
+
+      <div>
+        <Lottie onClick={reproducirarbustosdel} className="arbustosdel"
+          lottieRef={lottieRefarbustosdel}
+          animationData={arbustosdel}
+          loop={false}
+          autoplay={false}
+        />
+      </div>
+
+      <motion.div 
+                initial={{ opacity: 0, }}
+                animate={{ opacity: 1,}}
+                exit={{ opacity: 0, scale: 0.8 }}>
+        <img className="luz" src={luz} alt="" />
+      </motion.div>
 </div>
     <button onClick={pausarAudiogato}>Pausar</button>
     
