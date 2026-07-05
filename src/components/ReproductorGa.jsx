@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import { motion } from "motion/react"
 import LottieModule from "lottie-react";
 import arbustosdel from "../assets/arbustosdel.json"
@@ -21,6 +21,7 @@ export const ReproductorGa = () => {
   const lottieRefnubes = useRef()
   const lottieRefarbustostra = useRef()
   const refAudiogato = useRef(new Audio(audio));
+  const [animacionActiva, setAnimacionActiva] = useState(false);
 
 
 
@@ -42,6 +43,8 @@ export const ReproductorGa = () => {
   const pausarAudiogato = () => {
     refAudiogato.current.pause();
   };
+  
+
 
   return (
     <>
@@ -70,7 +73,7 @@ export const ReproductorGa = () => {
     <img className="suelo" src={suelo} alt="" />
     <img className="casa" src={casa} alt="" />
 
-    <img onClick={reproducirarbustostra} className="arbustostra" className="valla" src={valla} alt="" />
+    <img onClick={reproducirarbustostra} className="valla" className="valla" src={valla} alt="" />
 
       <div>
         <Lottie onClick={reproducirarbustosdel} className="arbustosdel"
@@ -81,12 +84,14 @@ export const ReproductorGa = () => {
         />
       </div>
 
-      <motion.div 
-                initial={{ opacity: 0, }}
-                animate={{ opacity: 1,}}
-                exit={{ opacity: 0, scale: 0.8 }}>
-        <img className="luz" src={luz} alt="" />
-      </motion.div>
+      <div>
+        <img 
+            src={luz} 
+            alt="Haz de luz"
+            className={`luz ${animacionActiva ? 'animada' : ''}`}
+            onClick={() => setAnimacionActiva(true)} 
+          />
+      </div>
 </div>
     <button onClick={pausarAudiogato}>Pausar</button>
     

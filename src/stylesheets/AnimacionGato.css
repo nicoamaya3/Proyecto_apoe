@@ -38,6 +38,18 @@
     filter: drop-shadow(0 0 6px #c7f12e);
     cursor: pointer;
 }
+.luz.animada {
+  /* Vincula tu @keyframes: dura 3 segundos, es infinito y suaviza la entrada/salida */
+  animation: latidoLuz 3s infinite ease-in-out;
+}
+@keyframes latidoLuz {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
 
 .casa{
     position: absolute;
