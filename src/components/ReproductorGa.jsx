@@ -3,9 +3,14 @@ import { motion } from "motion/react"
 import LottieModule from "lottie-react";
 import arbustosdel from "../assets/arbustosdel.json"
 import nubes from "../assets/nubes.json"
-import arbustostra from "../assets/arbustostra.json"
+import arbustostra from "../assets/arbustostra.json" 
 import "../stylesheets/AnimacionGato.css"
 import audio from '../assets/audio/ambiente.mp3'
+import suelo from '../assets/suelo.png'
+import valla from '../assets/valla.png'
+import casa from '../assets/casa.png'
+import luz from '../assets/luz.png'
+
 
 const Lottie = LottieModule.default;
 
@@ -60,20 +65,20 @@ export const ReproductorGa = () => {
         />
       </div>
       
-        <img className="casa" src="src/assets/casa.png" alt="" />
+        <img className="casa" src={casa} alt="" />
       
       
-        <img onClick={reproducirarbustostra} className="arbustostra" className="valla" src="src/assets/valla.png" alt="" />
+        <img onClick={reproducirarbustostra} className="arbustostra" className="valla" src={valla} alt="" />
       
      
-        <img className="suelo" src="src/assets/suelo.png" alt="" />
+        <img className="suelo" src={suelo} alt="" />
     
 
       <motion.div 
                 initial={{ opacity: 0, }}
                 animate={{ opacity: 1,}}
                 exit={{ opacity: 0, scale: 0.8 }}>
-        <img className="luz" src="src/assets/luz.png" alt="" />
+        <img className="luz" src={luz} alt="" />
       </motion.div>
       
     <div>
