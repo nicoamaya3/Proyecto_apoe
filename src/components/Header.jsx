@@ -6,7 +6,7 @@ export const Header = () => {
     return (
         <>
             
-            <div className="sidebar-container position-fixed top-0 start-0 d-flex align-items-center justify-content-center h-100 px-3">
+            <div className="menu sidebar-container position-fixed top-0 start-0 d-flex align-items-center justify-content-center h-100 px-3">
                 <motion.div className="custom-sidebar ms-4 d-flex flex-column align-items-center justify-content-between py-4"
                 initial={{ opacity: 0, x:-90 }}
                 animate={{ opacity: 1, x: 0 }}

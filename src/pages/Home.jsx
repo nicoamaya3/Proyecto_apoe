@@ -2,11 +2,35 @@ import { Cuentos } from "../components/Cuentos"
 import { Problemas } from "../components/Problemas"
 import "../stylesheets/General.css"
 import { motion } from "motion/react"
+import React from 'react';
+import { gsap } from "gsap";
+
+
+function SkullCursorLink() {
+  return (
+    <a 
+      href="https://www.cursors-4u.com/cursor/2009/10/14/thick-skeleton-skull.html" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      title="Thick Skeleton Skull"
+    >
+      <img 
+        src="https://cur.cursors-4u.net/cursor.png" 
+        alt="Thick Skeleton Skull" 
+        style={{ position: 'absolute', top: '0px', right: '0px' }} 
+      />
+    </a>
+  );
+}
+
+export default SkullCursorLink;
 
 export const Home = () => {
   return (
     <>
-    
+
+      
+
       <section className="bg-black">
         <img className="deco" src="recursos/deco.png" alt="" />
 
@@ -17,7 +41,7 @@ export const Home = () => {
               initial={{ opacity: 0, y: -100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeInOut", duration: 1 }}>
-                <div className="bg-black d-flex align-items-center justify-content-center me-5 rounded-bottom-5 w-100 h-50 pb-2 pt-2 ">
+                <div className="banda bg-black d-flex align-items-center justify-content-center me-5 rounded-bottom-5 w-100 h-50 pb-2 pt-2 ">
               <p className=" p-home text-white fs-6  text-center pt-3">Apoe!</p>
                 </div>
             </motion.div>
@@ -25,8 +49,8 @@ export const Home = () => {
           <img className="poe" src="recursos/poe.png" alt="" />
           <div className="row">
             <div className="col p-5 d-flex align-items-center justify-content-center">
-              <div className="info-home d-flex flex-row-reverse w-75 p-5  rounded-5">
-                <div className="d-flex align-items-center justify-content-center flex-column">
+              <div className="info-home d-flex flex-row-reverse w-75 p-5 justify-content-end rounded-5">
+                <div className="info d-flex align-items-center justify-content-center flex-column">
                   <div className="">
                     <img className="apoel pb-3" src="iconos/logo.png" alt="" />
                   </div>
@@ -92,4 +116,3 @@ export const Home = () => {
   )
 }
 
-/*  */

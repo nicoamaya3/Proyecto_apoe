@@ -8,6 +8,12 @@
     --negro: #000000;
 }
 
+* {
+  cursor: url('https://cur.cursors-4u.net/holidays/hol-4/hol335.cur'), auto !important;
+}
+
+
+
 @font-face {
     font-family:'Candara' ;
     src: url(../public/tipografias/Candara.otf);
@@ -44,20 +50,50 @@ p{
 }
 
 .poe{
-    width: 400px;
+    width: 100vh;
     position: absolute;
-    left: 60%;
+    right: 60px;
     top: 10%;
+    transform: scaleX(-1);
     z-index: 3;
+}
+
+.poe:hover {
+  transform: scale(1.1) scaleX(-1);
 }
 
 .btn:hover{
     transform: scale(1.1); 
 }
 
+.banda{
+    backdrop-filter: blur(16px);
+   -webkit-backdrop-filter: blur(16px);
+   border: 1px solid rgba(255, 255, 255, 0.082); 
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Sombra para dar profundidad */
+}
+
+.menu{
+    backdrop-filter: blur(16px);            /* Difumina el fondo */
+  -webkit-backdrop-filter: blur(16px);    /* Soporte para Safari */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Borde sutil brillante */                  
+  box-shadow: 0 13px 32px 0 rgba(0, 0, 0, 0.37); /* Sombra para dar profundidad */
+}
+
 .info-home{
     background-color: color-mix(in srgb, var(--rosa) 20%, transparent);
     z-index: 1;
+    background: rgba(255, 255, 255, 0.08); /* Fondo semitransparente claro u oscuro */
+  backdrop-filter: blur(16px);            /* Difumina el fondo */
+  -webkit-backdrop-filter: blur(16px);    /* Soporte para Safari */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Borde sutil brillante */
+  border-radius: 24px;                   
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Sombra para dar profundidad */
+}
+
+.info{
+    position: relative;
+    right: 20%;
 }
 
 .deco{
@@ -86,6 +122,9 @@ p{
 
 .apoel{
     width: 250px;
+}
+.apoel:hover {
+  transform: scale(1.15); 
 }
 
 .bg{
