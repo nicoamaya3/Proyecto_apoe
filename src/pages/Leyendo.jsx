@@ -1,5 +1,6 @@
 import { Cap1corazon } from "../components/Cap1corazon.jsx";
 import { Lect } from "../components/Lect"
+import { PortadaCorazon } from "../components/PortadaCorazon.jsx";
 import { ReproductorCap2 } from "../components/ReproductorCap2.jsx"
 import { Tutorial } from "../components/Tutorial.jsx"
 import "../stylesheets/AnimacionCorazon.css";
@@ -19,10 +20,10 @@ export const Leyendo = () => {
                                     <Cap1corazon />
                                 </div>
                                 <div className="carousel-item">
-                                    <ReproductorCap2 />
+                                    <PortadaCorazon/>
                                 </div>
                                 <div className="carousel-item">
-
+                                    <ReproductorCap2 />
                                 </div>
                             </div>
                             <div className="botonesSa">
