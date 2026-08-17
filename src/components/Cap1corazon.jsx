@@ -25,10 +25,10 @@ export const Cap1corazon = () => {
       </video>
       <div className='d-flex justify-content-center'>
         <div>
-        <button onClick={handlePlay}>Play</button>
+          <button onClick={handlePlay}>Play</button>
         </div>
         <div>
-        <button onClick={handlePause}>Detener</button>
+          <button onClick={handlePause}>Detener</button>
         </div>
       </div>
     </>
