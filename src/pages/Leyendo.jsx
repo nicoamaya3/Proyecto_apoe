@@ -5,6 +5,7 @@ import { Lect } from "../components/Lect"
 import { PortadaCorazon } from "../components/PortadaCorazon.jsx";
 import { Portadacorazon1 } from "../components/Portadacorazon1.jsx";
 import { Portadacorazon2 } from "../components/Portadacorazon2.jsx";
+import { Portadacorazon3 } from "../components/Portadacorazon3.jsx";
 import { ReproductorCap2 } from "../components/ReproductorCap2.jsx"
 import { Tutorial } from "../components/Tutorial.jsx"
 import "../stylesheets/AnimacionCorazon.css";
@@ -47,6 +48,14 @@ export const Leyendo = () => {
 
                                 <div className="carousel-item">
                                     <Cap3corazon/>
+                                </div>
+
+                                <div className="carousel-item">
+                                    <Portadacorazon3/>
+                                </div>
+
+                                <div className="carousel-item">
+                                    
                                 </div>
 
                             </div>
