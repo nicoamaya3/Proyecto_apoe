@@ -1,6 +1,7 @@
 import { Cap1corazon } from "../components/Cap1corazon.jsx";
 import { Cap2corazon } from "../components/Cap2corazon.jsx";
 import { Cap3corazon } from "../components/Cap3corazon.jsx";
+import { Cap4corazon } from "../components/Cap4corazon.jsx";
 import { Lect } from "../components/Lect"
 import { PortadaCorazon } from "../components/PortadaCorazon.jsx";
 import { Portadacorazon1 } from "../components/Portadacorazon1.jsx";
@@ -55,7 +56,7 @@ export const Leyendo = () => {
                                 </div>
 
                                 <div className="carousel-item">
-                                    
+                                    <Cap4corazon/>
                                 </div>
 
                             </div>
