@@ -86,23 +86,48 @@ export const Home = () => {
           </div>
 
           <section className='m-5 pt-5 section2 d-flex justify-content-center align-items-center z-3 flex-column h-100'>
-          <div className='comentario1 w-50 p-3 '>Escucha con atención, cuervo lector... Tu travesía por los rincones más oscuros está por comenzar</div>
 
-          <div className='tuto2 bg-white'>
-            <h2>¿Cómo funciona la initeractividad de los cuentos?</h2>
-            <div></div>
-            <div>
-            <p></p>
-            <button ref={botonRef} className="btn btn-outline-danger">Leer cuentos</button>
+            <div className='circ1'></div>
+
+            <div className='comentario1 p-3 text-white fontCa fs-6 m-4 rounded-5 d-flex'>Escucha con atención, cuervo lector... Tu travesía por los rincones más oscuros está por comenzar</div>
+
+            <div className='tuto2 text-white d-flex flex-column p-4 rounded-5 align-items-center '>
+              <h2 className='w-75 text-center t'>¿Cómo funciona la initeractividad de los cuentos?</h2>
+              <div className='d-flex align-items-center mt-4 gap-5'>
+              <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="..." alt="First slide" />
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="..." alt="Second slide" />
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="..." alt="Third slide" />
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+              <div>
+                <p className='fs-5'>Cada relato cuenta con su propia página inmersiva para una lectura profunda, encontrarás objetos alumbrados en los capítulos que revelan sorpresas interactivas al hacerles clic, y podrás compartir tus teorías e impresiones comentando en el foro de la comunidad sobre qué te pareció la obra.</p>
+                <button ref={botonRef}className="btn btn-outline-danger">Leer cuentos</button>
+              </div>
+              </div>
             </div>
-          </div>
 
-          <div className='circ1'>
-            <div className='circ2'>
+            <div className='circ1'>
+              <div className='circ2'>
 
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
         </div>
 
         {/* <div className="d-flex  justify-content-center">
@@ -111,9 +136,7 @@ export const Home = () => {
           </div>
         </div> */}
 
-        
 
-        
         <Cuentos />
 
         <div className="bg-black">
