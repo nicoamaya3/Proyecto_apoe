@@ -1,4 +1,4 @@
-:root{
+:root {
     --vinotinto: #40131f;
     --rojo: #be3636;
     --rosa: #edddd5;
@@ -9,47 +9,47 @@
 }
 
 * {
-  cursor: url('https://cur.cursors-4u.net/holidays/hol-4/hol335.cur'), auto !important;
+    cursor: url('https://cur.cursors-4u.net/holidays/hol-4/hol335.cur'), auto !important;
 }
 
 
 
 @font-face {
-    font-family:'Candara' ;
+    font-family: 'Candara';
     src: url(../public/tipografias/Candara.otf);
 }
 
 @font-face {
-    font-family:'Candara_Italic' ;
+    font-family: 'Candara_Italic';
     src: url(../public/tipografias/Candara_Italic.ttf);
 }
 
 @font-face {
-    font-family:'Candara_Bold' ;
+    font-family: 'Candara_Bold';
     src: url(../public/tipografias/Candara_Bold.ttf);
 }
 
 @font-face {
-    font-family:'Butter_Haunted' ;
+    font-family: 'Butter_Haunted';
     src: url(../public/tipografias/Butter_Haunted.otf);
 }
 
 @font-face {
-    font-family:'Ananda' ;
+    font-family: 'Ananda';
     src: url(../public/tipografias/Ananda.ttf);
 }
 
 /* home */
 
-p{
+p {
     font-family: 'Candara_Italic';
 }
 
-.p-home{
+.p-home {
     font-family: 'Ananda';
 }
 
-.poe{
+.poe {
     width: 100vh;
     position: absolute;
     right: 60px;
@@ -59,134 +59,147 @@ p{
 }
 
 .poe:hover {
-  transform: scale(1.1) scaleX(-1);
+    transform: scale(1.1) scaleX(-1);
 }
 
-.btn:hover{
-    transform: scale(1.1); 
+.btn:hover {
+    transform: scale(1.1);
 }
 
-.banda{
+.banda {
     backdrop-filter: blur(16px);
-   -webkit-backdrop-filter: blur(16px);
-   border: 1px solid rgba(255, 255, 255, 0.082); 
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Sombra para dar profundidad */
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.082);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    /* Sombra para dar profundidad */
 }
 
-.menu{
-    backdrop-filter: blur(16px);            /* Difumina el fondo */
-  -webkit-backdrop-filter: blur(16px);    /* Soporte para Safari */
-  border: 1px solid rgba(255, 255, 255, 0.15); /* Borde sutil brillante */                  
-  box-shadow: 0 13px 32px 0 rgba(0, 0, 0, 0.37); /* Sombra para dar profundidad */
+.menu {
+    backdrop-filter: blur(16px);
+    /* Difumina el fondo */
+    -webkit-backdrop-filter: blur(16px);
+    /* Soporte para Safari */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    /* Borde sutil brillante */
+    box-shadow: 0 13px 32px 0 rgba(0, 0, 0, 0.37);
+    /* Sombra para dar profundidad */
 }
 
-.info-home{
+.info-home {
     background-color: color-mix(in srgb, var(--rosa) 20%, transparent);
     z-index: 1;
-    background: rgba(255, 255, 255, 0.08); /* Fondo semitransparente claro u oscuro */
-  backdrop-filter: blur(16px);            /* Difumina el fondo */
-  -webkit-backdrop-filter: blur(16px);    /* Soporte para Safari */
-  border: 1px solid rgba(255, 255, 255, 0.15); /* Borde sutil brillante */
-  border-radius: 24px;                   
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Sombra para dar profundidad */
+    background: rgba(255, 255, 255, 0.08);
+    /* Fondo semitransparente claro u oscuro */
+    backdrop-filter: blur(16px);
+    /* Difumina el fondo */
+    -webkit-backdrop-filter: blur(16px);
+    /* Soporte para Safari */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    /* Borde sutil brillante */
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    /* Sombra para dar profundidad */
 }
 
-.info{
+.info {
     position: relative;
     right: 20%;
 }
 
-.deco{
+.deco {
     width: 100%;
     height: auto;
     position: absolute;
     z-index: 1;
 }
 
-.gatt{
+.gatt {
     height: 60vh;
 }
 
-.fondoo{
+.fondoo {
     background-color: black;
 }
 
-.bacLec{
+.bacLec {
     width: 100%;
     height: 90vh;
 }
 
-.lo{
+.lo {
     width: 40px;
 }
 
-.apoel{
+.apoel {
     width: 250px;
 }
+
 .apoel:hover {
-  transform: scale(1.15); 
+    transform: scale(1.15);
 }
 
-.bg{
+.bg {
     background-color: rgba(61, 61, 61, 0.479);
 }
 
-.foo{
+.foo {
     background: linear-gradient(to bottom, var(--vinotinto), #000000 70%);
 }
 
-.dd{
+.dd {
     width: 50px;
 
 }
 
-.cc{
-    min-width:100px;
+.cc {
+    min-width: 100px;
 }
 
-.tama{
+.tama {
     width: 25px;
 }
 
-.gat{
+.gat {
     height: 60vh;
 }
 
-.fon{
+.fon {
     background-color: var(--vinotinto);
 }
 
-.osq{
+.osq {
     background-color: var(--vinotinto);
 }
 
-.fondo{
+.fondo {
     background-color: var(--vinotinto);
 }
 
-.ico{
+.ico {
     width: 40px;
 }
 
-.tat{
+.tat {
     width: 110px;
 }
 
-.maax{
+.maax {
     max-width: 600px;
 }
 
-.ttxx{
+.ttxx {
     color: var(--verde);
     font-family: 'Butter_Haunted';
     letter-spacing: 5px;
 }
-
-.tuto{
+.t{
+    font-family: 'Ananda';
+}
+.tuto {
     height: 70vh;
 }
 
-.fontTitu{
+.fontTitu {
     font-family: 'Butter_Haunted';
     letter-spacing: 5px;
 }
@@ -195,80 +208,131 @@ p{
     font-family: 'Candara_Bold';
 }
 
-.iconos{
+.fontCa {
+    font-family: 'Candara_Italic';
+}
+
+.iconos {
     width: 50px;
 }
 
 .sidebar-svg {
-  width: 32px; 
-  height: 32px;
-  object-fit: contain;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
 }
 
 /* .section2{
     z-index: ;
 } */
 
-.comentario1, .tuto2, .circ1{
+.comentario1,
+.tuto2,
+.circ1 {
     background-color: var(--vinotinto);
 }
 
-.circ2{
-    background-color: var(--rosa);
+.comentario1 {
+    width: 40%;
+    position: relative;
+    left: 10%;
+    backdrop-filter: blur(16px);
+    /* Difumina el fondo */
+    -webkit-backdrop-filter: blur(16px);
+    /* Soporte para Safari */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    /* Borde sutil brillante */
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    /* Sombra para dar profundidad */
+}
+
+.tuto2 {
+    width: 60%;
+    backdrop-filter: blur(16px);
+    /* Difumina el fondo */
+    -webkit-backdrop-filter: blur(16px);
+    /* Soporte para Safari */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    /* Borde sutil brillante */
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    /* Sombra para dar profundidad */
+}
+
+.circ2 {
+    backdrop-filter: blur(16px);            /* Difumina el fondo */
+  -webkit-backdrop-filter: blur(16px);    /* Soporte para Safari */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Borde sutil brillante */
+  border-radius: 24px;                   
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Sombra para dar profundidad */
 }
 
 /* Footer */
 
-.footer{
+.footer {
     color: var(--rosa);
-    font-family: 'Candara' ;
+    font-family: 'Candara';
 }
 
 
 /*Header*/
 
-.header{
-    backdrop-filter: blur(16px);            /* Difumina el fondo */
-  -webkit-backdrop-filter: blur(16px);    /* Soporte para Safari */
-  border: 1px solid rgba(255, 255, 255, 0.15); /* Borde sutil brillante */
-  border-radius: 24px;                   
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+.header {
+    backdrop-filter: blur(16px);
+    /* Difumina el fondo */
+    -webkit-backdrop-filter: blur(16px);
+    /* Soporte para Safari */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    /* Borde sutil brillante */
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 
 .sidebar-container {
-  z-index: 1050; 
-  pointer-events: none; 
+    z-index: 1050;
+    pointer-events: none;
 }
 
 /* El menú con forma de cápsula */
 .custom-sidebar {
-  pointer-events: auto; /* Reactiva los clicks dentro del menú */
-  background-color: var(--rosa); /* El color rosa/marrón pastel de tu imagen */
-  width: 70px; /* Ancho de la barra */
-  height: 80vh; /* Altura (80% de la pantalla para que parezca flotante) */
-  border-radius: 50px; /* Bordes completamente redondeados (cápsula) */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra suave para darle profundidad */
-  transition: all 0.3s ease;
+    pointer-events: auto;
+    /* Reactiva los clicks dentro del menú */
+    background-color: var(--rosa);
+    /* El color rosa/marrón pastel de tu imagen */
+    width: 70px;
+    /* Ancho de la barra */
+    height: 80vh;
+    /* Altura (80% de la pantalla para que parezca flotante) */
+    border-radius: 50px;
+    /* Bordes completamente redondeados (cápsula) */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    /* Sombra suave para darle profundidad */
+    transition: all 0.3s ease;
 }
 
 /* Estilo para cada contenedor de icono */
 .sidebar-icon {
-  color: #000000; /* Color negro para los iconos */
-  font-size: 28px; /* Tamaño del icono */
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 50px;
-  transition: transform 0.2s ease;
+    color: #000000;
+    /* Color negro para los iconos */
+    font-size: 28px;
+    /* Tamaño del icono */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    transition: transform 0.2s ease;
 }
 
 /* Efecto al pasar el mouse por encima (Hover) */
 .sidebar-icon:hover {
-  transform: scale(1.15); /* Crece un poco al pasar el mouse */
-  color: var(--vinotinto), 100%; /* Cambia sutilmente el color si usas fuentes de iconos */
+    transform: scale(1.15);
+    /* Crece un poco al pasar el mouse */
+    color: var(--vinotinto), 100%;
+    /* Cambia sutilmente el color si usas fuentes de iconos */
 }
 
 /* Inicio */
@@ -278,7 +342,6 @@ p{
 } */
 
 /* Controles */
-.controles{
+.controles {
     background-color: #30592e;
 }
-
