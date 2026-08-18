@@ -7,7 +7,7 @@ export const Portadacorazon1 = () => {
     <>
     
       <div className='pantalla'>
-        <img src="./public/portadasCorazon/portadacap1.svg" alt="" />
+        <img src="./portadacap1.svg" alt="" />
       </div>
 
     </>
