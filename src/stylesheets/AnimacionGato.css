@@ -5,8 +5,8 @@
     height: 100vh;
 }
 .escenario{
-    width:75%;
-    height: 75%;
+    width:910px;
+    height: 500px;
     position: relative;
     overflow: hidden;
 }

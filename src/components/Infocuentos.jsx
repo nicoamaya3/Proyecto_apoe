@@ -2,15 +2,16 @@
 import { Link } from "react-router-dom"
 import "../stylesheets/General.css"
 
-export const Infocuentos = ({ titi, des, personajesUno, personajesDos, personajesTres, categoria, back, lii , tbt }) => {
+export const Infocuentos = ({ titi, des, personajesUno, personajesDos, personajesTres, categoria, back, lii, tbt }) => {
     return (
         <>
             <div className="container">
                 <div className="row d-flex flex-column align-items-center">
                     <div className="">
-                        <div className="rounded fon">
-                            <div className="p-2 d-flex rounded justify-content-between gat" style={{
-                                backgroundImage: back 
+                        <div className="rounded-5 fondoTarjeta shadow">
+                            <div className="p-2 m-4 d-flex rounded-5 justify-content-between gat" style={{
+                                backgroundImage: back ,
+                                height: "300px",
                             }}>
                                 <div className="w-50 p-3">
                                     <p className="bg-success w-75 text-center rounded-4">{categoria}</p>
@@ -20,16 +21,14 @@ export const Infocuentos = ({ titi, des, personajesUno, personajesDos, personaje
                                 </div>
                             </div>
                             <div>
-                                <div className="p-3 text-white">
-                                    <h5 className="fw-bold fontCard">{titi}</h5>
-                                    <p>{des}</p>
-                                    <div className="d-flex gap-2">
-                                        <p className="osq w-25 text-center rounded-4">{personajesUno}</p>
-                                        <p className="osq w-25 text-center rounded-4">{personajesDos}</p>
-                                        <p className="osq w-25 text-center rounded-4">{personajesTres}</p>
+                                <div className="p-3 mb-2 ">
+                                    <h2 className="fw-bold mb-4 t"
+                                    style={{ color: "var(--vinotinto)" }}
+                                    >{titi}</h2>
+                                    <p className="text-black">{des}</p>
+                                    <div className="d-flex justify-content-center">
+                                        <Link className="btn btn-outline-danger rounded-5 w-50 p-2 fw-bold " to={lii} > {tbt} </Link>
                                     </div>
-                                    
-                                    <Link className="btn btn-success text-black w-100 p-2 fw-bold " to={lii} > {tbt} </Link>
                                 </div>
                             </div>
                         </div>

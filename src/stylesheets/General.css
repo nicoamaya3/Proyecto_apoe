@@ -41,6 +41,13 @@
 
 /* home */
 
+.crow{
+    width: 610px;
+    position: absolute;
+    top: -130px;
+    left: -200px;
+}
+
 p {
     font-family: 'Candara_Italic';
 }
@@ -140,6 +147,10 @@ p {
 
 .foo {
     background: linear-gradient(to bottom, var(--vinotinto) -10%, black, var(--vinotinto));
+}
+
+.fondo2{
+    background: linear-gradient(to bottom, var(--rosa) -40%, var(--vinotinto), var(--rosa));
 }
 
 .dd {
@@ -248,6 +259,7 @@ p {
 
 .tuto2 {
     width: 60%;
+    height: 60vh;
     backdrop-filter: blur(16px);
     /* Difumina el fondo */
     -webkit-backdrop-filter: blur(16px);
@@ -295,11 +307,18 @@ p {
     text-align: start;
 }
 
+.fondoTarjeta {
+    background-color: var(--rosa);
+    backdrop-filter: blur(16px);            /* Difumina el fondo */
+  -webkit-backdrop-filter: blur(16px);    /* Soporte para Safari */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Borde sutil brillante */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
 /* Footer */
 
 .footer {
     color: var(--rosa);
-    font-family: 'Candara';
 }
 
 

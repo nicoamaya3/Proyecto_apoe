@@ -1,3 +1,8 @@
+
+import { Esc1Gatonegro } from "../components/Esc1Gatonegro.jsx"
+import { Esc2gatonegro } from "../components/Esc2gatonegro.jsx"
+import { Esc3gatonegro } from "../components/Esc3gatonegro.jsx"
+import { Esc4gatonegro } from "../components/Esc4gatonegro.jsx"
 import { Lect } from "../components/Lect"
 import { ReproductorGa } from "../components/ReproductorGa.jsx"
 import { Tutorial } from "../components/Tutorial.jsx"
@@ -12,7 +17,48 @@ export const Gleyendo = () => {
                         <Tutorial />
                     </div> */}
                     <div className="col position-absolute w-75 gatonegro">
-                        <ReproductorGa/>
+                        <div id="carouselExample" className="carousel slide">
+                            <div className="carousel-inner">
+                                
+                                <div className="carousel-item active">
+                                    <ReproductorGa />
+                                </div>
+
+                                <div className="carousel-item">
+                                    <Esc1Gatonegro />
+                                </div>
+
+                                <div className="carousel-item">
+                                    <Esc2gatonegro />
+                                </div>
+
+                                <div className="carousel-item">
+                                    <Esc3gatonegro />
+                                </div>
+
+                                <div className="carousel-item">
+                                    <Esc4gatonegro />
+                                </div>
+
+                            </div>
+                            <div className="botonesSa">
+                                <div>
+                                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span className="visually-hidden">Previous</span>
+                                    </button>
+                                </div>
+
+                                <div>
+                                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span className="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>

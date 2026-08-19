@@ -27,7 +27,7 @@ export const Leyendo = () => {
                                     <Portadacorazon1 />
                                 </div>
 
-                                <div className="carousel-item active">
+                                <div className="carousel-item">
                                     <Cap1corazon />
                                 </div>
 
