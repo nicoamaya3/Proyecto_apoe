@@ -117,10 +117,6 @@ p {
     height: 60vh;
 }
 
-.fondoo {
-    background-color: black;
-}
-
 .bacLec {
     width: 100%;
     height: 90vh;
@@ -143,7 +139,7 @@ p {
 }
 
 .foo {
-    background: linear-gradient(to bottom, var(--vinotinto), #000000 70%);
+    background: linear-gradient(to bottom, var(--vinotinto) -10%, black, var(--vinotinto));
 }
 
 .dd {
@@ -188,9 +184,11 @@ p {
 }
 
 .ttxx {
-    color: var(--verde);
+    width: 40%;
+    color: var(--rosa);
     font-family: 'Butter_Haunted';
     letter-spacing: 5px;
+    font-size: 60px;
 }
 .t{
     font-family: 'Ananda';
@@ -226,6 +224,7 @@ p {
     z-index: ;
 } */
 
+
 .comentario1,
 .tuto2,
 .circ1 {
@@ -233,9 +232,9 @@ p {
 }
 
 .comentario1 {
-    width: 40%;
+    width: 45%;
     position: relative;
-    left: 10%;
+    left: 7%;
     backdrop-filter: blur(16px);
     /* Difumina el fondo */
     -webkit-backdrop-filter: blur(16px);
@@ -244,7 +243,7 @@ p {
     /* Borde sutil brillante */
     border-radius: 24px;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    /* Sombra para dar profundidad */
+    z-index: 3;
 }
 
 .tuto2 {
@@ -260,12 +259,40 @@ p {
     /* Sombra para dar profundidad */
 }
 
-.circ2 {
+.contcirculo {
+    position: absolute;
+    left: 15%;
+    bottom: -30%;
+    z-index: 3;
+}
+
+.circ2{
+    background-color: var(--rosa);
+    width: 30vh;
+    height: 30vh;
     backdrop-filter: blur(16px);            /* Difumina el fondo */
   -webkit-backdrop-filter: blur(16px);    /* Soporte para Safari */
   border: 1px solid rgba(255, 255, 255, 0.15); /* Borde sutil brillante */
   border-radius: 24px;                   
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Sombra para dar profundidad */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.circ1 {
+    width: 40vh;
+    height: 40vh;
+    z-index: 3;
+    backdrop-filter: blur(16px);            /* Difumina el fondo */
+  -webkit-backdrop-filter: blur(16px);    /* Soporte para Safari */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Borde sutil brillante */
+  border-radius: 24px;                   
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.info2 {
+    width: 60%;
+    position: relative;
+    left: 30%;
+    text-align: start;
 }
 
 /* Footer */
