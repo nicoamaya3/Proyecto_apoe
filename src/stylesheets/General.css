@@ -41,7 +41,7 @@
 
 /* home */
 
-.crow{
+.crow {
     width: 610px;
     position: absolute;
     top: -130px;
@@ -54,6 +54,14 @@ p {
 
 .p-home {
     font-family: 'Ananda';
+}
+
+.imgnosotros{
+    width: 70%;
+}
+
+.tarjetas{
+    z-index: 2;
 }
 
 .poe {
@@ -117,7 +125,6 @@ p {
     width: 100%;
     height: auto;
     position: absolute;
-    z-index: 1;
 }
 
 .gatt {
@@ -149,8 +156,8 @@ p {
     background: linear-gradient(to bottom, var(--vinotinto) -10%, black, var(--vinotinto));
 }
 
-.fondo2{
-    background: linear-gradient(to bottom, var(--rosa) -40%, var(--vinotinto), var(--rosa));
+.fondo2 {
+    background: linear-gradient(to bottom, var(--rosa) -100%, var(--vinotinto) 40%, var(--vinotinto) 70%, var(--rosa) 140%);
 }
 
 .dd {
@@ -201,9 +208,11 @@ p {
     letter-spacing: 5px;
     font-size: 60px;
 }
-.t{
+
+.t {
     font-family: 'Ananda';
 }
+
 .tuto {
     height: 70vh;
 }
@@ -211,6 +220,7 @@ p {
 .fontTitu {
     font-family: 'Butter_Haunted';
     letter-spacing: 5px;
+    color: var(--rosa);
 }
 
 .fontCard {
@@ -278,26 +288,32 @@ p {
     z-index: 3;
 }
 
-.circ2{
+.circ2 {
     background-color: var(--rosa);
     width: 30vh;
     height: 30vh;
-    backdrop-filter: blur(16px);            /* Difumina el fondo */
-  -webkit-backdrop-filter: blur(16px);    /* Soporte para Safari */
-  border: 1px solid rgba(255, 255, 255, 0.15); /* Borde sutil brillante */
-  border-radius: 24px;                   
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(16px);
+    /* Difumina el fondo */
+    -webkit-backdrop-filter: blur(16px);
+    /* Soporte para Safari */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    /* Borde sutil brillante */
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 .circ1 {
     width: 40vh;
     height: 40vh;
     z-index: 3;
-    backdrop-filter: blur(16px);            /* Difumina el fondo */
-  -webkit-backdrop-filter: blur(16px);    /* Soporte para Safari */
-  border: 1px solid rgba(255, 255, 255, 0.15); /* Borde sutil brillante */
-  border-radius: 24px;                   
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(16px);
+    /* Difumina el fondo */
+    -webkit-backdrop-filter: blur(16px);
+    /* Soporte para Safari */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    /* Borde sutil brillante */
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 .info2 {
@@ -309,10 +325,13 @@ p {
 
 .fondoTarjeta {
     background-color: var(--rosa);
-    backdrop-filter: blur(16px);            /* Difumina el fondo */
-  -webkit-backdrop-filter: blur(16px);    /* Soporte para Safari */
-  border: 1px solid rgba(255, 255, 255, 0.15); /* Borde sutil brillante */
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(16px);
+    /* Difumina el fondo */
+    -webkit-backdrop-filter: blur(16px);
+    /* Soporte para Safari */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    /* Borde sutil brillante */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 /* Footer */
@@ -390,4 +409,6 @@ p {
 /* Controles */
 .controles {
     background-color: #30592e;
+    position: relative;
+    left: 10%;    
 }

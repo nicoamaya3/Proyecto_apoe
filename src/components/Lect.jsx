@@ -8,19 +8,19 @@ export const Lect = ({ cuento, llin, nombreCap }) => {
             <div className="d-flex flex-column gap-3 bg-black">
                 <div className="d-flex justify-content-center bg-black">
                     <div className="bacLec w-75" style={{
-                        
+
                     }}>
                         <div className="p-5">
                             <div className="p-3 ">
-                                
+
                             </div>
                         </div>
                     </div>
                 </div>
 
-                {/* Controles */}
+                 <Controles />
 
-                <div className="container">
+                {/* <div className="container">
                     <div className="row">
                         <div className="col">
 
@@ -45,7 +45,7 @@ export const Lect = ({ cuento, llin, nombreCap }) => {
 
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
 
 

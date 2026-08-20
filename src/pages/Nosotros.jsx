@@ -1,50 +1,65 @@
 import { Link } from "react-router-dom"
 import "../stylesheets/General.css"
+import { motion } from "motion/react"
+import { Footer } from "../components/Footer"
 
 export const Nosotros = () => {
     return (
         <>
-            <div className="fondo2 text-white py-5">
-                <div className="container">
-                    
+
+            <motion.div className="w-25 position-absolute top-0 start-50 translate-middle-x"
+                initial={{ opacity: 0, y: -100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeInOut", duration: 1 }}>
+                <div className="banda bg-black rounded-bottom-5 w-100">
+                    <p className="p-home text-white fs-6  text-center">Apoe!</p>
+                </div>
+            </motion.div>
+
+            <div className="fondo2 py-5">
+                <img className="deco position-absolute top-0 start-0" src="recursos/deco2.png" alt="" />
+
+
+                <div className="container mt-5 pt-5">
+
                     {/* TÍTULO PRINCIPAL */}
-                    <div className="row mb-5">
-                        <div className="col-12 text-center">
-                            <h1 className="fw-bold ttxx">NOSOTROS</h1>
+                    <div className="d-flex justify-content-center mb-5 w-100">
+                        <div className="text-center ">
+                            <h1 className="ttxx">NOSOTROS</h1>
                         </div>
                     </div>
 
                     {/* SECCIÓN SUPERIOR: Caja grande de descripción (Izquierda) + Misión/Visión (Derecha) */}
-                    <div className="row align-items-center g-4 mb-5">
-                        
+                    <div className="row align-items-center g-4 mb-5 justify-content-center text-white">
+
                         {/* Columna Izquierda: Tarjeta principal con cuervos y texto */}
-                        <div className="col-lg-7">
-                            <div className="p-4 rounded-4 shadow" style={{ backgroundColor: '#21131e' }}>
+                        <div className="col-lg-7 w-50">
+                            <div className="info-home p-4 rounded-5 shadow text-">
                                 <div className="text-center mb-3">
-                                    <img className="img-fluid rounded-4" src="iconos/logo.png" alt="Cuervos" style={{ maxHeight: '180px' }} />
+                                    <img className="imgnosotros rounded-5" src="./src/assets/svg/nosotros.png" alt="Cuervos" />
                                 </div>
-                                <p className="font-monospace fs-6 text-center">
-                                    Este proyecto busca transformar la forma en que los jóvenes adultos y adultos redescubren la lectura, a través de un libro digital interactivo e ilustrado que presenta una selección de cuentos clásicos de Edgar Allan Poe. Fue desarrollado en el SENA — Centro de Servicios y Gestión Empresarial, bajo la orientación de la instructora Sully Munera.
+                                <p className="fs-5 text-center">
+                                    Somos aprendices del programa de Producción Multimedia del SENA, apasionados por la narrativa visual y el arte del cómic. Este proyecto nace del deseo de acercar la literatura clásica de Edgar Allan Poe a nuevas audiencias a través de un formato gráfico e interactivo.
                                 </p>
                             </div>
                         </div>
 
                         {/* Columna Derecha: Tarjetas apiladas de Misión y Visión */}
-                        <div className="col-lg-5 d-flex flex-column gap-4">
-                            
+                        <div className="tarjetas col-lg-5 d-flex flex-column gap-5">
+
                             {/* Misión */}
-                            <div className="bg-black text-white p-4 rounded-4 shadow">
-                                <h3 className="fontCa text-center mb-2">Misión</h3>
+                            <div className="bg-black text-white p-5 rounded-5 shadow">
+                                <h3 className="t text-center mb-2">Misión</h3>
                                 <p className="small text-white-50 m-0 text-center">
-                                    Incentivar el hábito de la lectura clásica a través de herramientas multimedia e interactivas innovadoras.
+                                    Fomentar el hábito de la lectura en jóvenes mediante adaptaciones visuales atractivas de obras literarias clásicas.
                                 </p>
                             </div>
 
                             {/* Visión */}
-                            <div className="bg-black text-white p-4 rounded-4 shadow">
-                                <h3 className="fontCa text-center mb-2">Visión</h3>
-                                <p className="small text-white-50 m-0 text-center">
-                                    Convertirnos en un referente educativo digital de adaptaciones literarias góticas en la región.
+                            <div className="bg-black text-white p-5 rounded-5 shadow">
+                                <h3 className="t text-center mb-2">Visión</h3>
+                                <p className="fontCa small text-white-50 m-0 text-center">
+                                    Convertirnos en un referente de producción multimedia educativa que inspire a nuevas generaciones de lectores.
                                 </p>
                             </div>
 
@@ -56,21 +71,21 @@ export const Nosotros = () => {
                     <div className="section mt-5 pt-4">
                         <div className="row text-center mb-4">
                             <div className="col-12">
-                                <h2 className="fw-bold fontTitu">PROCESO</h2>
-                                <h5 className="fontCa text-white-50">¿Cómo se crea el proyecto Apoe?</h5>
+                                <h1 className="fontTitu">PROCESO</h1>
+                                <h2 className="text-white-50 t">¿Cómo se crea el proyecto Apoe?</h2>
                             </div>
                         </div>
 
                         {/* Fila del Proceso: Texto y Documentos (Izq) + Cuadro de Carrusel/Imagen (Der) */}
-                        <div className="row align-items-center g-4">
-                            
+                        <div className="row align-items-center g-4 w-75 d-flex justify-content-center mx-auto">
+
                             {/* Columna Izquierda del Proceso */}
                             <div className="col-lg-6">
-                                <p className="font-monospace mb-4">
+                                <p className="fs-5 mb-4 text-white">
                                     El desarrollo se estructuró bajo metodologías ágiles de diseño multimedia, integrando ilustración digital, animación vectorial y maquetación web responsiva en React con Bootstrap y GSAP.
                                 </p>
-                                <div className="d-flex flex-column gap-2">
-                                    <span className="fontCa fs-5">Documentos</span>
+                                <div className="d-flex flex-column gap-2 align-items-center">
+                                    <span className="t text-white-50 fs-2 ">Documentos</span>
                                     <div>
                                         <button className="btn btn-outline-danger btn-sm rounded-pill px-3 py-1">Manual de marca</button>
                                     </div>
@@ -97,6 +112,11 @@ export const Nosotros = () => {
                     </div>
 
                 </div>
+
+                <div className="mt-5 d-flex justify-content-center">
+                          <Footer/>
+                        </div>
+
             </div>
         </>
     )

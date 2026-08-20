@@ -96,3 +96,15 @@
 .botonesSa{
     position: relative;
 }
+
+.botonesSa1{
+    position: absolute;
+    bottom: -50px;
+    left: 40%;
+}
+
+.botonesSa2{
+    position: absolute;
+    bottom: -50px;
+    left: 60%;
+}

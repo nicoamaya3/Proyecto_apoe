@@ -132,7 +132,7 @@ export const Home = () => {
 
                 {/* Columna del Carrusel */}
                 <div className='col-lg-6 col-md-12 d-flex justify-content-center'>
-                  <div id="carouselExampleControls" className="carousel slide w-100" data-ride="carousel" style={{ maxWidth: '450px' }}>
+                  <div id="carouselExampleControls" className="carousel slide w-100" data-ride="carousel" style={{ maxWidth: '450px', boxShadow: '0 4px 40px rgba(0, 0, 0, 0.2)' }}>
                     <div className="carousel-inner rounded-4 overflow-hidden">
                       <div className="carousel-item active">
                         <img className="d-block w-100 img-fluid" src="./public/cap1.png" alt="First slide" />

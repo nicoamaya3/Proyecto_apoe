@@ -44,33 +44,33 @@ export const Leyendo = () => {
                                 </div>
 
                                 <div className="carousel-item">
-                                    <Portadacorazon2/>
+                                    <Portadacorazon2 />
                                 </div>
 
                                 <div className="carousel-item">
-                                    <Cap3corazon/>
+                                    <Cap3corazon />
                                 </div>
 
                                 <div className="carousel-item">
-                                    <Portadacorazon3/>
+                                    <Portadacorazon3 />
                                 </div>
 
                                 <div className="carousel-item">
-                                    <Cap4corazon/>
+                                    <Cap4corazon />
                                 </div>
 
                             </div>
                             <div className="botonesSa">
-                                <div>
+                                <div className="botonesSa1">
                                     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span >back</span>
                                         <span className="visually-hidden">Previous</span>
                                     </button>
                                 </div>
 
-                                <div>
+                                <div className="botonesSa2">
                                     <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span >next</span>
                                         <span className="visually-hidden">Next</span>
                                     </button>
                                 </div>
