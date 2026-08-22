@@ -67,8 +67,8 @@ export const Home = () => {
   return (
     <>
 
-
       <section className="bg-black">
+
         <img className="deco" src="recursos/deco.png" alt="" />
 
         <div className="container-fluid foo">
@@ -176,7 +176,9 @@ export const Home = () => {
             </div>
 
           </section>
-              
+
+          
+
           <Cuentos />
 
         </div>

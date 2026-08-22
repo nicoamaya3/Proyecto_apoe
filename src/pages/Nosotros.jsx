@@ -7,6 +7,17 @@ export const Nosotros = () => {
     return (
         <>
 
+            <div className="snowflakes">
+                <div className="snowflake"><img src="https://media.tenor.com/fU-lYcf2_UQAAAAi/bat.gif" alt="bat" className="img-fluid" /></div>
+                <div className="snowflake"><img src="https://media.tenor.com/fU-lYcf2_UQAAAAi/bat.gif" alt="bat" className="img-fluid" /></div>
+                <div className="snowflake"><img src="https://media.tenor.com/fU-lYcf2_UQAAAAi/bat.gif" alt="bat" className="img-fluid" /></div>
+                <div className="snowflake"><img src="https://media.tenor.com/fU-lYcf2_UQAAAAi/bat.gif" alt="bat" className="img-fluid" /></div>
+                <div className="snowflake"><img src="https://media.tenor.com/fU-lYcf2_UQAAAAi/bat.gif" alt="bat" className="img-fluid" /></div>
+                <div className="snowflake"><img src="https://media.tenor.com/fU-lYcf2_UQAAAAi/bat.gif" alt="bat" className="img-fluid" /></div>
+                <div className="snowflake"><img src="https://media.tenor.com/fU-lYcf2_UQAAAAi/bat.gif" alt="bat" className="img-fluid" /></div>
+                <div className="snowflake"><img src="https://media.tenor.com/fU-lYcf2_UQAAAAi/bat.gif" alt="bat" className="img-fluid" /></div>
+            </div>
+
             <motion.div className="w-25 position-absolute top-0 start-50 translate-middle-x"
                 initial={{ opacity: 0, y: -100 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -114,8 +125,8 @@ export const Nosotros = () => {
                 </div>
 
                 <div className="mt-5 d-flex justify-content-center">
-                          <Footer/>
-                        </div>
+                    <Footer />
+                </div>
 
             </div>
         </>
