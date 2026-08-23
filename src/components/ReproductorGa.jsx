@@ -73,7 +73,7 @@ export const ReproductorGa = () => {
         <img className="suelo" src={suelo} alt="" />
         <img className="casa" src={casa} alt="" />
 
-        <img onClick={reproducirarbustostra} className="valla" className="valla" src={valla} alt="" />
+        <img onClick={reproducirarbustostra} className="valla" src={valla} alt="" />
 
         <div>
           <Lottie onClick={reproducirarbustosdel} className="arbustosdel"
@@ -93,7 +93,10 @@ export const ReproductorGa = () => {
           />
         </div>
       </div>
-      <button onClick={pausarAudiogato}>Pausar</button>
+
+      <div className="position-absolute pausa">
+        <button onClick={pausarAudiogato}>Pausar</button>
+      </div>
 
     </>
   )

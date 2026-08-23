@@ -113,11 +113,12 @@ export const ReproductorCap2 = () => {
         </div>
       </div>
       {/* cuando de play cambie a stop, para que solo funcione una vez*/}
-      <div className="d-flex justify-content-center">
-        <div>
-          <button onClick={pausarAudio}>Detener</button>
-        </div>
+
+      <div className="position-absolute pausa">
+        <button onClick={pausarAudio}>Detener</button>
       </div>
+
+      
     </>
   );
 };

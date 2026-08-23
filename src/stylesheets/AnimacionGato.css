@@ -81,12 +81,26 @@
 
 .botonesSa11{
     position: absolute;
-    bottom: -10px;
+    bottom: -40px;
     left: 70%;
 }
 
 .botonesSa22{
     position: absolute;
-    bottom: -10px;
+    bottom: -40px;
     left: 80%;
+}
+
+.iniciar{
+    top: -25px;
+    right: 110px;
+}
+
+.detener{
+    top: -25px;
+    left: 125px;
+}
+
+.pausa{
+    top: 450px;
 }

@@ -65,14 +65,18 @@ export const Leyendo = () => {
                                 <div className="botonesSa">
                                     <div className="botonesSa1">
                                         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                                            <span >back</span>
+                                            <div>
+                                                <img src="src/assets/svg/retroceder.svg" alt="Retroceder" style={{ width: '30px', cursor: 'pointer' }} />
+                                            </div>
                                             <span className="visually-hidden">Previous</span>
                                         </button>
                                     </div>
 
                                     <div className="botonesSa2">
                                         <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                                            <span >next</span>
+                                            <div>
+                                                <img src="src/assets/svg/siguiente.svg" alt="Avanzar" style={{ width: '30px', cursor: 'pointer' }} />
+                                            </div>
                                             <span className="visually-hidden">Next</span>
                                         </button>
                                     </div>
