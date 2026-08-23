@@ -206,7 +206,7 @@ export const Cuentocora = () => {
 
           <div className="row w-100 justify-content-center mb-5 mt-5">
             <div className="col-12 col-lg-9" style={{ width: '100vh', height: '50vh', minWidth: '45px' }}>
-              <div className="h-100 rounded-4 w-100 border border-secondary bg-black text-center shadow d-flex align-items-center justify-content-center">
+              <div className="h-100 rounded-4 w-100 border border-secondary bg-black text-center shadow d-flex align-items-center justify-content-center mb-5">
                 <span className="text-white">BANNER 3D</span>
               </div>
             </div>
