@@ -28,7 +28,7 @@ export const Cuentos = () => {
                                 titi="El Gato Negro"
                                 des="Un hombre bondadoso se transforma en un ser monstruoso bajo el influjo del alcohol. Su crueldad hacia su gato Plutón desencadena una espiral de horror y culpa que culmina en..."
                                 categoria="Terror Psicológico"
-                                back="url(./gato.jpg)"
+                                back="url(./portadagato.png"
                                 lii="/GatoNegro"
                                 tbt="Más Info"
                             />
@@ -40,7 +40,7 @@ export const Cuentos = () => {
                                 titi="El Corazón Delator"
                                 des="En el Japón feudal, Takeshi asesina al anciano Satoshi, atormentado por su ojo de buitre. Tras ocultar el cuerpo bajo las tablas del suelo, el latido fantasmal del corazón..."
                                 categoria="Terror Japonés"
-                                back="url(./coraa.jpg)"
+                                back="url(./portadacora.png)"
                                 lii="/Delator"
                                 tbt="Más Info"
                             />

@@ -12,6 +12,8 @@ export const Infocuentos = ({ titi, des, personajesUno, personajesDos, personaje
                             <div className="p-2 m-4 d-flex rounded-5 justify-content-between gat" style={{
                                 backgroundImage: back ,
                                 height: "300px",
+                                backgroundPositionX: -70,
+                                backgroundSize: 600,
                             }}>
                                 <div className="w-50 p-3">
                                     <p className="text-white bg-success w-75 text-center rounded-4">{categoria}</p>
@@ -49,7 +51,7 @@ export const Infocuentos = ({ titi, des, personajesUno, personajesDos, personaje
                                     >{titi}</h2>
                                     <p className="text-black">{des}</p>
                                     <div className="d-flex justify-content-center">
-                                        <Link className="btn btn-outline-danger rounded-5 w-50 p-2 fw-bold " to={lii} > {tbt} </Link>
+                                        <Link className="btn btn-danger rounded-5 w-50 p-2 fw-bold " to={lii} > {tbt} </Link>
                                     </div>
                                 </div>
                             </div>

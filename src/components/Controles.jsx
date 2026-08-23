@@ -19,19 +19,19 @@ export const Controles = () => {
                                 {/* Contenedor de los iconos / botones */}
                                 <div className="d-flex align-items-center gap-4">
                                     <div>
-                                        <img src="retroceder" alt="Reiniciar" style={{ width: '20px', cursor: 'pointer' }} />
+                                        <img src="src/assets/svg/volver.svg" alt="Reiniciar" style={{ width: '30px', cursor: 'pointer' }} />
                                     </div>
                                     <div>
-                                        <img src="retroceder cap" alt="Retroceder" style={{ width: '20px', cursor: 'pointer' }} />
+                                        <img src="src/assets/svg/retroceder.svg" alt="Retroceder" style={{ width: '30px', cursor: 'pointer' }} />
                                     </div>
                                     <div>
-                                        <img src="play" alt="Play" style={{ width: '20px', cursor: 'pointer' }} />
+                                        <img src="src/assets/svg/play.svg" alt="Play" style={{ width: '25px', cursor: 'pointer' }} />
                                     </div>
                                     <div>
-                                        <img src="avanzar video" alt="Avanzar" style={{ width: '20px', cursor: 'pointer' }} />
+                                        <img src="src/assets/svg/siguiente.svg" alt="Avanzar" style={{ width: '30px', cursor: 'pointer' }} />
                                     </div>
                                     <div>
-                                        <img src="agrandar pag" alt="Pantalla completa" style={{ width: '20px', cursor: 'pointer' }} />
+                                        <img src="src/assets/svg/expandir.svg" alt="Pantalla completa" style={{ width: '30px', cursor: 'pointer' }} />
                                     </div>
                                 </div>
 

@@ -96,7 +96,7 @@ export const Home = () => {
                     <span className="linea-animada d-block"> cuentos ilustrados e interactivos basados en las</span>
                     <span className="linea-animada d-block"> obras maestras de Edgar Allan Poe.</span>
                   </p>
-                  <button ref={botonRef} className="btn btn-outline-danger rounded-5">Leer cuentos</button>
+                  <button ref={botonRef} className="btn btn-danger rounded-5">Leer cuentos</button>
                 </div>
               </div>
             </div>
@@ -125,7 +125,7 @@ export const Home = () => {
             <div className='tuto2 text-white d-flex flex-column p-4 rounded-5 align-items-center justify-content-center'>
 
               {/* Título */}
-              <h2 className='w-75 text-center t mb-4'>¿Cómo funciona la interactividad de los cuentos?</h2>
+              <h2 className='w-75 text-center text-white t mb-4'>¿Cómo funciona la interactividad de los cuentos?</h2>
 
               {/* Contenedor en fila de Bootstrap para organizar carrusel y texto lado a lado */}
               <div className='row align-items-center justify-content-center w-100 g-4 px-3'>
@@ -161,23 +161,18 @@ export const Home = () => {
                     Cada relato cuenta con su propia página inmersiva para una lectura profunda, encontrarás objetos alumbrados en los capítulos que revelan sorpresas interactivas al hacerles clic, y podrás compartir tus teorías e impresiones comentando en el foro de la comunidad sobre qué te pareció la obra.
                   </p>
                   <div className='d-flex justify-content-center align-items-center w-100'>
-                    <button ref={botonRef} className="btn btn-outline-danger rounded-5 px-4 py-2">
+                    <button className="btn btn-danger rounded-5 px-4 py-2">
                       Leer cuentos
                     </button>
                   </div>
                 </div>
-
-                {/* <div>
-                    <img src="https://64.media.tumblr.com/93495eaaa52b4b5a788e5b952a327a94/54342fb5ebe553f2-11/s500x750/b260af9619e68f4db4d6252b43a4fbd836e49f28.gifv"/>
-
-                </div> */}
 
               </div>
             </div>
 
           </section>
 
-          
+
 
           <Cuentos />
 
@@ -187,52 +182,7 @@ export const Home = () => {
           <Footer />
         </div>
 
-        {/* <div className="d-flex  justify-content-center">
-          <div className="problema w-75">
-            <Problemas />
-          </div>
-        </div> */}
 
-
-
-
-
-        {/* <div className="container p-5">
-            <div className="row">
-              <div className="text-white">
-                <div className="text-center">
-                  <h2 className="fw-bold fontTitu">NOSOTROS</h2>
-                </div>
-                <div className="d-flex align-items-center justify-content-center">
-                  <div className="col-12 col-md-12 mt-4 w-25 text-center p-5 ">
-                    <div className="cc p-2 bg-success rounded">
-                      <img className="dd  w-50 " src="./usuario.png" alt="" />
-                    </div>
-                    <h5 className="fontCard">Nicolás Atehortúa</h5>
-                    <p>Desarrollo Web</p>
-                  </div>
-                  <div className="col-12 col-md-12 mt-4  w-25 text-center p-5 ">
-                    <div className="cc p-2 bg-success rounded">
-                      <img className="dd  w-50 " src="./usuario.png" alt="" />
-                    </div>
-                    <h5 className="fontCard">Mariana Martínez</h5>
-                    <p>Diseño & Contenido</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
-
-        {/* 
-<div className="bg-black">
-          <section className="navbar rounded-top-5 position-relative bg-black ">
-            <div className="col text-center">
-              <h2 className="fontCard footer fs-4 fw-bold">
-                APOE! · SENA · Producción Multimedia · 2025
-              </h2>
-            </div>
-          </section>
-        </div> */}
 
       </section>
 

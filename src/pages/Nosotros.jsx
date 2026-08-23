@@ -27,7 +27,7 @@ export const Nosotros = () => {
                 </div>
             </motion.div>
 
-            <div className="fondo2 py-5">
+            <div className="fondo2 pt-5">
                 <img className="deco position-absolute top-0 start-0" src="recursos/deco2.png" alt="" />
 
 
@@ -82,13 +82,13 @@ export const Nosotros = () => {
                     <div className="section mt-5 pt-4">
                         <div className="row text-center mb-4">
                             <div className="col-12">
-                                <h1 className="fontTitu">PROCESO</h1>
-                                <h2 className="text-white-50 t">¿Cómo se crea el proyecto Apoe?</h2>
+                                <h1 className="fontTitu fs-1">PROCESO</h1>
+                                <h2 className="text-white t">¿Cómo se crea el proyecto Apoe?</h2>
                             </div>
                         </div>
 
                         {/* Fila del Proceso: Texto y Documentos (Izq) + Cuadro de Carrusel/Imagen (Der) */}
-                        <div className="row align-items-center g-4 w-75 d-flex justify-content-center mx-auto">
+                        <div className="row align-items-center g-4 w-75 d-flex justify-content-center mx-auto my-3">
 
                             {/* Columna Izquierda del Proceso */}
                             <div className="col-lg-6">
@@ -96,22 +96,41 @@ export const Nosotros = () => {
                                     El desarrollo se estructuró bajo metodologías ágiles de diseño multimedia, integrando ilustración digital, animación vectorial y maquetación web responsiva en React con Bootstrap y GSAP.
                                 </p>
                                 <div className="d-flex flex-column gap-2 align-items-center">
-                                    <span className="t text-white-50 fs-2 ">Documentos</span>
+                                    <span className="t text-white fs-2 ">Documentos</span>
                                     <div>
-                                        <button className="btn btn-outline-danger btn-sm rounded-pill px-3 py-1">Manual de marca</button>
+                                        <button className="btn btn-danger btn-sm rounded-pill px-3 py-1">Manual de marca</button>
                                     </div>
                                     <div>
-                                        <button className="btn btn-outline-danger btn-sm rounded-pill px-3 py-1">Infografías</button>
+                                        <button className="btn btn-danger btn-sm rounded-pill px-3 py-1">Infografías</button>
                                     </div>
                                 </div>
                             </div>
 
                             {/* Columna Derecha del Proceso (Cuadro con la X / Carrusel) */}
-                            <div className="col-lg-6">
-                                <div className="border border-secondary rounded-4 p-4 bg-black text-center" style={{ minHeight: '220px' }}>
-                                    <span className="text-secondary fs-1">📖</span>
-                                    {/* Aquí puedes poner tu carrusel o imagen del proceso */}
-                                </div>
+                                <div className='col-lg-6 col-md-12 d-flex justify-content-center'>
+                                    <div id="carouselExampleControls" className="carousel slide w-100" data-ride="carousel" style={{ maxWidth: '450px', boxShadow: '0 4px 40px rgba(0, 0, 0, 0.2)' }}>
+                                        <div className="carousel-inner rounded-4 overflow-hidden">
+                                            <div className="carousel-item active">
+                                                <img className="d-block w-100 img-fluid" src="./public/cap2.jpg" alt="First slide" />
+                                            </div>
+                                            <div className="carousel-item">
+                                                <img className="d-block w-100 img-fluid" src="..." alt="Second slide" />
+                                            </div>
+                                            <div className="carousel-item">
+                                                <img className="d-block w-100 img-fluid" src="..." alt="Third slide" />
+                                            </div>
+                                        </div>
+                                        <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span className="sr-only"></span>
+                                        </a>
+                                        <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span className="sr-only"></span>
+                                        </a>
+                                    </div>
+
+                                    
                                 <div className="d-flex justify-content-center gap-2 mt-3">
                                     <span className="badge rounded-circle bg-secondary p-2"></span>
                                     <span className="badge rounded-circle bg-white p-2"></span>
@@ -123,11 +142,9 @@ export const Nosotros = () => {
                     </div>
 
                 </div>
-
-                <div className="mt-5 d-flex justify-content-center">
+                <div className="mt-5 d-flex justify-content-center align-items-end">
                     <Footer />
                 </div>
-
             </div>
         </>
     )
