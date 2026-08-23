@@ -14,75 +14,79 @@ import "../stylesheets/AnimacionCorazon.css";
 export const Leyendo = () => {
     return (
         <>
-            <div className="container">
-                <div className="row">
-                    <div className="col z-3 position-absolute w-75 top-50 start-50 translate-middle rounded-3">
-                        {/* <Tutorial /> */}
-                    </div>
-                    <div className="col cap2Corazon position-absolute w-75">
-                        <div id="carouselExample" className="carousel slide">
-                            <div className="carousel-inner">
 
-                                <div className="carousel-item active">
-                                    <Portadacorazon1 />
-                                </div>
-
-                                <div className="carousel-item">
-                                    <Cap1corazon />
-                                </div>
-
-                                <div className="carousel-item">
-                                    <PortadaCorazon />
-                                </div>
-
-                                <div className="carousel-item">
-                                    <ReproductorCap2 />
-                                </div>
-
-                                <div className="carousel-item">
-                                    <Cap2corazon />
-                                </div>
-
-                                <div className="carousel-item">
-                                    <Portadacorazon2 />
-                                </div>
-
-                                <div className="carousel-item">
-                                    <Cap3corazon />
-                                </div>
-
-                                <div className="carousel-item">
-                                    <Portadacorazon3 />
-                                </div>
-
-                                <div className="carousel-item">
-                                    <Cap4corazon />
-                                </div>
-
-                            </div>
-                            <div className="botonesSa">
-                                <div className="botonesSa1">
-                                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                                        <span >back</span>
-                                        <span className="visually-hidden">Previous</span>
-                                    </button>
-                                </div>
-
-                                <div className="botonesSa2">
-                                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                                        <span >next</span>
-                                        <span className="visually-hidden">Next</span>
-                                    </button>
-                                </div>
-
-                            </div>
+            <div className="bg-black">
+                <div className="container">
+                    <div className="row">
+                        <div className="col z-3 position-absolute w-75 top-50 start-50 translate-middle rounded-3">
+                            {/* <Tutorial /> */}
                         </div>
+                        <div className="col cap2Corazon position-absolute w-75">
+                            <div id="carouselExample" className="carousel slide">
+                                <div className="carousel-inner">
 
+                                    <div className="carousel-item active">
+                                        <Portadacorazon1 />
+                                    </div>
+
+                                    <div className="carousel-item">
+                                        <Cap1corazon />
+                                    </div>
+
+                                    <div className="carousel-item">
+                                        <PortadaCorazon />
+                                    </div>
+
+                                    <div className="carousel-item">
+                                        <ReproductorCap2 />
+                                    </div>
+
+                                    <div className="carousel-item">
+                                        <Cap2corazon />
+                                    </div>
+
+                                    <div className="carousel-item">
+                                        <Portadacorazon2 />
+                                    </div>
+
+                                    <div className="carousel-item">
+                                        <Cap3corazon />
+                                    </div>
+
+                                    <div className="carousel-item">
+                                        <Portadacorazon3 />
+                                    </div>
+
+                                    <div className="carousel-item">
+                                        <Cap4corazon />
+                                    </div>
+
+                                </div>
+                                <div className="botonesSa">
+                                    <div className="botonesSa1">
+                                        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                            <span >back</span>
+                                            <span className="visually-hidden">Previous</span>
+                                        </button>
+                                    </div>
+
+                                    <div className="botonesSa2">
+                                        <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                            <span >next</span>
+                                            <span className="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
+                    <Lect cuento="url(./corazon.jpg)" llin="/Delator" nombreCap="Capítulo I — La confesión" />
                 </div>
             </div>
 
-            <Lect cuento="url(./corazon.jpg)" llin="/Delator" nombreCap="Capítulo I — La confesión" />
+
         </>
     )
 }

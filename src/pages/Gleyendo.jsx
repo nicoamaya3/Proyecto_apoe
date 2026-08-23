@@ -11,58 +11,66 @@ import { Tutorial } from "../components/Tutorial.jsx"
 export const Gleyendo = () => {
     return (
         <>
-            <div className="container">
-                <div className="row">
-                    {/* <div className="col z-3 position-absolute w-75 top-50 start-50 translate-middle rounded-3">
+            <div className="bg-black">
+                <div className="container">
+                    <div className="row">
+                        {/* <div className="col z-3 position-absolute w-75 top-50 start-50 translate-middle rounded-3">
                         <Tutorial />
                     </div> */}
-                    <div className="col position-absolute w-75 gatonegro">
-                        <div id="carouselExample" className="carousel slide">
-                            <div className="carousel-inner">
-                                
-                                <div className="carousel-item active">
-                                    <ReproductorGa />
-                                </div>
+                        <div className="col position-absolute w-75 gatonegro">
+                            <div id="carouselExample" className="carousel slide">
+                                <div className="carousel-inner">
 
-                                <div className="carousel-item">
-                                    <Esc1Gatonegro />
-                                </div>
+                                    <div className="carousel-item active">
+                                        <ReproductorGa />
+                                    </div>
 
-                                <div className="carousel-item">
-                                    <Esc2gatonegro />
-                                </div>
+                                    <div className="carousel-item">
+                                        <Esc1Gatonegro />
+                                    </div>
 
-                                <div className="carousel-item">
-                                    <Esc3gatonegro />
-                                </div>
+                                    <div className="carousel-item">
+                                        <Esc2gatonegro />
+                                    </div>
 
-                                <div className="carousel-item">
-                                    <Esc4gatonegro />
-                                </div>
+                                    <div className="carousel-item">
+                                        <Esc3gatonegro />
+                                    </div>
 
+                                    <div className="carousel-item">
+                                        <Esc4gatonegro />
+                                    </div>
+
+                                </div>
+                                <div className="botonesSaa">
+                                    <div className="botonesSa11">
+                                        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                            <div>
+                                                <img src="src/assets/svg/retroceder.svg" alt="Retroceder" style={{ width: '30px', cursor: 'pointer' }} />
+                                            </div>
+                                            <span className="visually-hidden">Previous</span>
+                                        </button>
+                                    </div>
+
+                                    <div className="botonesSa22">
+                                        <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                            <div>
+                                                <img src="src/assets/svg/siguiente.svg" alt="Avanzar" style={{ width: '30px', cursor: 'pointer' }} />
+                                            </div>
+                                            <span className="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+
+                                </div>
                             </div>
-                            <div className="botonesSaa">
-                                <div className="botonesSa11">
-                                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                                        <span>back</span>
-                                        <span className="visually-hidden">Previous</span>
-                                    </button>
-                                </div>
 
-                                <div className="botonesSa22">
-                                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                                        <span>next</span>
-                                        <span className="visually-hidden">Next</span>
-                                    </button>
-                                </div>
-
-                            </div>
                         </div>
-
                     </div>
+                    <Lect cuento="url(./gatoN.jpg)" llin="/GatoNegro" nombreCap="Capítulo I — " />
                 </div>
             </div>
-            <Lect cuento="url(./gatoN.jpg)" llin="/GatoNegro" nombreCap="Capítulo I — " />
+
+
         </>
     )
 }

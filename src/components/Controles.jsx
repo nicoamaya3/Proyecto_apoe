@@ -10,7 +10,7 @@ export const Controles = () => {
                         <div className="col-12">
 
                             <div className="controles w-75 d-flex flex-row justify-content-between align-items-center px-4 py-3 rounded-pill shadow">
-                                
+
                                 {/* Texto de la escena */}
                                 <div className="text-white fw-bold">
                                     <span>El gato negro: Escena 01</span>
