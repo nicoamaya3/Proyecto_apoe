@@ -472,7 +472,7 @@ p {
 }
 
 .contcirculo2 {
-    position: absolute;
+   position: absolute;
     top: 65%;
     left: 65%;
     transform: scaleX(-1);

@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { Cuentos } from "../components/Cuentos"
-import { Problemas } from "../components/Problemas"
 import "../stylesheets/General.css"
 import { motion } from "motion/react"
 import { Footer } from '../components/Footer';
