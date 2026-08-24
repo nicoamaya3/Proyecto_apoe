@@ -5,6 +5,8 @@ import "../stylesheets/General.css"
 import { motion } from "motion/react"
 import { Footer } from '../components/Footer';
 import dataCrow from "../assets/dataCrow.json"
+import datafrank from "../assets/datafrank.json"
+import dataTakeshi from "../assets/dataTakeshi.json"
 import LottieModule from "lottie-react";
 
 
@@ -35,11 +37,27 @@ export const Home = () => {
 
   const lottieRef = useRef()
   const lottieRefC = useRef()
+  const lottieReff = useRef()
+  const lottieReft = useRef()
 
   const manejarMouseEnter = () => {
     if (lottieRefC.current) {
       lottieRefC.current.stop();
       lottieRefC.current.play();
+    }
+  };
+
+  const manejarMouseEnterf = () => {
+    if (lottieReff.current) {
+      lottieReff.current.stop();
+      lottieReff.current.play();
+    }
+  };
+
+  const manejarMouseEntert = () => {
+    if (lottieReft.current) {
+      lottieReft.current.stop();
+      lottieReft.current.play();
     }
   };
 
@@ -171,6 +189,25 @@ export const Home = () => {
 
           </section>
 
+          <div onMouseEnter={manejarMouseEnterf}>
+            <Lottie
+              className="frank"
+              lottieRef={lottieReff}
+              animationData={datafrank}
+              loop={false}
+              autoplay={false}
+            />
+          </div>
+
+          <div onMouseEnter={manejarMouseEntert}>
+            <Lottie
+              className="takeshitar"
+              lottieRef={lottieReft}
+              animationData={dataTakeshi}
+              loop={false}
+              autoplay={false}
+            />
+          </div>
 
 
           <Cuentos />

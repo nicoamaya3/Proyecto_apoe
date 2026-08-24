@@ -181,6 +181,10 @@ p {
     background-color: var(--vinotinto);
 }
 
+.fondo5{
+    background: linear-gradient(to bottom, var(--rojo) -90%, var(--vinotinto) 40%, var(--vinotinto) 100%);
+}
+
 .dd {
     width: 50px;
 
@@ -525,6 +529,34 @@ p {
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
+.takeshitar{
+    position: absolute;
+    z-index: 4;
+    left: 51%;
+    top: 200.5%;
+    width: 550px;
+}
+
+.takeshic{
+    z-index: 4;
+    top: 2.7%;
+    left: 32%;
+}
+
+.frankc{
+    z-index: 4;
+    top: 4.8%;
+    left: 44%;
+}
+
+.frank{
+    position: absolute;
+    z-index: 4;
+    left: 15%;
+    top: 200.5%;
+    width: 550px;
+}
+
 .comentarios {
     width: 100%;
 }
@@ -622,8 +654,8 @@ p {
 }
 
 .play {
-    top: -17px;
-    right: 105px;
+    top: -20px;
+    right: 110px;
 }
 
 .expandir {

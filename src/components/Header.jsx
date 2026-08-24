@@ -28,9 +28,9 @@ export const Header = () => {
                         <img className="iconos" src="iconos/nosotros.svg" alt="" />
                     </Link>
 
-                    <a href="#" className="sidebar-icon">
+                    <Link to='/Poe' href="#" className="sidebar-icon">
                         <img className="iconos" src="iconos/cuervo.svg" alt="" />
-                    </a>
+                    </Link>
 
                 </motion.div>
             </div>

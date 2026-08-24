@@ -6,6 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import dataCrow from "../assets/dataCrow.json"
 import LottieModule from "lottie-react";
 import { motion } from "motion/react"
+import datafrankc from "../assets/datafrankc.json"
+
 
 const Lottie = LottieModule.default;
 
@@ -13,6 +15,14 @@ export const Cuentogato = () => {
 
   const lottieRef = useRef()
   const lottieRefC = useRef()
+  const lottieReffc = useRef()
+
+  const manejarMouseEnterfc = () => {
+    if (lottieReffc.current) {
+      lottieReffc.current.stop();
+      lottieReffc.current.play();
+    }
+  };
 
   const manejarMouseEnter = () => {
     if (lottieRefC.current) {
@@ -149,6 +159,15 @@ export const Cuentogato = () => {
 
               </div>
             </div>
+            <div onMouseEnter={manejarMouseEnterfc}>
+              <Lottie
+                className="frankc position-absolute w-50"
+                lottieRef={lottieReffc}
+                animationData={datafrankc}
+                loop={false}
+                autoplay={false}
+              />
+            </div>
           </div>
 
           <div className="row text-center mb-4">
@@ -219,7 +238,7 @@ export const Cuentogato = () => {
 
           <div className="row w-100 justify-content-center mb-5 mt-5">
             <div className="col-12 col-lg-9" style={{ width: '100vh', height: '50vh', minWidth: '45px' }}>
-              <div className="h-100 rounded-4 w-100 border border-secondary bg-black text-center shadow d-flex align-items-center justify-content-center">
+              <div className="h-100 rounded-4 w-100 border border-secondary bg-black text-center shadow d-flex align-items-center justify-content-center mb-5">
                 <span className="text-white">BANNER 3D</span>
               </div>
             </div>
@@ -227,7 +246,7 @@ export const Cuentogato = () => {
 
         </div>
 
-        <div style={{ position: 'fixed', top: '30px', right: '20px', zIndex: '9999', width: '369px' }}>
+        <div style={{ position: 'fixed', top: '-120px', right: '-180px', zIndex: '9999', width: '350px' }}>
           <iframe
             data-testid="embed-iframe"
             src="https://open.spotify.com/embed/track/1CqetFVvQeVIFwjVGk4WGr?utm_source=generator&si=d1a1675989144089"
@@ -320,26 +339,23 @@ export const Cuentogato = () => {
 
 
 
-        <div className="container">
-  <div className="row justify-content-center">
-    <div className="col-12 fondo mb-5 col-lg-8 p-4 rounded-4 border border-secondary">
-      <h3 className="text-white mb-4 fw-bold">Comentarios</h3>
+        <div className="container mt-5">
+          <div className="row justify-content-center">
+            <div className="col-12 fondo mb-5 col-lg-8 p-4 rounded-4 border border-secondary">
+              <h3 className="text-white mb-4 fw-bold">Comentarios</h3>
 
-      {/* Contenedor de Cusdis con min-height para evitar que colapse en blanco */}
-      <div 
-        id="cusdis_thread"
-        className="cusdis-thread"
-        data-host="https://cusdis.com"
-        data-app-id="acc6b049-f587-43b7-b8ba-b05918a2a6ff"
-        data-page-id="cuento-gato"
-        data-page-url={window.location.href}
-        data-page-title="El Gato Negro"
-        style={{ minHeight: '200px' }}
-      ></div>
+              {/* Contenedor de Cusdis */}
+              <div id="cusdis_thread"
+                data-host="https://cusdis.com"
+                data-app-id="acc6b049-f587-43b7-b8ba-b05918a2a6ff"
+                data-page-id="cuento-gato"
+                data-page-url={window.location.href}
+                data-page-title="El Gato Negro"
+              ></div>
 
-    </div>
-  </div>
-</div>
+            </div>
+          </div>
+        </div>
 
 
       </section>

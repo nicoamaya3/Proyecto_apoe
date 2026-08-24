@@ -12,6 +12,7 @@ import { Gleyendo } from "./pages/Gleyendo.jsx"
 import { Cuentos } from "./components/Cuentos.jsx"
 import { LotieNicolas } from "./components/LotieNicolas.jsx"
 import { LootieMari } from "./components/LootieMari.jsx"
+import { Poe } from "./pages/Poe.jsx"
 
 
 
@@ -34,8 +35,11 @@ export const App = () => {
           <Route path="/LecturaC" element= {<Leyendo />} />
           <Route path="/LecturaG" element= {<Gleyendo />} />
           <Route path="/Cuentos" element= {<Cuentos />} />
+          <Route path="/Poe" element= {<Poe />} />
+
           <Route path="/LootieNico" element= {<LotieNicolas />} />
           <Route path="/LootieMari" element= {<LootieMari />} />
+
 
           
         </Routes>
