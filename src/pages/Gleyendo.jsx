@@ -177,7 +177,7 @@ export const Gleyendo = () => {
                   title={isPlaying ? "Pausar" : "Play"}
                 >
                   <img 
-                    src={isPlaying ? "src/assets/svg/pausa.svg" : "src/assets/svg/play.svg"} 
+                    src={isPlaying ? "src/assets/svg/Detener.svg" : "src/assets/svg/play.svg"} 
                     alt={isPlaying ? "Pausa" : "Play"} 
                     style={{ width: '28px', cursor: 'pointer' }} 
                   />
