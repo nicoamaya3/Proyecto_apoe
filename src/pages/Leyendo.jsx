@@ -124,61 +124,9 @@ export const Leyendo = () => {
               </div>
 
               {/* Botones Flotantes Laterales sobre la imagen/video (Forzados con CSS visible) */}
-              <button 
-                type="button" 
-                onClick={handlePrev}
-                aria-label="Anterior"
-                style={{
-                  position: 'absolute',
-                  top: '50%',
-                  left: '10px',
-                  transform: 'translateY(-50%)',
-                  zIndex: 10,
-                  background: 'rgba(0,0,0,0.5)',
-                  border: 'none',
-                  borderRadius: '50%',
-                  width: '45px',
-                  height: '45px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  cursor: 'pointer'
-                }}
-              >
-                <img 
-                  src="src/assets/svg/retroceder.svg" 
-                  alt="Retroceder" 
-                  style={{ width: '24px', filter: 'invert(1)' }} 
-                />
-              </button>
+             
 
-              <button 
-                type="button" 
-                onClick={handleNext}
-                aria-label="Siguiente"
-                style={{
-                  position: 'absolute',
-                  top: '50%',
-                  right: '10px',
-                  transform: 'translateY(-50%)',
-                  zIndex: 10,
-                  background: 'rgba(0,0,0,0.5)',
-                  border: 'none',
-                  borderRadius: '50%',
-                  width: '45px',
-                  height: '45px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  cursor: 'pointer'
-                }}
-              >
-                <img 
-                  src="src/assets/svg/siguiente.svg" 
-                  alt="Avanzar" 
-                  style={{ width: '24px', filter: 'invert(1)' }} 
-                />
-              </button>
+              
 
             </div>
 
