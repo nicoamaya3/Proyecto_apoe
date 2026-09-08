@@ -237,7 +237,7 @@ export const Leyendo = () => {
                   title={isPlaying ? "Pausar" : "Play"}
                 >
                   <img 
-                    src={isPlaying ? "src/assets/svg/pausa.svg" : "src/assets/svg/play.svg"} 
+                    src={isPlaying ? "src/assets/svg/detener.svg" : "src/assets/svg/play.svg"} 
                     alt={isPlaying ? "Pausa" : "Play"} 
                     style={{ width: '28px', cursor: 'pointer' }} 
                   />

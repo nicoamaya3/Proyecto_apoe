@@ -272,9 +272,6 @@ export const Gleyendo = () => {
           </div>
         </div>
 
-        {/* Componente Lect de tu cuento original */}
-        <Lect cuento="url(./gatoN.jpg)" llin="/GatoNegro" nombreCap="Capítulo I — " />
-
       </div>
     </div>
   );
