@@ -3,19 +3,21 @@
     flex-direction: column;
     align-items: end;
     justify-content: center;
-    height: 100vh;
+    width: 100%;
+    height: 85vh;
+    background-color: #c7f12e;
 }
 
 .pantalla {
     width: 910px;
     height: 500px;
-    position: relative;
     overflow: hidden;
+    background-color: aqua;
 }
 
 .cuartoTakeshi {
     position: absolute;
-    width: 830px;
+    width: 880px;
 }
 
 .takeshi {
@@ -44,8 +46,8 @@
 
 .puerta {
     position: absolute;
-    width: 118px;
-    left: 12px;
+    width: 125px;
+    left: 16px;
     top: 40px ;
     color: white;
     border-radius: 10px;
@@ -56,9 +58,9 @@
 
 .cuadroDragon {
     position: absolute;
-    width: 155px;
+    width: 170px;
     top: 65px;
-    left: 200px;
+    left: 210px;
     color: white;
     border-radius: 10px;
     filter: drop-shadow(0 0 10px  #c7f12e);
@@ -66,9 +68,9 @@
 
 .cuadroSamurai {
     position: absolute;
-    width: 145px;
-    top: 105px;
-    left: 438px;
+    width: 155px;
+    top: 120px;
+    left: 465px;
     color: white;
     border-radius: 10px;
     filter: drop-shadow(0 0 10px #c7f12e);
@@ -85,8 +87,8 @@
 
 .maceta {
     position: absolute;
-    width: 270px;
-    top: 195px;
+    width: 295px;
+    top: 203px;
     left: 160px;
     color: white;
     border-radius: 10px;
