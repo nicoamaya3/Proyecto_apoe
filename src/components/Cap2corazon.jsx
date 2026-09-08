@@ -5,33 +5,18 @@ import "../stylesheets/AnimacionCorazon.css";
 
 export const Cap2corazon = () => {
 
-    const videoRef2 = useRef(null)
 
-    const handlePlay = () => {
-        videoRef2.current.play()
-    }
-    const handlePause = () => {
-        videoRef2.current.pause()
-    }
 
     return (
         <>
             <video
-                ref={videoRef2}
+                
                 className='pantalla'>
                 <source
                     src="./public/Videos/Corazón/Capitulo2-Sec2.mp4"
                 />
             </video>
-            <div className='position-relative iniciar'>
-                <div className="position-absolute play">
-                    <img onClick={handlePlay} src="src/assets/svg/play.svg" alt="Play" style={{ width: '25px', cursor: 'pointer' }} />
-                </div>
-
-                <div className='position-absolute detener'>
-                    <button onClick={handlePause}>Detener</button>
-                </div>
-            </div>
+           
         </>
     )
 }
