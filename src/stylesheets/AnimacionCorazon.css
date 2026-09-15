@@ -20,6 +20,11 @@
     width: 880px;
 }
 
+.FondoS {
+    position: absolute;
+    width: 880px;
+}
+
 .takeshi {
     position: absolute;
     width: 270px;
@@ -80,8 +85,6 @@
     position: absolute;
     width: 300px;
     left: 255px;
-    color: white;
-    border-radius: 10px;
     filter: drop-shadow(0 0 10px  #c7f12e);
 }
 
@@ -95,18 +98,27 @@
     filter: drop-shadow(0 0 10px #c7f12e);
 }
 
-.botonesSa{
-    position: relative;
+
+.Mesaa{
+    position: absolute;
+    width: 380px;
+    top: 210px;
+    left: 210px ;
+    filter: drop-shadow(0 0 10px  #c7f12e);
 }
 
-.botonesSa1{
+.Silla{
     position: absolute;
-    top: 45px;
-    left: 70%;
+    width: 310px;
+    top: 140px;
+    left: 520px;
+    filter: drop-shadow(0 0 10px  #c7f12e);
 }
 
-.botonesSa2{
+.Mazeta{
     position: absolute;
-    top: 45px;
-    left: 80%;
+    width: 280px;
+    top: 145px;
+    left: 410px;
+    filter: drop-shadow(0 0 10px  #c7f12e);
 }
