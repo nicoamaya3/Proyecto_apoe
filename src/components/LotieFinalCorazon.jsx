@@ -1,10 +1,14 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import LottieModule from "lottie-react";
 
 
 import dataMesaa from "../assets/dataMesaa.json";
 import dataSilla from "../assets/dataSilla.json";
 import dataMazeta from "../assets/dataMazeta.json";
+import dataOla from "../assets/dataOla.json";
+import dataCuerpo from "../assets/dataCuerpo.json";
+import dataShogun from "../assets/dataShogun.json";
+import dataT from "../assets/dataT.json";
 
 
 
@@ -19,22 +23,50 @@ export const LotieFinalCorazon = () => {
     const lottieRefMesa = useRef();
     const lottieRefSilla = useRef();
     const lottieRefMazeta = useRef();
+    const lottieRefOla = useRef();
+    const lottieRefCuerpo = useRef();
+    const lottieRefShogun = useRef();
+    const lottieRefT = useRef();
+    const [anima, setAnima] = useState(false);
 
 
-     const reproducirMesaa = () => {
-    lottieRefMesa.current.stop();
-    lottieRefMesa.current.play();
-  };
+    const iniciarCa = () => {
+        setAnima(true);
+    };
 
-     const reproducirSilla = () => {
-    lottieRefSilla.current.stop();
-    lottieRefSilla.current.play();
-  };
 
-     const reproducirMazeta = () => {
-    lottieRefMazeta.current.stop();
-    lottieRefMazeta.current.play();
-  };
+    const reproducirMesaa = () => {
+        lottieRefMesa.current.stop();
+        lottieRefMesa.current.play();
+    };
+
+    const reproducirSilla = () => {
+        lottieRefSilla.current.stop();
+        lottieRefSilla.current.play();
+    };
+
+    const reproducirMazeta = () => {
+        lottieRefMazeta.current.stop();
+        lottieRefMazeta.current.play();
+    };
+
+    const reproducirOla = () => {
+        lottieRefOla.current.stop();
+        lottieRefOla.current.play();
+    };
+
+    const reproducirCuerpo = () => {
+        lottieRefCuerpo.current.stop();
+        lottieRefCuerpo.current.play();
+    };
+
+    const reproducirShogun = () => {
+        lottieRefShogun.current.stop();
+        lottieRefShogun.current.play();
+        lottieRefT.current.stop();
+        lottieRefT.current.play();
+    };
+
 
 
     return (
@@ -46,6 +78,15 @@ export const LotieFinalCorazon = () => {
                     <Lottie
                         lottieRef={lottieRefMazeta}
                         animationData={dataMazeta}
+                        loop={false}
+                        autoplay={false}
+                    />
+                </div>
+
+                <div onClick={reproducirOla} className="Ola">
+                    <Lottie
+                        lottieRef={lottieRefOla}
+                        animationData={dataOla}
                         loop={false}
                         autoplay={false}
                     />
@@ -69,8 +110,41 @@ export const LotieFinalCorazon = () => {
                     />
                 </div>
 
-                
-                
+                <div onClick={reproducirCuerpo} className="Cuerpo">
+                    <Lottie
+                        lottieRef={lottieRefCuerpo}
+                        animationData={dataCuerpo}
+                        loop={false}
+                        autoplay={false}
+                    />
+                </div>
+
+                <div className="T">
+                    <Lottie
+                        className={`T ${anima ? 'activar-Camina' : ''}`}
+                        lottieRef={lottieRefT}
+                        animationData={dataT}
+                        loop={false}
+                        autoplay={false}
+                    />
+                </div>
+
+                <div onClick={reproducirShogun} className="Shogun">
+                    <Lottie
+                        onClick={iniciarCa}
+                        lottieRef={lottieRefShogun}
+                        animationData={dataShogun}
+                        loop={false}
+                        autoplay={false}
+                    />
+                </div>
+
+
+
+
+
+
+
 
             </div>
         </>
