@@ -9,6 +9,7 @@ import dataOla from "../assets/dataOla.json";
 import dataCuerpo from "../assets/dataCuerpo.json";
 import dataShogun from "../assets/dataShogun.json";
 import dataT from "../assets/dataT.json";
+import soundFinal from "../../public/audios/Cap5_sec_Final.mp3";
 
 
 
@@ -27,6 +28,8 @@ export const LotieFinalCorazon = () => {
     const lottieRefCuerpo = useRef();
     const lottieRefShogun = useRef();
     const lottieRefT = useRef();
+
+    const refAudio = useRef(new Audio(soundFinal));
     const [anima, setAnima] = useState(false);
 
 
@@ -34,6 +37,12 @@ export const LotieFinalCorazon = () => {
         setAnima(true);
     };
 
+    const reproducirAudio = () => {
+        refAudio.current.play();
+    };
+    const pausarAudio = () => {
+        refAudio.current.pause();
+    };
 
     const reproducirMesaa = () => {
         lottieRefMesa.current.stop();
@@ -71,7 +80,7 @@ export const LotieFinalCorazon = () => {
 
     return (
         <>
-            <div className="pantalla">
+            <div onClick={reproducirAudio} className="pantalla">
                 <img className="FondoS" src="fondoS.webp" alt="" />
 
                 <div onClick={reproducirMazeta} className="Mazeta">
@@ -139,6 +148,9 @@ export const LotieFinalCorazon = () => {
                     />
                 </div>
 
+                <div className="position-absolute pausa">
+                    <button onClick={pausarAudio}>Detener</button>
+                </div>
 
 
                 {/* a */}
