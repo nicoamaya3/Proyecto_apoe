@@ -18,14 +18,14 @@ export const Leyendo = () => {
 
   // Lista ordenada de tus componentes y títulos
   const slides = [
-    { component: <Portadacorazon1 />, title: "El Corazón Delator: Escena 01" },
+    { component: <Portadacorazon1 />, title: "Arrepentimiento" },
     { component: <Cap1corazon />, title: "El Corazón Delator: Escena 01" },
-    { component: <PortadaCorazon />, title: "Portada Corazón" },
+    { component: <PortadaCorazon />, title: "El inicio" },
     { component: <ReproductorCap2 />, title: "El Corazón Delator: Escena 02" },
     { component: <Cap2corazon />, title: "El Corazón Delator: Escena 02" },
-    { component: <Portadacorazon2 />, title: "Portada 2" },
+    { component: <Portadacorazon2 />, title: "La noche" },
     { component: <Cap3corazon />, title: "El Corazón Delator: Escena 03" },
-    { component: <Portadacorazon3 />, title: "Portada 3" },
+    { component: <Portadacorazon3 />, title: "Plan maestro" },
     { component: <Cap4corazon />, title: "El Corazón Delator: Escena 04" },
     { component: <LotieFinalCorazon />, title: "El Corazón Delator: Escena 05" },
 
