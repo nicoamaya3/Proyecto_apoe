@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { div } from 'motion/react-client'
+import Cap3G from "../../public/Videos/GatoNegro/Esc3.mp4";
 import "../stylesheets/AnimacionGato.css";
 
 
@@ -12,7 +13,7 @@ export const Esc3gatonegro = () => {
                
                 className='escenario'>
                 <source
-                    src="./public/Videos/GatoNegro/Esc3.mp4"
+                     src={Cap3G}
                 />
             </video>
         </>

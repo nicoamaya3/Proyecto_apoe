@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { div } from 'motion/react-client'
+import Cap1C from "../../public/Videos/Corazón/Cap1.mp4";
 import "../stylesheets/AnimacionCorazon.css";
 
 export const Cap1corazon = () => {
@@ -11,7 +12,7 @@ export const Cap1corazon = () => {
         
         className='pantalla'>
         <source
-          src="./public/Videos/Corazón/Cap1.mp4"
+          src={Cap1C}
         />
       </video>
 
