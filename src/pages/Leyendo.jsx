@@ -3,10 +3,12 @@ import { Cap1corazon } from "../components/Cap1corazon.jsx";
 import { Cap2corazon } from "../components/Cap2corazon.jsx";
 import { Cap3corazon } from "../components/Cap3corazon.jsx";
 import { Cap4corazon } from "../components/Cap4corazon.jsx";
+import { Cap5corazon } from "../components/Cap5corazon.jsx";
 import { PortadaCorazon } from "../components/PortadaCorazon.jsx";
 import { Portadacorazon1 } from "../components/Portadacorazon1.jsx";
 import { Portadacorazon2 } from "../components/Portadacorazon2.jsx";
 import { Portadacorazon3 } from "../components/Portadacorazon3.jsx";
+import { Portadacorazon4 } from "../components/Portadacorazon4.jsx";
 import { ReproductorCap2 } from "../components/ReproductorCap2.jsx";
 import { LotieFinalCorazon } from "../components/LotieFinalCorazon.jsx";
 import "../stylesheets/AnimacionCorazon.css";
@@ -27,6 +29,9 @@ export const Leyendo = () => {
     { component: <Cap3corazon />, title: "El Corazón Delator: Escena 03" },
     { component: <Portadacorazon3 />, title: "Plan maestro" },
     { component: <Cap4corazon />, title: "El Corazón Delator: Escena 04" },
+    { component: <Portadacorazon4 />, title: "La caida" },
+    { component: <Portadacorazon4 />, title: "La caida" },
+    { component: <Cap5corazon />, title: "El Corazón Delator: Escena 05" },
     { component: <LotieFinalCorazon />, title: "El Corazón Delator: Escena 05" },
 
   ];
