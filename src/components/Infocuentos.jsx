@@ -19,7 +19,7 @@ export const Infocuentos = ({ titi, des, personajesUno, personajesDos, personaje
                                     <p className="text-white bg-success w-75 text-center rounded-4">{categoria}</p>
                                 </div>
                             </div>
-                            <div className="d-flex justify-content-center gap-3">
+                            {/* <div className="d-flex justify-content-center gap-3">
                                         <img className='img' src="https://64.media.tumblr.com/d65212d0050b2057686a31a3033377a4/9a5e59d4a20102aa-17/s75x75_c1/f537b0a0585d89556f1dfac7a609449e0dcd6813.gifv" />
                             
                                         <img className='img' src="https://64.media.tumblr.com/6625acfa135f373639d42c4c2afa265c/9a5e59d4a20102aa-4d/s75x75_c1/25095466d0f9bed2e5f9c034c38d543b922ca8da.gifv" />
@@ -43,8 +43,11 @@ export const Infocuentos = ({ titi, des, personajesUno, personajesDos, personaje
                                         <img className='img' src="https://64.media.tumblr.com/e807e881d13cf17d2b4ea722a874ecf7/408b2d36fe8fb6b1-e5/s75x75_c1/0f8b22143647c538a713eb433d98b6a1ed6d2f52.gifv" />
                             
                                         <img className='img' src="https://64.media.tumblr.com/e1af22751f2c11adb8ea7b2eff326ed0/4809e0c5820895fd-c3/s75x75_c1/fc73c5fdc5e08ae4289065b971eac74551edfc54.gifv" />
-                                      </div>
+                                      </div> */}
                             <div>
+
+                                <div><img className="w-100" src="https://pixelsafari.neocities.org/dividers/animal/bat3.png"/></div>
+
                                 <div className="ps-4 pe-4 pb-4 mb-2">
                                     <h2 className="fw-bold mb-4 t pt-3"
                                     style={{ color: "var(--vinotinto)" }}
