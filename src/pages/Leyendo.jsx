@@ -16,14 +16,16 @@ import "../stylesheets/AnimacionCorazon.css";
 export const Leyendo = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-  
+
   // Estados para el progreso del video
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [hasVideo, setHasVideo] = useState(false);
 
   const carouselInnerRef = useRef(null);
+  const progressBarRef = useRef(null); // Referencia para hacer clic en la barra
 
+  // Lista ordenada de tus componentes y títulos
   const slides = [
     { component: <Portadacorazon1 />, title: "Arrepentimiento" },
     { component: <Cap1corazon />, title: "El Corazón Delator: Escena 01" },
@@ -93,7 +95,7 @@ export const Leyendo = () => {
     }
   };
 
-  // Reproducir / Pausar
+  // Acción de Reproducir / Pausar
   const togglePlayPause = (e) => {
     e.stopPropagation();
     const video = getActiveVideo();
@@ -106,7 +108,7 @@ export const Leyendo = () => {
     }
   };
 
-  // Reiniciar
+  // Acción de Reiniciar
   const handleRestart = (e) => {
     e.stopPropagation();
     const video = getActiveVideo();
@@ -116,21 +118,21 @@ export const Leyendo = () => {
     }
   };
 
-  // Siguiente Escena
+  // Acción de Ir a la Siguiente Escena
   const handleNext = (e) => {
     if (e) e.stopPropagation();
     stopCurrentVideo();
     setCurrentIndex((prev) => (prev + 1) % slides.length);
   };
 
-  // Escena Anterior
+  // Acción de Volver a la Escena Anterior
   const handlePrev = (e) => {
     if (e) e.stopPropagation();
     stopCurrentVideo();
     setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
-  // Pantalla Completa
+  // Acción de Pantalla Completa
   const handleFullscreen = (e) => {
     e.stopPropagation();
     const video = getActiveVideo();
@@ -145,14 +147,17 @@ export const Leyendo = () => {
     }
   };
 
-  // Buscar tiempo al hacer clic/arrastrar la barra de progreso
-  const handleSeek = (e) => {
+  // Permite hacer clic en la barra para adelantar o retroceder el video
+  const handleBarClick = (e) => {
     const video = getActiveVideo();
-    if (video && duration > 0) {
-      const newTime = parseFloat(e.target.value);
-      video.currentTime = newTime;
-      setCurrentTime(newTime);
-    }
+    if (!video || !duration || !progressBarRef.current) return;
+
+    const rect = progressBarRef.current.getBoundingClientRect();
+    const clickPosition = (e.clientX - rect.left) / rect.width;
+    const newTime = clickPosition * duration;
+
+    video.currentTime = newTime;
+    setCurrentTime(newTime);
   };
 
   // Formateador de segundos a MM:SS
@@ -169,6 +174,7 @@ export const Leyendo = () => {
     <div className="fondo position-relative min-vh-100 bg-black text-white">
       <div className="container py-4">
         <div className="row justify-content-center">
+          
           <div className="col-12 col-md-10 position-relative">
             {/* Carrusel Principal */}
             <div id="carouselExample" className="carousel slide position-relative">
@@ -186,45 +192,41 @@ export const Leyendo = () => {
           </div>
         </div>
 
-        {/* Barra de Controles e Indicadores */}
+        {/* Barra Verde Inferior de Controles */}
         <div className="row justify-content-center mt-4">
           <div className="col-12 col-md-10">
             <div 
               className="d-flex flex-column gap-2 px-4 py-3 rounded-4 shadow"
               style={{ backgroundColor: '#2e6930', zIndex: 20, position: 'relative' }}
             >
-              {/* Barra de Progreso del Video (solo se muestra si la diapositiva tiene video) */}
+
+              {/* Barra de Progreso del Video (Interactiva) */}
               {hasVideo ? (
                 <div className="d-flex align-items-center gap-2">
                   <span className="small text-white-50 font-monospace">
                     {formatTime(currentTime)}
                   </span>
                   
-                  <div className="position-relative flex-grow-1 d-flex align-items-center">
-                    <input
-                      type="range"
-                      className="form-range custom-progress-range"
-                      min="0"
-                      max={duration || 100}
-                      step="0.1"
-                      value={currentTime}
-                      onChange={handleSeek}
-                      style={{
-                        cursor: "pointer",
-                        accentColor: "#ffffff",
-                        zIndex: 2
-                      }}
-                    />
+                  <div 
+                    ref={progressBarRef}
+                    onClick={handleBarClick}
+                    className="progress flex-grow-1 rounded-pill position-relative" 
+                    style={{ 
+                      height: '10px', 
+                      cursor: 'pointer', 
+                      backgroundColor: 'rgba(255, 255, 255, 0.2)' 
+                    }}
+                    title="Hacer clic para adelantar/retroceder"
+                  >
                     <div 
-                      className="progress position-absolute w-100" 
-                      style={{ height: '6px', pointerEvents: 'none', top: '50%', transform: 'translateY(-50%)', backgroundColor: 'rgba(255, 255, 255, 0.2)' }}
-                    >
-                      <div 
-                        className="progress-bar bg-white" 
-                        role="progressbar" 
-                        style={{ width: `${progressPercent}%` }}
-                      ></div>
-                    </div>
+                      className="progress-bar rounded-pill" 
+                      role="progressbar" 
+                      style={{ 
+                        width: `${progressPercent}%`, 
+                        backgroundColor: '#3F131F',
+                        transition: 'width 0.1s linear'
+                      }}
+                    ></div>
                   </div>
 
                   <span className="small text-white-50 font-monospace">
@@ -239,13 +241,16 @@ export const Leyendo = () => {
 
               {/* Fila Inferior: Título + Botones */}
               <div className="d-flex flex-row justify-content-between align-items-center mt-1">
+                
                 {/* Texto de la escena actual */}
                 <div className="text-white fw-bold fs-5">
                   <span>{slides[currentIndex].title}</span>
                 </div>
 
-                {/* Botones de Control */}
+                {/* Botones de Control en la barra verde */}
                 <div className="d-flex align-items-center gap-3">
+
+                  {/* Reiniciar */}
                   <button 
                     type="button" 
                     className="btn p-0 border-0 bg-transparent" 
@@ -260,6 +265,7 @@ export const Leyendo = () => {
                     />
                   </button>
 
+                  {/* Retroceder (Escena anterior) */}
                   <button 
                     type="button" 
                     className="btn p-0 border-0 bg-transparent" 
@@ -273,6 +279,7 @@ export const Leyendo = () => {
                     />
                   </button>
 
+                  {/* Play / Pausa */}
                   <button 
                     type="button" 
                     className="btn p-0 border-0 bg-transparent" 
@@ -287,6 +294,7 @@ export const Leyendo = () => {
                     />
                   </button>
 
+                  {/* Avanzar (Escena siguiente) */}
                   <button 
                     type="button" 
                     className="btn p-0 border-0 bg-transparent" 
@@ -300,6 +308,7 @@ export const Leyendo = () => {
                     />
                   </button>
 
+                  {/* Pantalla Completa */}
                   <button 
                     type="button" 
                     className="btn p-0 border-0 bg-transparent" 
@@ -313,7 +322,9 @@ export const Leyendo = () => {
                       style={{ width: '28px', cursor: hasVideo ? 'pointer' : 'default', opacity: hasVideo ? 1 : 0.5 }} 
                     />
                   </button>
+
                 </div>
+
               </div>
 
             </div>

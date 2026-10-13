@@ -17,6 +17,7 @@ export const Gleyendo = () => {
   const [hasVideo, setHasVideo] = useState(false);
 
   const carouselInnerRef = useRef(null);
+  const progressBarRef = useRef(null); // Referencia para hacer clic en la barra
 
   // Lista de componentes para este cuento y sus respectivos títulos
   const slides = [
@@ -132,14 +133,17 @@ export const Gleyendo = () => {
     }
   };
 
-  // Control manual del tiempo al interactuar con la barra
-  const handleSeek = (e) => {
+  // Permite hacer clic en cualquier parte de la barra para adelantar o retroceder el video
+  const handleBarClick = (e) => {
     const video = getActiveVideo();
-    if (video && duration > 0) {
-      const newTime = parseFloat(e.target.value);
-      video.currentTime = newTime;
-      setCurrentTime(newTime);
-    }
+    if (!video || !duration || !progressBarRef.current) return;
+
+    const rect = progressBarRef.current.getBoundingClientRect();
+    const clickPosition = (e.clientX - rect.left) / rect.width; // Posición porcentual del clic (0 a 1)
+    const newTime = clickPosition * duration;
+
+    video.currentTime = newTime;
+    setCurrentTime(newTime);
   };
 
   // Formateador de segundos a MM:SS
@@ -184,44 +188,34 @@ export const Gleyendo = () => {
               style={{ backgroundColor: '#2e6930', zIndex: 20, position: 'relative' }}
             >
 
-              {/* Barra de Progreso del Video */}
+              {/* Barra de Progreso del Video Interactiva */}
               {hasVideo ? (
                 <div className="d-flex align-items-center gap-2">
                   <span className="small text-white-50 font-monospace">
                     {formatTime(currentTime)}
                   </span>
                   
-                  <div className="position-relative flex-grow-1 d-flex align-items-center">
-                    <input
-                      type="range"
-                      className="form-range custom-progress-range"
-                      min="0"
-                      max={duration || 100}
-                      step="0.1"
-                      value={currentTime}
-                      onChange={handleSeek}
-                      style={{
-                        cursor: "pointer",
-                        accentColor: "#ffffff",
-                        zIndex: 2
-                      }}
-                    />
+                  {/* Contenedor clickeable de la barra de progreso */}
+                  <div 
+                    ref={progressBarRef}
+                    onClick={handleBarClick}
+                    className="progress flex-grow-1 rounded-pill position-relative" 
+                    style={{ 
+                      height: '10px', 
+                      cursor: 'pointer', 
+                      backgroundColor: 'rgba(255, 255, 255, 0.2)' 
+                    }}
+                    title="Hacer clic para adelantar/retroceder"
+                  >
                     <div 
-                      className="progress position-absolute w-100" 
+                      className="progress-bar rounded-pill" 
+                      role="progressbar" 
                       style={{ 
-                        height: '6px', 
-                        pointerEvents: 'none', 
-                        top: '50%', 
-                        transform: 'translateY(-50%)', 
-                        backgroundColor: 'rgba(255, 255, 255, 0.2)' 
+                        width: `${progressPercent}%`, 
+                        backgroundColor: '#3F131F',
+                        transition: 'width 0.1s linear' // Suaviza el movimiento del llenado
                       }}
-                    >
-                      <div 
-                        className="progress-bar bg-white" 
-                        role="progressbar" 
-                        style={{ width: `${progressPercent}%` }}
-                      ></div>
-                    </div>
+                    ></div>
                   </div>
 
                   <span className="small text-white-50 font-monospace">
@@ -328,4 +322,4 @@ export const Gleyendo = () => {
       </div>
     </div>
   );
-}; 
+};
