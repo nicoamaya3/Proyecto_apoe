@@ -6,11 +6,19 @@ import { Cap4corazon } from "../components/Cap4corazon.jsx";
 import { Cap5corazon } from "../components/Cap5corazon.jsx";
 import { ReproductorCap2 } from "../components/ReproductorCap2.jsx";
 import { LotieFinalCorazon } from "../components/LotieFinalCorazon.jsx";
+import SubtitulosCap1 from "../../public/Videos/DialogosCorazon/dialogoCap1.mp4";
+import SubtitulosCap2 from "../../public/Videos/DialogosCorazon/dialogoCap2.mp4";
+import SubtitulosCap3 from "../../public/Videos/DialogosCorazon/dialogoCap3.mp4";
+import SubtitulosCap4 from "../../public/Videos/DialogosCorazon/dialogoCap4.mp4";
+import SubtitulosCap5 from "../../public/Videos/DialogosCorazon/dialogoCap5.mp4";
 import "../stylesheets/AnimacionCorazon.css";
 
 export const Leyendo = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
+
+  // Estado para activar/desactivar subtítulos
+  const [showSubtitles, setShowSubtitles] = useState(false);
 
   // Estados para el progreso del video
   const [currentTime, setCurrentTime] = useState(0);
@@ -18,11 +26,23 @@ export const Leyendo = () => {
   const [hasVideo, setHasVideo] = useState(false);
 
   const carouselInnerRef = useRef(null);
-  const progressBarRef = useRef(null); // Referencia para hacer clic en la barra
+  const subtitleVideoRef = useRef(null);
+  const progressBarRef = useRef(null);
 
-  // Lista ordenada de tus componentes y títulos
+  // Mapeo de subtítulos por índice de diapositiva
+  const subtitlesMap = {
+    0: SubtitulosCap1,
+    1: SubtitulosCap2,
+    2: SubtitulosCap2,
+    3: SubtitulosCap3,
+    4: SubtitulosCap4,
+    5: SubtitulosCap5,
+  };
+
+  const currentSubtitleSrc = subtitlesMap[currentIndex];
+
   const slides = [
-    { component: <Cap1corazon />, title: "El Corazón Delator: Escena 01" },
+    { component: <Cap1corazon showSubtitles={showSubtitles} subtitleSrc={SubtitulosCap1} />, title: "El Corazón Delator: Escena 01" },
     { component: <ReproductorCap2 />, title: "El Corazón Delator: Escena 02" },
     { component: <Cap2corazon />, title: "El Corazón Delator: Escena 02" },
     { component: <Cap3corazon />, title: "El Corazón Delator: Escena 03" },
@@ -31,13 +51,26 @@ export const Leyendo = () => {
     { component: <LotieFinalCorazon />, title: "El Corazón Delator: Escena 05" },
   ];
 
-  // Busca el elemento <video> dentro de la escena activa
   const getActiveVideo = () => {
     if (!carouselInnerRef.current) return null;
     return carouselInnerRef.current.querySelector('.carousel-item.active video');
   };
 
-  // Escuchar eventos del video de la diapositiva activa
+  // Sincronización del video de subtítulos
+  useEffect(() => {
+    const mainVideo = getActiveVideo();
+    const subVideo = subtitleVideoRef.current;
+
+    if (mainVideo && subVideo && currentSubtitleSrc) {
+      if (isPlaying) {
+        subVideo.play().catch(() => {});
+      } else {
+        subVideo.pause();
+      }
+      subVideo.currentTime = mainVideo.currentTime;
+    }
+  }, [isPlaying, currentTime, currentIndex, currentSubtitleSrc]);
+
   useEffect(() => {
     const video = getActiveVideo();
 
@@ -75,16 +108,17 @@ export const Leyendo = () => {
     };
   }, [currentIndex]);
 
-  // Detiene la reproducción del video
   const stopCurrentVideo = () => {
     const video = getActiveVideo();
     if (video) {
       video.pause();
       setIsPlaying(false);
     }
+    if (subtitleVideoRef.current) {
+      subtitleVideoRef.current.pause();
+    }
   };
 
-  // Acción de Reproducir / Pausar
   const togglePlayPause = (e) => {
     e.stopPropagation();
     const video = getActiveVideo();
@@ -97,7 +131,11 @@ export const Leyendo = () => {
     }
   };
 
-  // Acción de Reiniciar
+  const toggleSubtitles = (e) => {
+    e.stopPropagation();
+    setShowSubtitles((prev) => !prev);
+  };
+
   const handleRestart = (e) => {
     e.stopPropagation();
     const video = getActiveVideo();
@@ -105,23 +143,23 @@ export const Leyendo = () => {
       video.currentTime = 0;
       video.play();
     }
+    if (subtitleVideoRef.current) {
+      subtitleVideoRef.current.currentTime = 0;
+    }
   };
 
-  // Acción de Ir a la Siguiente Escena
   const handleNext = (e) => {
     if (e) e.stopPropagation();
     stopCurrentVideo();
     setCurrentIndex((prev) => (prev + 1) % slides.length);
   };
 
-  // Acción de Volver a la Escena Anterior
   const handlePrev = (e) => {
     if (e) e.stopPropagation();
     stopCurrentVideo();
     setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
-  // Acción de Pantalla Completa
   const handleFullscreen = (e) => {
     e.stopPropagation();
     const video = getActiveVideo();
@@ -136,7 +174,6 @@ export const Leyendo = () => {
     }
   };
 
-  // Permite hacer clic en la barra para adelantar o retroceder el video
   const handleBarClick = (e) => {
     const video = getActiveVideo();
     if (!video || !duration || !progressBarRef.current) return;
@@ -146,10 +183,12 @@ export const Leyendo = () => {
     const newTime = clickPosition * duration;
 
     video.currentTime = newTime;
+    if (subtitleVideoRef.current) {
+      subtitleVideoRef.current.currentTime = newTime;
+    }
     setCurrentTime(newTime);
   };
 
-  // Formateador de segundos a MM:SS
   const formatTime = (timeInSeconds) => {
     if (isNaN(timeInSeconds) || timeInSeconds === 0) return "00:00";
     const minutes = Math.floor(timeInSeconds / 60);
@@ -171,9 +210,31 @@ export const Leyendo = () => {
                 {slides.map((slide, index) => (
                   <div
                     key={index}
-                    className={`carousel-item ${index === currentIndex ? "active" : ""}`}
+                    className={`carousel-item ${index === currentIndex ? "active" : ""} position-relative`}
                   >
                     {slide.component}
+
+                    {/* Subtítulo posicionado EXACTAMENTE en la recuadra negra */}
+                    {index === currentIndex && showSubtitles && currentSubtitleSrc && (
+                      <video
+                        ref={subtitleVideoRef}
+                        src={currentSubtitleSrc}
+                        className="position-absolute"
+                        style={{
+                          bottom: '3.5%',          // Distancia exacta respecto al borde inferior[cite: 1]
+                          left: '50%',             // Centrado horizontalmente[cite: 1]
+                          transform: 'translateX(-50%)',
+                          width: '61.5%',          // Mismo ancho que el recuadro negro de la imagen[cite: 1]
+                          height: '21.5%',         // Misma altura que la franja negra[cite: 1]
+                          objectFit: 'cover',      // Rellena la caja completa[cite: 1]
+                          pointerEvents: 'none',
+                          zIndex: 10,
+                          borderRadius: '4px'
+                        }}
+                        muted
+                        playsInline
+                      />
+                    )}
                   </div>
                 ))}
               </div>
@@ -189,7 +250,7 @@ export const Leyendo = () => {
               style={{ backgroundColor: '#2e6930', zIndex: 20, position: 'relative' }}
             >
 
-              {/* Barra de Progreso del Video (Interactiva) */}
+              {/* Barra de Progreso del Video */}
               {hasVideo ? (
                 <div className="d-flex align-items-center gap-2">
                   <span className="small text-white-50 font-monospace">
@@ -231,13 +292,24 @@ export const Leyendo = () => {
               {/* Fila Inferior: Título + Botones */}
               <div className="d-flex flex-row justify-content-between align-items-center mt-1">
                 
-                {/* Texto de la escena actual */}
                 <div className="text-white fw-bold fs-5">
                   <span>{slides[currentIndex].title}</span>
                 </div>
 
-                {/* Botones de Control en la barra verde */}
                 <div className="d-flex align-items-center gap-3">
+
+                  {/* Botón CC */}
+                  {currentSubtitleSrc && (
+                    <button
+                      type="button"
+                      className={`btn btn-sm ${showSubtitles ? 'btn-light text-dark fw-bold' : 'btn-outline-light'} px-2 py-1`}
+                      onClick={toggleSubtitles}
+                      title={showSubtitles ? "Ocultar Subtítulos" : "Mostrar Subtítulos"}
+                      style={{ fontSize: '12px', borderRadius: '6px' }}
+                    >
+                      CC {showSubtitles ? "ON" : "OFF"}
+                    </button>
+                  )}
 
                   {/* Reiniciar */}
                   <button 
@@ -254,7 +326,7 @@ export const Leyendo = () => {
                     />
                   </button>
 
-                  {/* Retroceder (Escena anterior) */}
+                  {/* Anterior */}
                   <button 
                     type="button" 
                     className="btn p-0 border-0 bg-transparent" 
@@ -283,7 +355,7 @@ export const Leyendo = () => {
                     />
                   </button>
 
-                  {/* Avanzar (Escena siguiente) */}
+                  {/* Siguiente */}
                   <button 
                     type="button" 
                     className="btn p-0 border-0 bg-transparent" 

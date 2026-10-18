@@ -8,6 +8,13 @@
 
 }
 
+.subs{
+    position: absolute ;
+    top: 0;
+    left: 0;
+    width: 200px;
+}
+
 .pantalla {
     width: 910px;
     height: 500px;
