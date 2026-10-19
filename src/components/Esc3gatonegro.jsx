@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { div } from 'motion/react-client'
-import Cap3G from "../../public/Videos/GatoNegro/Esc3.mp4";
+import Cap3G from "../../public/Videos/GatoNegro/Capi3.mp4";
 import "../stylesheets/AnimacionGato.css";
 
 

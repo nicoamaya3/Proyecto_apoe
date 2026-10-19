@@ -662,3 +662,16 @@ p {
     top: -17px;
     right: 10px;
 }
+
+/* Ajustes para el libro Flipbook de Apoe */
+.stpage {
+  background-color: #f4ede2 !important;
+}
+
+.page-wrapper {
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.page-wrapper p, .page-wrapper h4, .page-wrapper h5 {
+  margin-bottom: 0.5rem;
+}
