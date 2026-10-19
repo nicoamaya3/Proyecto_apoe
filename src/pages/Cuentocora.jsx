@@ -161,6 +161,10 @@ export const Cuentocora = () => {
                         </div>
                     </div>
 
+                    <div className="text-center">
+                <img className="w-50" src="https://pixelsafari.neocities.org/dividers/animal/bat3.png" alt="Divider" />
+              </div>
+
                     <div className="row text-center mb-4">
                         <div className="col-12">
                             <h1 className="fw-bold fontTitu mt-3" style={{ fontSize: 50 }}>PERSONAJES</h1>

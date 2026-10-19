@@ -81,6 +81,8 @@ export const Poe = () => {
           </div>
         </section>
 
+        <div><img className="w-100" src="https://pixelsafari.neocities.org/dividers/animal/bat3.png"/></div>
+
         {/* SECCIÓN 2: LIBRO INTERACTIVO AMPLIADO (FLIPBOOK) */}
         <section className="row justify-content-center align-items-center my-5 py-4 w-100">
           <div className="col-12 text-center mb-4">

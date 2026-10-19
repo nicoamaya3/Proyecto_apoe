@@ -6,6 +6,8 @@
     --verdeOsc: #30592e;
     --blanco: #ffffff;
     --negro: #000000;
+    --vinorespla: #b14c67;
+    --rosarespla: #edddd5cf;
 }
 
 * {
@@ -674,4 +676,37 @@ p {
 
 .page-wrapper p, .page-wrapper h4, .page-wrapper h5 {
   margin-bottom: 0.5rem;
+}
+
+/* Transición suave para todos los elementos interactivos */
+.glow-effect {
+  transition: filter 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* 1. Resplandor para Tarjetas y Cajas */
+.glow-box:hover {
+  box-shadow: 0 0 25px var(--vinorespla) !important; 
+  transform: translateY(-4px);
+}
+
+/* 2. Resplandor para Imágenes (PNGs transparentes, GIFs y elementos gráficos) */
+.glow-img:hover {
+  filter: drop-shadow(0 0 6px var(--rosarespla)) drop-shadow(0 0 20px var(--vinorespla));
+  transform: scale(1.03);
+}
+
+/* 3. Resplandor para Títulos y Textos */
+.glow-text:hover {
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.9), 0 0 25px var(--vinotinto);
+  transition: text-shadow 0.3s ease;
+}
+
+/* 4. Resplandor mejorado para Botones */
+.glow-btn {
+  transition: all 0.3s ease;
+}
+.glow-btn:hover {
+  box-shadow: var(--vinotinto);
+  transform: scale(1.05);
 }
