@@ -247,6 +247,8 @@ export const Poe = () => {
           </div>
         </section>
 
+        
+
         {/* SECCIÓN 3: TEXTO SECUNDARIO */}
         <section className="row justify-content-center my-5 py-4 w-75">
           <div className="col-12 bg-dark p-5 rounded-5 border border-secondary shadow text-center">
