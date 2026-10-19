@@ -63,7 +63,7 @@ export const Leyendo = () => {
 
     if (mainVideo && subVideo && currentSubtitleSrc) {
       if (isPlaying) {
-        subVideo.play().catch(() => {});
+        subVideo.play().catch(() => { });
       } else {
         subVideo.pause();
       }
@@ -75,17 +75,22 @@ export const Leyendo = () => {
     const video = getActiveVideo();
 
     if (!video) {
-      setHasVideo(false);
-      setIsPlaying(false);
-      setCurrentTime(0);
-      setDuration(0);
+      // Usamos queueMicrotask o setTimeout para evitar actualizaciones síncronas en el render
+      queueMicrotask(() => {
+        setHasVideo(false);
+        setIsPlaying(false);
+        setCurrentTime(0);
+        setDuration(0);
+      });
       return;
     }
 
-    setHasVideo(true);
-    setIsPlaying(!video.paused);
-    setDuration(video.duration || 0);
-    setCurrentTime(video.currentTime || 0);
+    queueMicrotask(() => {
+      setHasVideo(true);
+      setIsPlaying(!video.paused);
+      setDuration(video.duration || 0);
+      setCurrentTime(video.currentTime || 0);
+    });
 
     const handleTimeUpdate = () => setCurrentTime(video.currentTime);
     const handleLoadedMetadata = () => setDuration(video.duration);
@@ -202,7 +207,7 @@ export const Leyendo = () => {
     <div className="fondo position-relative min-vh-100 bg-black text-white">
       <div className="container py-4">
         <div className="row justify-content-center">
-          
+
           <div className="col-12 col-md-10 position-relative">
             {/* Carrusel Principal */}
             <div id="carouselExample" className="carousel slide position-relative">
@@ -245,7 +250,7 @@ export const Leyendo = () => {
         {/* Barra Verde Inferior de Controles */}
         <div className="row justify-content-center mt-4">
           <div className="col-12 col-md-10">
-            <div 
+            <div
               className="d-flex flex-column gap-2 px-4 py-3 rounded-4 shadow"
               style={{ backgroundColor: '#2e6930', zIndex: 20, position: 'relative' }}
             >
@@ -256,23 +261,23 @@ export const Leyendo = () => {
                   <span className="small text-white-50 font-monospace">
                     {formatTime(currentTime)}
                   </span>
-                  
-                  <div 
+
+                  <div
                     ref={progressBarRef}
                     onClick={handleBarClick}
-                    className="progress flex-grow-1 rounded-pill position-relative" 
-                    style={{ 
-                      height: '10px', 
-                      cursor: 'pointer', 
-                      backgroundColor: 'rgba(255, 255, 255, 0.2)' 
+                    className="progress flex-grow-1 rounded-pill position-relative"
+                    style={{
+                      height: '10px',
+                      cursor: 'pointer',
+                      backgroundColor: 'rgba(255, 255, 255, 0.2)'
                     }}
                     title="Hacer clic para adelantar/retroceder"
                   >
-                    <div 
-                      className="progress-bar rounded-pill" 
-                      role="progressbar" 
-                      style={{ 
-                        width: `${progressPercent}%`, 
+                    <div
+                      className="progress-bar rounded-pill"
+                      role="progressbar"
+                      style={{
+                        width: `${progressPercent}%`,
                         backgroundColor: '#3F131F',
                         transition: 'width 0.1s linear'
                       }}
@@ -291,7 +296,7 @@ export const Leyendo = () => {
 
               {/* Fila Inferior: Título + Botones */}
               <div className="d-flex flex-row justify-content-between align-items-center mt-1">
-                
+
                 <div className="text-white fw-bold fs-5">
                   <span>{slides[currentIndex].title}</span>
                 </div>
@@ -312,75 +317,75 @@ export const Leyendo = () => {
                   )}
 
                   {/* Reiniciar */}
-                  <button 
-                    type="button" 
-                    className="btn p-0 border-0 bg-transparent" 
-                    onClick={handleRestart} 
+                  <button
+                    type="button"
+                    className="btn p-0 border-0 bg-transparent"
+                    onClick={handleRestart}
                     title="Reiniciar"
                     disabled={!hasVideo}
                   >
-                    <img 
-                      src="src/assets/svg/volver.svg" 
-                      alt="Reiniciar" 
-                      style={{ width: '28px', cursor: hasVideo ? 'pointer' : 'default', opacity: hasVideo ? 1 : 0.5 }} 
+                    <img
+                      src="src/assets/svg/volver.svg"
+                      alt="Reiniciar"
+                      style={{ width: '28px', cursor: hasVideo ? 'pointer' : 'default', opacity: hasVideo ? 1 : 0.5 }}
                     />
                   </button>
 
                   {/* Anterior */}
-                  <button 
-                    type="button" 
-                    className="btn p-0 border-0 bg-transparent" 
-                    onClick={handlePrev} 
+                  <button
+                    type="button"
+                    className="btn p-0 border-0 bg-transparent"
+                    onClick={handlePrev}
                     title="Anterior"
                   >
-                    <img 
-                      src="src/assets/svg/retroceder.svg" 
-                      alt="Anterior" 
-                      style={{ width: '28px', cursor: 'pointer' }} 
+                    <img
+                      src="src/assets/svg/retroceder.svg"
+                      alt="Anterior"
+                      style={{ width: '28px', cursor: 'pointer' }}
                     />
                   </button>
 
                   {/* Play / Pausa */}
-                  <button 
-                    type="button" 
-                    className="btn p-0 border-0 bg-transparent" 
-                    onClick={togglePlayPause} 
+                  <button
+                    type="button"
+                    className="btn p-0 border-0 bg-transparent"
+                    onClick={togglePlayPause}
                     title={isPlaying ? "Pausar" : "Play"}
                     disabled={!hasVideo}
                   >
-                    <img 
-                      src={isPlaying ? "src/assets/svg/detener.svg" : "src/assets/svg/play.svg"} 
-                      alt={isPlaying ? "Pausa" : "Play"} 
-                      style={{ width: '28px', cursor: hasVideo ? 'pointer' : 'default', opacity: hasVideo ? 1 : 0.5 }} 
+                    <img
+                      src={isPlaying ? "src/assets/svg/detener.svg" : "src/assets/svg/play.svg"}
+                      alt={isPlaying ? "Pausa" : "Play"}
+                      style={{ width: '28px', cursor: hasVideo ? 'pointer' : 'default', opacity: hasVideo ? 1 : 0.5 }}
                     />
                   </button>
 
                   {/* Siguiente */}
-                  <button 
-                    type="button" 
-                    className="btn p-0 border-0 bg-transparent" 
-                    onClick={handleNext} 
+                  <button
+                    type="button"
+                    className="btn p-0 border-0 bg-transparent"
+                    onClick={handleNext}
                     title="Siguiente"
                   >
-                    <img 
-                      src="src/assets/svg/siguiente.svg" 
-                      alt="Siguiente" 
-                      style={{ width: '28px', cursor: 'pointer' }} 
+                    <img
+                      src="src/assets/svg/siguiente.svg"
+                      alt="Siguiente"
+                      style={{ width: '28px', cursor: 'pointer' }}
                     />
                   </button>
 
                   {/* Pantalla Completa */}
-                  <button 
-                    type="button" 
-                    className="btn p-0 border-0 bg-transparent" 
-                    onClick={handleFullscreen} 
+                  <button
+                    type="button"
+                    className="btn p-0 border-0 bg-transparent"
+                    onClick={handleFullscreen}
                     title="Pantalla Completa"
                     disabled={!hasVideo}
                   >
-                    <img 
-                      src="src/assets/svg/expandir.svg" 
-                      alt="Pantalla completa" 
-                      style={{ width: '28px', cursor: hasVideo ? 'pointer' : 'default', opacity: hasVideo ? 1 : 0.5 }} 
+                    <img
+                      src="src/assets/svg/expandir.svg"
+                      alt="Pantalla completa"
+                      style={{ width: '28px', cursor: hasVideo ? 'pointer' : 'default', opacity: hasVideo ? 1 : 0.5 }}
                     />
                   </button>
 

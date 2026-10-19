@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import LottieModule from "lottie-react";
-import dataTakeshi from "../assets/dataTakeshi.json";
+import dataTakeshi from "../assets/dataTaa.json";
 import dataPuerta from "../assets/dataPuerta.json";
 import dataDragon from "../assets/dataDragon.json";
 import dataSamurai from "../assets/dataSamurai.json";
