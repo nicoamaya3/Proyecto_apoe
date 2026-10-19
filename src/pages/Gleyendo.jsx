@@ -3,6 +3,7 @@ import { Esc1Gatonegro } from "../components/Esc1Gatonegro.jsx";
 import { Esc2gatonegro } from "../components/Esc2gatonegro.jsx";
 import { Esc3gatonegro } from "../components/Esc3gatonegro.jsx";
 import { Esc4gatonegro } from "../components/Esc4gatonegro.jsx";
+import { Esc5gatonegro } from "../components/Esc5gatonegro.jsx";
 import { Lect } from "../components/Lect";
 import { ReproductorGa } from "../components/ReproductorGa.jsx";
 import { Tutorial } from "../components/Tutorial.jsx";
@@ -25,7 +26,8 @@ export const Gleyendo = () => {
     { component: <Esc1Gatonegro />, title: "El gato negro: Escena 01" },
     { component: <Esc2gatonegro />, title: "El gato negro: Escena 02" },
     { component: <Esc3gatonegro />, title: "El gato negro: Escena 03" },
-    { component: <Esc4gatonegro />, title: "El gato negro: Escena 04" }
+    { component: <Esc4gatonegro />, title: "El gato negro: Escena 04" },
+    { component: <Esc5gatonegro />, title: "El gato negro: Escena 05" }
   ];
 
   // Busca el elemento <video> dentro de la escena activa
