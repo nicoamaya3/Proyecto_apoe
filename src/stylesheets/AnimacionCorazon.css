@@ -34,7 +34,7 @@
 
 .takeshi {
     position: absolute;
-    width: 270px;
+    width: 370px;
     left: 140px;
     top: 65px;
     border-radius: 10px;
@@ -42,7 +42,7 @@
 }
 
 .activar-animacion {
-    animation: desplazarYDesaparecer 8s ease-in-out 6s forwards;
+    animation: desplazarYDesaparecer 8s ease-in-out 8s forwards;
     pointer-events: none;
 }
 
@@ -52,7 +52,7 @@
     }
 
     100% {
-        transform: translateX(-490px);
+        transform: translateX(-550px);
     }
 }
 
