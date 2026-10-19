@@ -75,17 +75,22 @@ export const Leyendo = () => {
     const video = getActiveVideo();
 
     if (!video) {
-      setHasVideo(false);
-      setIsPlaying(false);
-      setCurrentTime(0);
-      setDuration(0);
+      // Usamos queueMicrotask o setTimeout para evitar actualizaciones síncronas en el render
+      queueMicrotask(() => {
+        setHasVideo(false);
+        setIsPlaying(false);
+        setCurrentTime(0);
+        setDuration(0);
+      });
       return;
     }
 
-    setHasVideo(true);
-    setIsPlaying(!video.paused);
-    setDuration(video.duration || 0);
-    setCurrentTime(video.currentTime || 0);
+    queueMicrotask(() => {
+      setHasVideo(true);
+      setIsPlaying(!video.paused);
+      setDuration(video.duration || 0);
+      setCurrentTime(video.currentTime || 0);
+    });
 
     const handleTimeUpdate = () => setCurrentTime(video.currentTime);
     const handleLoadedMetadata = () => setDuration(video.duration);
