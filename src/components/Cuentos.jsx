@@ -9,11 +9,20 @@ export const Cuentos = () => {
 
             <div className="container-fluid p-5">
 
+
+                <div className="text-center w-75 mx-auto">
+                    <img
+                        className="w-50 glow-img glow-effect"
+                        src="https://pixelsafari.neocities.org/dividers/animal/bat3.png"
+                        alt="Divisor murciélagos"
+                    />
+                </div>
+
                 {/* TÍTULO */}
-                <div className="row mb-4">
+                <div className="row mb-5 z-3">
                     <div className="col text-center">
                         <div className="text-white d-flex flex-column align-items-center gap-2">
-                            <h1 className="fw-bold ttxx">CUENTOS</h1>
+                            <h1 className="fw-bold glow-text ttxx">CUENTOS</h1>
                         </div>
                     </div>
                 </div>
@@ -23,7 +32,7 @@ export const Cuentos = () => {
                     <div className="row justify-content-center align-items-center gap-4">
 
                         {/* Tarjeta 1: El Gato Negro */}
-                        <div className="col-md-5 col-10">
+                        <div className="col-md-5 col-10 ">
                             <Infocuentos
                                 titi="El Gato Negro"
                                 des="Un hombre bondadoso se transforma en un ser monstruoso bajo el influjo del alcohol. Su crueldad hacia su gato Plutón desencadena una espiral de horror y culpa que culmina en..."

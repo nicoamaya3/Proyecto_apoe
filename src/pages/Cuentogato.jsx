@@ -135,7 +135,7 @@ export const Cuentogato = () => {
       <div className="volver container pt-4">
         <div className="row ps-3 justify-content-start">
           <div className="col-12 ms-5 ps-5 mb-5 mt-4">
-            <Link className="btn btn-success rounded-pill px-4 fw-bold" to='/'>🡸 Volver</Link>
+            <Link className="btn glow-btn2 btn-success rounded-pill px-4 fw-bold" to='/'>🡸 Volver</Link>
           </div>
         </div>
       </div>
@@ -149,12 +149,12 @@ export const Cuentogato = () => {
               <div className="p-5 rounded-5 border border-secondary shadow bg-dark text-center position-relative overflow-hidden"
                 style={{ backgroundImage: 'url(./portadagato.png)', backgroundSize: 'cover', backgroundPosition: 'center', height: 450, }}>
 
-                <div className="position-relative w-50 mt-5 pt-5 pb-4 rounded-5" style={{ backgroundColor: 'rgba(0, 0, 0, 0.65)', zIndex: '2' }}>
-                  <h1 className="fw-bold text-white t mb-4" style={{ fontSize: 60 }}>El gato negro</h1>
+                <div className="glow-box position-relative w-50 mt-5 pt-5 pb-4 rounded-5" style={{ backgroundColor: 'rgba(0, 0, 0, 0.65)', zIndex: '2' }}>
+                  <h1 className="fw-bold glow-text text-white t mb-4" style={{ fontSize: 60 }}>El gato negro</h1>
                   <p className="text-light mb-4">
                     Frank, un niño conocido por su bondad y amor por los animales en Boston, se convierte en un hombre monstruoso consumido por el alcohol...
                   </p>
-                  <Link className="btn btn-danger rounded-pill px-4 py-2" to="/LecturaG">Empezar a leer</Link>
+                  <Link className="btn glow-btn2 btn-danger rounded-pill px-4 py-2" to="/LecturaG">Empezar a leer</Link>
                 </div>
 
               </div>
@@ -170,13 +170,13 @@ export const Cuentogato = () => {
             </div>
           </div>
 
-              <div className="text-center">
+              <div className="glow-img text-center">
                 <img className="w-50" src="https://pixelsafari.neocities.org/dividers/animal/bat3.png" alt="Divider" />
               </div>
 
           <div className="row text-center mb-4">
             <div className="col-12">
-              <h1 className="fw-bold fontTitu mt-3" style={{
+              <h1 className="glow-text fw-bold fontTitu mt-3" style={{
                 fontSize: 50
               }}>PERSONAJES</h1>
             </div>
@@ -192,7 +192,7 @@ export const Cuentogato = () => {
               {/* Botón Anterior */}
               <button
                 onClick={anteriorPersonaje}
-                className="btn btn-outline-secondary rounded-circle text-white d-flex align-items-center justify-content-center shadow-sm"
+                className="btn  btn-outline-secondary rounded-circle text-white d-flex align-items-center justify-content-center shadow-sm"
                 style={{ width: '45px', height: '45px', minWidth: '45px' }}
               >
                 &lt;
@@ -200,7 +200,7 @@ export const Cuentogato = () => {
 
               {/* Imagen del personaje con dimensiones estrictas y fijas */}
               <div
-                className="rounded-pill border border-secondary d-flex align-items-center justify-content-center bg-black overflow-hidden shadow"
+                className="rounded-pill glow-box border border-secondary d-flex align-items-center justify-content-center bg-black overflow-hidden shadow"
                 style={{ width: '330px', height: '500px', minWidth: '330px', minHeight: '500px' }}
               >
                 <img

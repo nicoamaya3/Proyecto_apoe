@@ -103,17 +103,17 @@ export const Home = () => {
           <img className="poe" src="recursos/poe.png" alt="" />
           <div className="row">
             <div className="col p-5 d-flex align-items-center justify-content-center">
-              <div className="info-home d-flex flex-row-reverse w-75 p-5 justify-content-end rounded-5">
+              <div className="info-home glow-box d-flex flex-row-reverse w-75 p-5 justify-content-end rounded-5">
                 <div className="info d-flex align-items-center justify-content-center flex-column w-100">
                   <div className="">
-                    <img className="apoel pb-3" src="iconos/logo.png" alt="" />
+                    <img className="apoel glow-img pb-3" src="iconos/logo.png" alt="" />
                   </div>
                   <p ref={textoRef} className="w-100 fs-5 text-center text-white">
                     <span className="linea-animada d-block">Reconecta con el placer de la lectura a través de</span>
                     <span className="linea-animada d-block"> cuentos ilustrados e interactivos basados en las</span>
                     <span className="linea-animada d-block"> obras maestras de Edgar Allan Poe.</span>
                   </p>
-                  <button ref={botonRef} className="btn btn-danger rounded-5">Leer cuentos</button>
+                  <button ref={botonRef} className="btn btn-danger glow-btn rounded-5">Leer cuentos</button>
                 </div>
               </div>
             </div>
@@ -122,7 +122,7 @@ export const Home = () => {
           <section className='m-5 pt-5 section2 d-flex justify-content-center align-items-center z-3 flex-column h-100'>
 
             <div className='contcirculo'>
-              <div className='circ1 rounded-circle d-flex justify-content-center align-items-center'>
+              <div className='circ1 glow-box rounded-circle d-flex justify-content-center align-items-center'>
                 <div className='circ2 rounded-circle d-flex justify-content-center align-items-center'>
                   <div onMouseEnter={manejarMouseEnter}>
                     <Lottie
@@ -137,12 +137,12 @@ export const Home = () => {
               </div>
             </div>
 
-            <div className='comentario1 p-3 text-white fontCa fs-6 m-4 rounded-5 d-flex'>Escucha con atención, cuervo lector... Tu travesía por los rincones más oscuros está por comenzar</div>
+            <div className='comentario1 p-3 text-white fontCa fs-6 m-4 rounded-5 d-flex glow-box'>Escucha con atención, cuervo lector... Tu travesía por los rincones más oscuros está por comenzar</div>
 
-            <div className='tuto2 text-white d-flex flex-column p-4 rounded-5 align-items-center justify-content-center'>
+            <div className='glow-box tuto2 text-white d-flex flex-column p-4 rounded-5 align-items-center justify-content-center'>
 
               {/* Título */}
-              <h2 className='w-75 text-center text-white t mb-4'>¿Cómo funciona la interactividad de los cuentos?</h2>
+              <h2 className=' glow-text w-75 text-center text-white t mb-4'>¿Cómo funciona la interactividad de los cuentos?</h2>
 
               {/* Contenedor en fila de Bootstrap para organizar carrusel y texto lado a lado */}
               <div className='row align-items-center justify-content-center w-100 g-4 px-3'>
@@ -178,7 +178,7 @@ export const Home = () => {
                     Cada relato cuenta con su propia página inmersiva para una lectura profunda, encontrarás objetos alumbrados en los capítulos que revelan sorpresas interactivas al hacerles clic, y podrás compartir tus teorías e impresiones comentando en el foro de la comunidad sobre qué te pareció la obra.
                   </p>
                   <div className='d-flex justify-content-center align-items-center w-100'>
-                    <button className="btn btn-danger rounded-5 px-4 py-2">
+                    <button className="glow-btn btn btn-danger rounded-5 px-4 py-2">
                       Leer cuentos
                     </button>
                   </div>
@@ -209,8 +209,7 @@ export const Home = () => {
             />
           </div>
 
-
-          <Cuentos />
+          <Cuentos/>
 
         </div>
 

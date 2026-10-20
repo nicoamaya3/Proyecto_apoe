@@ -8,7 +8,7 @@ export const Infocuentos = ({ titi, des, personajesUno, personajesDos, personaje
             <div className="container">
                 <div className="row d-flex flex-column align-items-center">
                     <div className="">
-                        <div className="rounded-5 fondoTarjeta shadow">
+                        <div className="rounded-5 fondoTarjeta shadow glow-box">
                             <div className="p-2 m-4 d-flex rounded-5 justify-content-between gat" style={{
                                 backgroundImage: back ,
                                 height: "300px",
@@ -21,15 +21,15 @@ export const Infocuentos = ({ titi, des, personajesUno, personajesDos, personaje
                             </div>
                             <div>
 
-                                <div><img className="w-100" src="https://pixelsafari.neocities.org/dividers/animal/bat3.png"/></div>
+                                <div><img className="w-100 glow-img" src="https://pixelsafari.neocities.org/dividers/animal/bat3.png"/></div>
 
                                 <div className="ps-4 pe-4 pb-4 mb-2">
-                                    <h2 className="fw-bold mb-4 t pt-3"
+                                    <h2 className="fw-bold glow-text2 text-center mb-4 t pt-3"
                                     style={{ color: "var(--vinotinto)" }}
                                     >{titi}</h2>
                                     <p className="text-black">{des}</p>
-                                    <div className="d-flex justify-content-center">
-                                        <Link className="btn btn-danger rounded-5 w-50 p-2 fw-bold " to={lii} > {tbt} </Link>
+                                    <div className="d-flex justify-content-center ">
+                                        <Link className="btn glow-btn btn-danger rounded-5 w-50 p-2 fw-bold " to={lii} > {tbt} </Link>
                                     </div>
                                 </div>
                             </div>

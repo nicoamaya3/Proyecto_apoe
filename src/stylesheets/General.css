@@ -535,7 +535,7 @@ p {
     position: absolute;
     z-index: 4;
     left: 51%;
-    top: 200.5%;
+    top: 1517px;
     width: 550px;
 }
 
@@ -555,7 +555,7 @@ p {
     position: absolute;
     z-index: 4;
     left: 15%;
-    top: 200.5%;
+    top: 1517px;
     width: 550px;
 }
 
@@ -692,13 +692,13 @@ p {
 
 /* 2. Resplandor para Imágenes (PNGs transparentes, GIFs y elementos gráficos) */
 .glow-img:hover {
-  filter: drop-shadow(0 0 6px var(--rosarespla)) drop-shadow(0 0 20px var(--vinorespla));
+  filter: drop-shadow(0 0 3px var(--rosarespla)) drop-shadow(0 0 10px var(--vinorespla));
   transform: scale(1.03);
 }
 
 /* 3. Resplandor para Títulos y Textos */
 .glow-text:hover {
-  text-shadow: 0 0 12px rgba(255, 255, 255, 0.9), 0 0 25px var(--vinotinto);
+  text-shadow: 0 0 12px var(--rosarespla), 0 0 25px var(--vinotinto);
   transition: text-shadow 0.3s ease;
 }
 
@@ -706,7 +706,18 @@ p {
 .glow-btn {
   transition: all 0.3s ease;
 }
+
 .glow-btn:hover {
-  box-shadow: var(--vinotinto);
+  box-shadow: var(--vinorespla) 0px 0px 10px, var(--rosarespla) 0px 0px 10px;
+  transform: scale(1.05);
+}
+
+.glow-text2:hover {
+  text-shadow: 0 0 12px var(--rosarespla), 0 0 10px var(--vinorespla);
+  transition: text-shadow 0.3s ease;
+}
+
+.glow-btn2:hover {
+  box-shadow: var(--vinorespla) 0px 0px 10px, var(--rosarespla) 0px 0px 5px;
   transform: scale(1.05);
 }
