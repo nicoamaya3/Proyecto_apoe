@@ -221,7 +221,7 @@ export const Cuentogato = () => {
                 <img
                   src="https://64.media.tumblr.com/93495eaaa52b4b5a788e5b952a327a94/54342fb5ebe553f2-11/s500x750/b260af9619e68f4db4d6252b43a4fbd836e49f28.gifv"
                   alt="Animación"
-                  className="img-fluid mt-5"
+                  className="img-fluid glow-img mt-5"
                 />
                 <div className="text-white-50 small mt-3 d-flex justify-content-center">
                   Personaje {indiceActual + 1} de {personajes.length}
@@ -242,7 +242,7 @@ export const Cuentogato = () => {
 
           <div className="row w-100 justify-content-center mb-5 mt-5">
             <div className="col-12 col-lg-9" style={{ width: '100vh', height: '50vh', minWidth: '45px' }}>
-              <div className="h-100 rounded-4 w-100 border border-secondary bg-black text-center shadow d-flex align-items-center justify-content-center mb-5">
+              <div className="h-100  glow-box rounded-4 w-100 border border-secondary bg-black text-center shadow d-flex align-items-center justify-content-center mb-5">
                 <span className="text-white">BANNER 3D</span>
               </div>
             </div>
@@ -250,7 +250,7 @@ export const Cuentogato = () => {
 
         </div>
 
-        <div style={{ position: 'fixed', top: '-120px', right: '-180px', zIndex: '9999', width: '350px' }}>
+        <div style={{ position: 'fixed', top: '-120px', right: '-180px', zIndex: '9999', width: '350px' }} className="glow-box">
           <iframe
             data-testid="embed-iframe"
             src="https://open.spotify.com/embed/track/1CqetFVvQeVIFwjVGk4WGr?utm_source=generator&si=d1a1675989144089"
@@ -273,7 +273,7 @@ export const Cuentogato = () => {
         </div>
 
         <div className='contcirculo2 '>
-          <div className='circ1 rounded-circle d-flex justify-content-center align-items-center'>
+          <div className='circ1 glow-box rounded-circle d-flex justify-content-center align-items-center'>
             <div className='circ2 rounded-circle d-flex justify-content-center align-items-center'>
               <div onMouseEnter={manejarMouseEnter}>
                 <Lottie
@@ -288,14 +288,14 @@ export const Cuentogato = () => {
           </div>
         </div>
 
-        <div className='comentario2 p-3 text-white fontCa fs-6 m-4 mx-5 rounded-5 d-flex'>Escucha con atención, cuervo lector... Tu travesía por los rincones más oscuros está por comenzar</div>
+        <div className='glow-box comentario2 p-3 text-white fontCa fs-6 m-4 mx-5 rounded-5 d-flex'>Escucha con atención, cuervo lector... Tu travesía por los rincones más oscuros está por comenzar</div>
 
         <div className='emojis mb-5'>
           <div className="d-flex justify-content-around align-items-center flex-wrap gap-3">
 
             <button
               onClick={() => incrementar('aterrorizado')}
-              className="foo btn btn-dark border border-secondary rounded-pill px-3 py-2 d-flex align-items-center gap-2 text-white shadow-sm"
+              className="foo glow-box btn btn-dark border border-secondary rounded-pill px-3 py-2 d-flex align-items-center gap-2 text-white shadow-sm"
             >
               <span style={{ fontSize: '1.5rem' }}>😍</span>
               <span className="badge bg-danger rounded-pill">{conteo.aterrorizado}</span>
@@ -303,7 +303,7 @@ export const Cuentogato = () => {
 
             <button
               onClick={() => incrementar('enojado')}
-              className="foo btn btn-dark border border-secondary rounded-pill px-3 py-2 d-flex align-items-center gap-2 text-white shadow-sm"
+              className="foo glow-box btn btn-dark border border-secondary rounded-pill px-3 py-2 d-flex align-items-center gap-2 text-white shadow-sm"
             >
               <span style={{ fontSize: '1.5rem' }}>😡</span>
               <span className="badge bg-danger rounded-pill">{conteo.enojado}</span>
@@ -311,7 +311,7 @@ export const Cuentogato = () => {
 
             <button
               onClick={() => incrementar('triste')}
-              className="foo btn btn-dark border border-secondary rounded-pill px-3 py-2 d-flex align-items-center gap-2 text-white shadow-sm"
+              className="foo glow-box btn btn-dark border border-secondary rounded-pill px-3 py-2 d-flex align-items-center gap-2 text-white shadow-sm"
             >
               <span style={{ fontSize: '1.5rem' }}>😢</span>
               <span className="badge bg-danger rounded-pill">{conteo.triste}</span>
@@ -319,7 +319,7 @@ export const Cuentogato = () => {
 
             <button
               onClick={() => incrementar('asustado')}
-              className="foo btn btn-dark border border-secondary rounded-pill px-3 py-2 d-flex align-items-center gap-2 text-white shadow-sm"
+              className="foo glow-box btn btn-dark border border-secondary rounded-pill px-3 py-2 d-flex align-items-center gap-2 text-white shadow-sm"
             >
               <span style={{ fontSize: '1.5rem' }}>😨</span>
               <span className="badge bg-danger rounded-pill">{conteo.asustado}</span>
@@ -327,7 +327,7 @@ export const Cuentogato = () => {
 
             <button
               onClick={() => incrementar('sorprendido')}
-              className="foo btn btn-dark border border-secondary rounded-pill px-3 py-2 d-flex align-items-center gap-2 text-white shadow-sm"
+              className="foo glow-box btn btn-dark border border-secondary rounded-pill px-3 py-2 d-flex align-items-center gap-2 text-white shadow-sm"
             >
               <span style={{ fontSize: '1.5rem' }}>😲</span>
               <span className="badge bg-danger rounded-pill">{conteo.sorprendido}</span>
@@ -335,17 +335,17 @@ export const Cuentogato = () => {
 
           </div>
           <img
-            src="https://64.media.tumblr.com/93495eaaa52b4b5a788e5b952a327a94/54342fb5ebe553f2-11/s500x750/b260af9619e68f4db4d6252b43a4fbd836e49f28.gifv"
-            alt="Animación"
-            className="img-fluid mt-4 ms-4"
-          />
+                  src="https://64.media.tumblr.com/93495eaaa52b4b5a788e5b952a327a94/54342fb5ebe553f2-11/s500x750/b260af9619e68f4db4d6252b43a4fbd836e49f28.gifv"
+                  alt="Animación"
+                  className="img-fluid glow-img mt-5 ms-1 w-100"
+                />
         </div>
 
 
 
         <div className="container mt-5">
           <div className="row justify-content-center">
-            <div className="col-12 fondo mb-5 col-lg-8 p-4 rounded-4 border border-secondary">
+            <div className="glow-box col-12 fondo mb-5 col-lg-8 p-4 rounded-4 border border-secondary">
               <h3 className="text-white mb-4 fw-bold">Comentarios</h3>
 
               {/* Contenedor de Cusdis */}

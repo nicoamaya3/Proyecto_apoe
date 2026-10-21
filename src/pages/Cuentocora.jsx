@@ -126,7 +126,7 @@ export const Cuentocora = () => {
             <div className="volver container pt-4">
                 <div className="row ps-3 justify-content-start">
                     <div className="col-12 ms-5 ps-5 mb-5 mt-4">
-                        <Link className="btn btn-success rounded-pill px-4 fw-bold" to='/'>🡸 Volver</Link>
+                        <Link className="btn glow-btn2 btn-success rounded-pill px-4 fw-bold" to='/'>🡸 Volver</Link>
                     </div>
                 </div>
             </div>

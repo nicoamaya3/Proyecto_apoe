@@ -718,6 +718,6 @@ p {
 }
 
 .glow-btn2:hover {
-  box-shadow: var(--vinorespla) 0px 0px 10px, var(--rosarespla) 0px 0px 5px;
+  box-shadow: var(--vinorespla) 0px 0px 10px;
   transform: scale(1.05);
 }
