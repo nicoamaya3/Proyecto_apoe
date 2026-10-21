@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { Header } from "./components/Header.jsx";
+import { ContactosFijos } from "./components/contactofijo.jsx";
 import { Home } from "./pages/Home.jsx";
 import { Inicioseccion } from "./pages/Inicioseccion.jsx";
 import { Nosotros } from "./pages/Nosotros.jsx";
@@ -70,6 +71,7 @@ export const App = () => {
       <BrowserRouter>
         <ScrollToTop />
         <Header /> 
+        <ContactosFijos />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Perfil" element={<Inicioseccion />} />

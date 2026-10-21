@@ -591,6 +591,37 @@ p {
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
+/* Estilos para el etiqueta flotante (Custom Tooltip) */
+.custom-tooltip {
+    position: absolute;
+    left: calc(100% + 18px); /* Aparece justo a la derecha del sidebar */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #120508; /* Fondo oscuro acoplado a la paleta */
+    color: #edddd5; /* Color claro para buena legibilidad */
+    border: 1px solid rgba(159, 44, 44, 0.4); /* Borde sutil vino tinto */
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap; /* Evita que el texto se parta en varias líneas */
+    pointer-events: none; /* Asegura que no estorbe los clics del usuario */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6), 0 0 10px rgba(64, 19, 31, 0.5);
+    z-index: 10;
+}
+
+/* Pequeña flecha apuntando hacia el icono */
+.custom-tooltip::before {
+    content: '';
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #120508 transparent transparent;
+}
+
 
 .sidebar-container {
     z-index: 1050;
@@ -686,7 +717,7 @@ p {
 
 /* 1. Resplandor para Tarjetas y Cajas */
 .glow-box:hover {
-  box-shadow: 0 0 25px var(--vinorespla) !important; 
+  box-shadow: 0 10px 20px var(--vinorespla) !important; 
   transform: translateY(-4px);
 }
 
@@ -698,7 +729,7 @@ p {
 
 /* 3. Resplandor para Títulos y Textos */
 .glow-text:hover {
-  text-shadow: 0 0 12px var(--rosarespla), 0 0 25px var(--vinotinto);
+  text-shadow: 0 0 20px var(--rosarespla), 0 0 25px var(--vinotinto);
   transition: text-shadow 0.3s ease;
 }
 
@@ -713,11 +744,46 @@ p {
 }
 
 .glow-text2:hover {
-  text-shadow: 0 0 12px var(--rosarespla), 0 0 10px var(--vinorespla);
+  text-shadow: 0 0 12px var(--rosarespla), 0 0 25px var(--vinotinto);
   transition: text-shadow 0.3s ease;
 }
 
 .glow-btn2:hover {
   box-shadow: var(--vinorespla) 0px 0px 10px;
   transform: scale(1.05);
+}
+
+
+/* Contenedor del ícono */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Ocultar el texto por defecto */
+.tooltip-container .tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  background-color: #40131f; /* Color vino tinto de tu paleta */
+  color: #fff;
+  text-align: center;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  box-shadow: 0 0 10px rgba(159, 44, 44, 0.6);
+  
+  /* Posicionamiento al lado derecho del menú lateral */
+  position: absolute;
+  left: 110%;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 100;
+}
+
+/* Mostrar texto al pasar el cursor */
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
 }

@@ -216,9 +216,7 @@ export const Home = () => {
         <div className="d-flex justify-content-center fondo">
           <Footer />
         </div>
-
-
-
+        
       </section>
 
 
