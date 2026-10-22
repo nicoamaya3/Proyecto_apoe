@@ -4,6 +4,11 @@ import { Esc2gatonegro } from "../components/Esc2gatonegro.jsx";
 import { Esc3gatonegro } from "../components/Esc3gatonegro.jsx";
 import { Esc4gatonegro } from "../components/Esc4gatonegro.jsx";
 import { Esc5gatonegro } from "../components/Esc5gatonegro.jsx";
+import SubtitulosEsc1 from "../../public/Videos/DialogosGato/dialogoCapi1.mp4";
+import SubtitulosEsc2 from "../../public/Videos/DialogosGato/dialogoCapi2.mp4";
+import SubtitulosEsc3 from "../../public/Videos/DialogosGato/dialogoCapi3.mp4";
+import SubtitulosEsc4 from "../../public/Videos/DialogosGato/dialogoCapi4.mp4";
+import SubtitulosEsc5 from "../../public/Videos/DialogosGato/dialogoCapi5.mp4";
 import { Lect } from "../components/Lect";
 import { ReproductorGa } from "../components/ReproductorGa.jsx";
 import { Tutorial } from "../components/Tutorial.jsx";
@@ -12,13 +17,28 @@ export const Gleyendo = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
 
+  // Estado para activar/desactivar subtítulos
+  const [showSubtitles, setShowSubtitles] = useState(false);
+
   // Estados para el progreso del video
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [hasVideo, setHasVideo] = useState(false);
 
   const carouselInnerRef = useRef(null);
+  const subtitleVideoRef = useRef(null);
   const progressBarRef = useRef(null); // Referencia para hacer clic en la barra
+
+  // Mapeo de subtítulos por índice de diapositiva (ReproductorGa en índice 0 no lleva subtítulo)
+  const subtitlesMap = {
+    1: SubtitulosEsc1,
+    2: SubtitulosEsc2,
+    3: SubtitulosEsc3,
+    4: SubtitulosEsc4,
+    5: SubtitulosEsc5,
+  };
+
+  const currentSubtitleSrc = subtitlesMap[currentIndex];
 
   // Lista de componentes para este cuento y sus respectivos títulos
   const slides = [
@@ -35,6 +55,21 @@ export const Gleyendo = () => {
     if (!carouselInnerRef.current) return null;
     return carouselInnerRef.current.querySelector('.carousel-item.active video');
   };
+
+  // Sincronización del video de subtítulos activo con el video principal
+  useEffect(() => {
+    const mainVideo = getActiveVideo();
+    const subVideo = subtitleVideoRef.current;
+
+    if (mainVideo && subVideo && currentSubtitleSrc) {
+      if (isPlaying) {
+        subVideo.play().catch(() => {});
+      } else {
+        subVideo.pause();
+      }
+      subVideo.currentTime = mainVideo.currentTime;
+    }
+  }, [isPlaying, currentTime, currentIndex, currentSubtitleSrc]);
 
   // Escuchar eventos del video de la escena activa
   useEffect(() => {
@@ -81,6 +116,9 @@ export const Gleyendo = () => {
       video.pause();
       setIsPlaying(false);
     }
+    if (subtitleVideoRef.current) {
+      subtitleVideoRef.current.pause();
+    }
   };
 
   // Acción de Reproducir / Pausar
@@ -96,6 +134,12 @@ export const Gleyendo = () => {
     }
   };
 
+  // Alternar Subtítulos
+  const toggleSubtitles = (e) => {
+    e.stopPropagation();
+    setShowSubtitles((prev) => !prev);
+  };
+
   // Acción de Reiniciar el video activo
   const handleRestart = (e) => {
     e.stopPropagation();
@@ -103,6 +147,9 @@ export const Gleyendo = () => {
     if (video) {
       video.currentTime = 0;
       video.play();
+    }
+    if (subtitleVideoRef.current) {
+      subtitleVideoRef.current.currentTime = 0;
     }
   };
 
@@ -141,10 +188,13 @@ export const Gleyendo = () => {
     if (!video || !duration || !progressBarRef.current) return;
 
     const rect = progressBarRef.current.getBoundingClientRect();
-    const clickPosition = (e.clientX - rect.left) / rect.width; // Posición porcentual del clic (0 a 1)
+    const clickPosition = (e.clientX - rect.left) / rect.width; 
     const newTime = clickPosition * duration;
 
     video.currentTime = newTime;
+    if (subtitleVideoRef.current) {
+      subtitleVideoRef.current.currentTime = newTime;
+    }
     setCurrentTime(newTime);
   };
 
@@ -171,9 +221,33 @@ export const Gleyendo = () => {
                 {slides.map((slide, index) => (
                   <div
                     key={index}
-                    className={`carousel-item ${index === currentIndex ? "active" : ""}`}
+                    className={`carousel-item ${index === currentIndex ? "active" : ""} position-relative`}
                   >
                     {slide.component}
+
+                    {/* Subtítulos superpuestos completos con esquinas redondeadas y 80% de opacidad */}
+                    {index === currentIndex && showSubtitles && currentSubtitleSrc && (
+                      <video
+                        ref={subtitleVideoRef}
+                        src={currentSubtitleSrc}
+                        className="position-absolute"
+                        style={{
+                          bottom: '3%',
+                          left: '50%',
+                          transform: 'translateX(-50%)',
+                          width: '65%',
+                          height: '24%',
+                          objectFit: 'contain', 
+                          pointerEvents: 'none',
+                          zIndex: 10,
+                          borderRadius: '12px',
+                          overflow: 'hidden',
+                          opacity: 0.8 // Opacidad al 80%
+                        }}
+                        muted
+                        playsInline
+                      />
+                    )}
                   </div>
                 ))}
               </div>
@@ -197,7 +271,6 @@ export const Gleyendo = () => {
                     {formatTime(currentTime)}
                   </span>
                   
-                  {/* Contenedor clickeable de la barra de progreso */}
                   <div 
                     ref={progressBarRef}
                     onClick={handleBarClick}
@@ -215,7 +288,7 @@ export const Gleyendo = () => {
                       style={{ 
                         width: `${progressPercent}%`, 
                         backgroundColor: '#3F131F',
-                        transition: 'width 0.1s linear' // Suaviza el movimiento del llenado
+                        transition: 'width 0.1s linear'
                       }}
                     ></div>
                   </div>
@@ -233,13 +306,24 @@ export const Gleyendo = () => {
               {/* Fila Inferior: Título + Botones */}
               <div className="d-flex flex-row justify-content-between align-items-center mt-1">
                 
-                {/* Texto de la escena actual */}
                 <div className="text-white fw-bold fs-5">
                   <span>{slides[currentIndex].title}</span>
                 </div>
 
-                {/* Controles multimedia */}
                 <div className="d-flex align-items-center gap-3">
+
+                  {/* Botón de Subtítulos (CC) */}
+                  {currentSubtitleSrc && (
+                    <button
+                      type="button"
+                      className={`btn btn-sm ${showSubtitles ? 'btn-light text-dark fw-bold' : 'btn-outline-light'} px-2 py-1`}
+                      onClick={toggleSubtitles}
+                      title={showSubtitles ? "Ocultar Subtítulos" : "Mostrar Subtítulos"}
+                      style={{ fontSize: '12px', borderRadius: '6px' }}
+                    >
+                      CC {showSubtitles ? "ON" : "OFF"}
+                    </button>
+                  )}
 
                   {/* Reiniciar */}
                   <button 
