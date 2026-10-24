@@ -9,6 +9,7 @@ import { motion } from "motion/react"
 import dataTakeshic from "../assets/dataTakeshic.json"
 import { Banda } from '../components/Banda';
 
+
 const Lottie = LottieModule.default;
 
 
@@ -263,8 +264,8 @@ export const Cuentocora = () => {
 
                     <div className="row w-100 justify-content-center mb-5 mt-5">
                         <div className="col-12 col-lg-9" style={{ width: '100vh', height: '50vh', minWidth: '45px' }}>
-                            <div className="h-100 rounded-4 w-100 border border-secondary bg-black text-center shadow d-flex align-items-center justify-content-center mb-5 glow-box">
-                                <span className="text-white">BANNER 3D</span>
+                            <div>
+                                <video className="h-100 rounded-4 w-100 border border-secondary bg-black text-center shadow d-flex align-items-center justify-content-center mb-5 glow-box" src="/Videos/Casa3D.mkv" controls />
                             </div>
                         </div>
                     </div>
@@ -331,7 +332,7 @@ export const Cuentocora = () => {
                             <span style={{ fontSize: '1.5rem' }}>😲</span>
                             <span className="badge bg-danger rounded-pill">{conteo.sorprendido}</span>
                         </button>
-
+                        
                     </div>
                     <img
                         src="https://64.media.tumblr.com/93495eaaa52b4b5a788e5b952a327a94/54342fb5ebe553f2-11/s500x750/b260af9619e68f4db4d6252b43a4fbd836e49f28.gifv"

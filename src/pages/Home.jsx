@@ -76,8 +76,8 @@ export const Home = () => {
       // 2. Agregamos la animación del botón justo después
       .fromTo(botonRef.current,
         { opacity: 0, scale: 0.5 }, // Comienza invisible y pequeño
-        { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.7)" }, // Aparece con un rebote suave
-        "-=0.4" // Esto hace que la animación del botón empiece un poco antes de que termine la del texto para fluir mejor
+        { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.7)" }, 
+        "-=0.4" 
       );
 
   }, []);
@@ -140,7 +140,7 @@ export const Home = () => {
               </div>
             </div>
 
-            <div className='comentario1 p-3 text-white fontCa fs-6 m-4 rounded-5 d-flex glow-box'>Escucha con atención, cuervo lector... Tu travesía por los rincones más oscuros está por comenzar</div>
+            <div className='comentario1 p-3 text-white fontCa m-4 rounded-5 d-flex glow-box' style={{ fontSize: '18px' }}>Escucha con atención, cuervo lector... Tu travesía por los rincones más oscuros está por comenzar</div>
 
             <div className='glow-box tuto2 text-white d-flex flex-column p-4 rounded-5 align-items-center justify-content-center'>
 

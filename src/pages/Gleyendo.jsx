@@ -42,12 +42,12 @@ export const Gleyendo = () => {
 
   // Lista de componentes para este cuento y sus respectivos títulos
   const slides = [
-    { component: <ReproductorGa />, title: "El gato negro: Portada" },
-    { component: <Esc1Gatonegro />, title: "El gato negro: Escena 01" },
-    { component: <Esc2gatonegro />, title: "El gato negro: Escena 02" },
-    { component: <Esc3gatonegro />, title: "El gato negro: Escena 03" },
-    { component: <Esc4gatonegro />, title: "El gato negro: Escena 04" },
-    { component: <Esc5gatonegro />, title: "El gato negro: Escena 05" }
+    { component: <ReproductorGa />, title: "El gato negro: Inocencia y perdición" },
+    { component: <Esc1Gatonegro />, title: "Capítulo 1: Inocencia y perdición" },
+    { component: <Esc2gatonegro />, title: "Capítulo 2: Dulce hogar" },
+    { component: <Esc3gatonegro />, title: "Capítulo 3: Ojo de gato" },
+    { component: <Esc4gatonegro />, title: "Capítulo 4: Resurreción" },
+    { component: <Esc5gatonegro />, title: "Capítulo 5: Muerte y justicia" }
   ];
 
   // Busca el elemento <video> dentro de la escena activa
@@ -209,12 +209,12 @@ export const Gleyendo = () => {
   const progressPercent = duration > 0 ? (currentTime / duration) * 100 : 0;
 
   return (
-    <div className="bg-black min-vh-100 text-white position-relative">
-      <div className="container py-4">
-        <div className="row justify-content-center">
+    <div className="fondo bg-black text-white d-flex justify-content-center align-items-center" style={{ minHeight: '100vh', width: '100%' }}>
+      <div className="container-fluid py-4 px-3 px-md-5" style={{ maxWidth: '1200px' }}>
+        <div className="row justify-content-center align-items-center">
           
           {/* Contenedor del Carrusel */}
-          <div className="col-12 col-md-10 position-relative">
+          <div className="col-12 col-xl-10 position-relative">
             <div id="carouselExample" className="carousel slide position-relative">
               
               <div className="carousel-inner" ref={carouselInnerRef}>
@@ -225,28 +225,35 @@ export const Gleyendo = () => {
                   >
                     {slide.component}
 
-                    {/* Subtítulos superpuestos completos con esquinas redondeadas y 80% de opacidad */}
+                    {/* Subtítulos superpuestos completos con esquinas redondeadas, opacidad y objectFit contain */}
                     {index === currentIndex && showSubtitles && currentSubtitleSrc && (
-                      <video
-                        ref={subtitleVideoRef}
-                        src={currentSubtitleSrc}
-                        className="position-absolute"
+                      <div
+                        className="position-absolute d-flex align-items-center justify-content-center"
                         style={{
-                          bottom: '3%',
+                          bottom: '3.5%',
                           left: '50%',
                           transform: 'translateX(-50%)',
-                          width: '65%',
-                          height: '24%',
-                          objectFit: 'contain', 
-                          pointerEvents: 'none',
-                          zIndex: 10,
-                          borderRadius: '12px',
+                          width: '61.5%',
+                          height: '21.5%',
+                          backgroundColor: 'black',
+                          borderRadius: '16px',
                           overflow: 'hidden',
-                          opacity: 0.8 // Opacidad al 80%
+                          opacity: 0.8,
+                          zIndex: 10,
+                          pointerEvents: 'none'
                         }}
-                        muted
-                        playsInline
-                      />
+                      >
+                        <video
+                          ref={subtitleVideoRef}
+                          src={currentSubtitleSrc}
+                          className="w-100 h-100"
+                          style={{
+                            objectFit: 'contain' // Muestra todo el contenido del subtítulo sin recortes
+                          }}
+                          muted
+                          playsInline
+                        />
+                      </div>
                     )}
                   </div>
                 ))}
@@ -258,7 +265,7 @@ export const Gleyendo = () => {
 
         {/* Barra Inferior Verde de Controles */}
         <div className="row justify-content-center mt-4">
-          <div className="col-12 col-md-10">
+          <div className="col-12 col-xl-10">
             <div 
               className="d-flex flex-column gap-2 px-4 py-3 rounded-4 shadow"
               style={{ backgroundColor: '#2e6930', zIndex: 20, position: 'relative' }}
@@ -271,6 +278,7 @@ export const Gleyendo = () => {
                     {formatTime(currentTime)}
                   </span>
                   
+                  {/* Contenedor clickeable de la barra de progreso */}
                   <div 
                     ref={progressBarRef}
                     onClick={handleBarClick}
@@ -306,10 +314,12 @@ export const Gleyendo = () => {
               {/* Fila Inferior: Título + Botones */}
               <div className="d-flex flex-row justify-content-between align-items-center mt-1">
                 
+                {/* Texto de la escena actual */}
                 <div className="text-white fw-bold fs-5">
                   <span>{slides[currentIndex].title}</span>
                 </div>
 
+                {/* Controles multimedia */}
                 <div className="d-flex align-items-center gap-3">
 
                   {/* Botón de Subtítulos (CC) */}

@@ -29,10 +29,10 @@ export const Leyendo = () => {
   const subtitleVideoRef = useRef(null);
   const progressBarRef = useRef(null);
 
-  // Mapeo de subtítulos por índice de diapositiva
+  // Mapeo de subtítulos por índice de diapositiva (Índice 1: ReproductorCap2 excluido)
   const subtitlesMap = {
     0: SubtitulosCap1, // Cap1corazon
-    1: SubtitulosCap2, // ReproductorCap2
+    // 1: ReproductorCap2 (Sin subtítulo)
     2: SubtitulosCap2, // Cap2corazon
     3: SubtitulosCap3, // Cap3corazon
     4: SubtitulosCap4, // Cap4corazon
@@ -42,13 +42,13 @@ export const Leyendo = () => {
   const currentSubtitleSrc = subtitlesMap[currentIndex];
 
   const slides = [
-    { component: <Cap1corazon showSubtitles={showSubtitles} subtitleSrc={SubtitulosCap1} />, title: "El Corazón Delator: Escena 01" },
-    { component: <ReproductorCap2 />, title: "El Corazón Delator: Escena 02" },
-    { component: <Cap2corazon />, title: "El Corazón Delator: Escena 02" },
-    { component: <Cap3corazon />, title: "El Corazón Delator: Escena 03" },
-    { component: <Cap4corazon />, title: "El Corazón Delator: Escena 04" },
-    { component: <Cap5corazon />, title: "El Corazón Delator: Escena 05" },
-    { component: <LotieFinalCorazon />, title: "El Corazón Delator: Escena 05" },
+    { component: <Cap1corazon showSubtitles={showSubtitles} subtitleSrc={SubtitulosCap1} />, title: "Capítulo 1: Arrepentimiento" },
+    { component: <ReproductorCap2 />, title: "Capítulo 2: El inicio" },
+    { component: <Cap2corazon />, title: "Capítulo 2: El inicio" },
+    { component: <Cap3corazon />, title: "Capítulo 3: La noche" },
+    { component: <Cap4corazon />, title: "Capítulo 4: Plan maestro" },
+    { component: <Cap5corazon />, title: "Capítulo 5: La caída" },
+    { component: <LotieFinalCorazon />, title: "Capítulo 5: El final" },
   ];
 
   const getActiveVideo = () => {
@@ -199,11 +199,11 @@ export const Leyendo = () => {
   const progressPercent = duration > 0 ? (currentTime / duration) * 100 : 0;
 
   return (
-    <div className="fondo position-relative min-vh-100 bg-black text-white">
-      <div className="container py-4">
-        <div className="row justify-content-center">
+    <div className="fondo bg-black text-white d-flex justify-content-center align-items-center" style={{ minHeight: '100vh', width: '100%' }}>
+      <div className="container-fluid py-4 px-3 px-md-5" style={{ maxWidth: '1200px' }}>
+        <div className="row justify-content-center align-items-center">
           
-          <div className="col-12 col-md-10 position-relative">
+          <div className="col-12 col-xl-10 position-relative">
             {/* Carrusel Principal */}
             <div id="carouselExample" className="carousel slide position-relative">
               <div className="carousel-inner" ref={carouselInnerRef}>
@@ -214,28 +214,35 @@ export const Leyendo = () => {
                   >
                     {slide.component}
 
-                    {/* Subtítulos superpuestos completos con esquinas redondeadas y 80% de opacidad */}
+                    {/* Subtítulos superpuestos completos */}
                     {index === currentIndex && showSubtitles && currentSubtitleSrc && (
-                      <video
-                        ref={subtitleVideoRef}
-                        src={currentSubtitleSrc}
-                        className="position-absolute"
+                      <div
+                        className="position-absolute d-flex align-items-center justify-content-center"
                         style={{
-                          bottom: '3%',
+                          bottom: '3.5%',
                           left: '50%',
                           transform: 'translateX(-50%)',
-                          width: '65%',
-                          height: '24%',
-                          objectFit: 'contain',
-                          pointerEvents: 'none',
-                          zIndex: 10,
-                          borderRadius: '12px',
+                          width: '61.5%',
+                          height: '21.5%',
+                          backgroundColor: 'black',
+                          borderRadius: '16px',
                           overflow: 'hidden',
-                          opacity: 0.8 // Opacidad al 80%
+                          opacity: 0.8,
+                          zIndex: 10,
+                          pointerEvents: 'none'
                         }}
-                        muted
-                        playsInline
-                      />
+                      >
+                        <video
+                          ref={subtitleVideoRef}
+                          src={currentSubtitleSrc}
+                          className="w-100 h-100"
+                          style={{
+                            objectFit: 'contain'
+                          }}
+                          muted
+                          playsInline
+                        />
+                      </div>
                     )}
                   </div>
                 ))}
@@ -246,7 +253,7 @@ export const Leyendo = () => {
 
         {/* Barra Verde Inferior de Controles */}
         <div className="row justify-content-center mt-4">
-          <div className="col-12 col-md-10">
+          <div className="col-12 col-xl-10">
             <div 
               className="d-flex flex-column gap-2 px-4 py-3 rounded-4 shadow"
               style={{ backgroundColor: '#2e6930', zIndex: 20, position: 'relative' }}
