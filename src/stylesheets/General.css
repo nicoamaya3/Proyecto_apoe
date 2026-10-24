@@ -744,7 +744,7 @@ p {
 }
 
 .glow-text2:hover {
-  text-shadow: 0 0 12px var(--rosarespla), 0 0 25px var(--vinotinto);
+  text-shadow: 0 0 25px var(--vinorespla);
   transition: text-shadow 0.3s ease;
 }
 

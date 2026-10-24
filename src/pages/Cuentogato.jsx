@@ -140,7 +140,7 @@ export const Cuentogato = () => {
         </div>
       </div>
 
-      <section className='bg-black section3 rounded-5 d-flex flex-column justify-content-center align-items-center'>
+      <section className='bg-black glow-box section3 rounded-5 d-flex flex-column justify-content-center align-items-center'>
 
         <div className="container mt-4 py-4">
 

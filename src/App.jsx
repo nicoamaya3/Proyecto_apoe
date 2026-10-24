@@ -69,9 +69,9 @@ export const App = () => {
       />
 
       <BrowserRouter>
+        <ContactosFijos/>
         <ScrollToTop />
         <Header /> 
-        <ContactosFijos />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Perfil" element={<Inicioseccion />} />
