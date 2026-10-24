@@ -12,13 +12,13 @@ export const ContactosFijos = () => {
     return (
         <>
             {/* Botón de Instagram (Ubicado abajo) */}
-            <div className="position-fixed end-0 me-4 z-3" style={{ bottom: "180px" }}>
+            <div className="position-fixed end-0 me-4 z-3" style={{ bottom: "170px" }}>
                 <motion.div 
                     className="custom-sidebar d-flex align-items-center justify-content-center p-2 glow-box glow-effect"
                     style={{ width: "70px", height: "70px", borderRadius: "100%" }}
                     initial={{ opacity: 0, x: 90 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1.2, type: "spring", stiffness: 100, damping: 10 }}
+                    transition={{ duration: 1, type: "spring", stiffness: 100, damping: 10 }}
                 >
                     <button 
                         onClick={() => toggleQR('instagram')}
@@ -58,13 +58,13 @@ export const ContactosFijos = () => {
             </div>
 
             {/* Botón de Facebook (Ubicado más abajo todavía) */}
-            <div className="position-fixed end-0 me-4 z-3" style={{ bottom: "100px" }}>
+            <div className="position-fixed end-0 me-4 z-3" style={{ bottom: "90px" }}>
                 <motion.div 
                     className="custom-sidebar d-flex align-items-center justify-content-center p-2 glow-box glow-effect"
                     style={{ width: "70px", height: "70px", borderRadius: "100%" }}
                     initial={{ opacity: 0, x: 90 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1.2, type: "spring", stiffness: 100, damping: 10, delay: 0.1 }}
+                    transition={{ duration: 1, type: "spring", stiffness: 100, damping: 10 }}
                 >
                     <button 
                         onClick={() => toggleQR('facebook')}

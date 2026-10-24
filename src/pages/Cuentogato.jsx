@@ -122,6 +122,46 @@ export const Cuentogato = () => {
   return (
     <div className="fondo3 d-flex flex-column justify-content-center align-items-center">
 
+      <div style={{ 
+    position: 'absolute', 
+    top: '20px', 
+    right: '20px', 
+    zIndex: '9999', 
+    width: '350px',
+    height: '152px',
+    borderRadius: '12px', 
+    overflow: 'hidden' 
+}}>
+  <iframe
+  className="h-75 w-100"
+    data-testid="embed-iframe"
+    src="https://open.spotify.com/embed/track/1CqetFVvQeVIFwjVGk4WGr?utm_source=generator&si=d1a1675989144089"
+    width="100%"
+    height="152"
+    frameBorder="0"
+    allowFullScreen=""
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy"
+    style={{ borderRadius: '12px', border: 'none' }}
+    title="Spotify Track"
+  ></iframe>
+
+  <img
+    src="https://imgbb.host/images/MgfCi.png"
+    alt="Overlay"
+    className="img-fluid"
+    style={{ 
+      position: 'absolute', 
+      top: '0', 
+      left: '0', 
+      zIndex: '-1', 
+      width: '100%', 
+      height: '100%',
+      objectFit: 'cover'
+    }}
+  />
+</div>
+
       <img className="deco position-absolute top-0 start-0" src="recursos/deco3.png" alt="" />
 
       <Banda />
@@ -242,28 +282,6 @@ export const Cuentogato = () => {
             </div>
           </div>
 
-        </div>
-
-        <div style={{ position: 'fixed', top: '-120px', right: '-180px', zIndex: '9999', width: '350px' }} >
-          <iframe
-            data-testid="embed-iframe"
-            src="https://open.spotify.com/embed/track/1CqetFVvQeVIFwjVGk4WGr?utm_source=generator&si=d1a1675989144089"
-            width="100%"
-            height="152"
-            frameBorder="0"
-            allowFullScreen=""
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-            style={{ borderRadius: '12px' }}
-            title="Spotify Track"
-          ></iframe>
-
-          <img
-            src="https://imgbb.host/images/MgfCi.png"
-            alt="Overlay"
-            className="img-fluid"
-            style={{ position: 'absolute', top: '0', left: '0', zIndex: '-1', width: '100%', height: '100%' }}
-          />
         </div>
 
         <div className='contcirculo2 '>
