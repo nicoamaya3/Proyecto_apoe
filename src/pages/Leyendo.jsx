@@ -11,7 +11,9 @@ import SubtitulosCap2 from "../../public/Videos/DialogosCorazon/dialogoCap2.mp4"
 import SubtitulosCap3 from "../../public/Videos/DialogosCorazon/dialogoCap3.mp4";
 import SubtitulosCap4 from "../../public/Videos/DialogosCorazon/dialogoCap4.mp4";
 import SubtitulosCap5 from "../../public/Videos/DialogosCorazon/dialogoCap5.mp4";
+import salir from "../assets/svg/salir.svg";
 import "../stylesheets/AnimacionCorazon.css";
+import { Link } from "react-router-dom"
 
 export const Leyendo = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -198,12 +200,39 @@ export const Leyendo = () => {
 
   const progressPercent = duration > 0 ? (currentTime / duration) * 100 : 0;
 
+  // Función para manejar la acción de salir
+  const handleSalir = () => {
+    stopCurrentVideo();
+    // Agrega aquí tu lógica de navegación o salida (ej: navigate('/home') o window.history.back())
+    console.log("Saliendo...");
+  };
+
   return (
     <div className="fondo bg-black text-white d-flex justify-content-center align-items-center" style={{ minHeight: '100vh', width: '100%' }}>
       <div className="container-fluid py-4 px-3 px-md-5" style={{ maxWidth: '1200px' }}>
         <div className="row justify-content-center align-items-center">
           
           <div className="col-12 col-xl-10 position-relative">
+            
+            {/* Botón Salir en la esquina superior derecha */}
+            <Link to="/Delator"
+              type="button"
+              className="btn p-0 border-0 bg-transparent position-absolute"
+              onClick={handleSalir}
+              title="Salir"
+              style={{
+                top: '10px',
+                right: '-270px',
+                zIndex: 30,
+              }}
+            >
+              <img
+                src={salir}
+                alt="Salir"
+                style={{ width: '60px', cursor: 'pointer' }}
+              />
+            </Link>
+
             {/* Carrusel Principal */}
             <div id="carouselExample" className="carousel slide position-relative">
               <div className="carousel-inner" ref={carouselInnerRef}>
