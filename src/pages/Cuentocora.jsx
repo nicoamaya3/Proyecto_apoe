@@ -9,9 +9,7 @@ import { motion } from "motion/react"
 import dataTakeshic from "../assets/dataTakeshic.json"
 import { Banda } from '../components/Banda';
 
-
 const Lottie = LottieModule.default;
-
 
 export const Cuentocora = () => {
 
@@ -47,7 +45,6 @@ export const Cuentocora = () => {
             }
         };
 
-        // Damos un pequeño respiro para que el DOM pinte el div de los comentarios
         const timer = setTimeout(loadCusdis, 200);
         return () => clearTimeout(timer);
     }, []);
@@ -77,22 +74,31 @@ export const Cuentocora = () => {
         });
     };
 
-    // Personajes adaptados a Corazón Delator (Takeshi, Satoshi, Shogun/Investigadores, etc.)
+    // Personajes con sus respectivas expresiones dinámicas
     const personajes = [
         {
             nombre: "Takeshi",
             imagen: "./take.png",
-            descripcion: "Takeshi, un hombre mentalmente inestable de 32 años en el periodo Edo en Kyoto, consumido por una obsesión enfermiza."
+            descripcion: "Takeshi, un hombre mentalmente inestable de 32 años en el periodo Edo en Kyoto, consumido por una obsesión enfermiza.",
+            expresiones: [
+                "./eTakeshi.png"
+            ]
         },
         {
             nombre: "Satoshi",
             imagen: "./anci.png",
-            descripcion: "El anciano maestro de Takeshi, cuya mirada penetrante, semejante al ojo de un buitre, despierta la paranoia mortal de su discípulo."
+            descripcion: "El anciano maestro de Takeshi, cuya mirada penetrante, semejante al ojo de buitre, despierta la paranoia mortal de su discípulo.",
+            expresiones: [
+                "./eSatoshi.png"
+            ]
         },
         {
             nombre: "Shogun / Guardias",
             imagen: "./sho.png",
-            descripcion: "Autoridades del orden que investigan la desaparición, desafiados por el eco implacable de un latido fantasmal."
+            descripcion: "Autoridades del orden que investigan la desaparición, desafiados por el eco implacable de un latido fantasmal.",
+            expresiones: [
+                "./eShogun.png"
+            ]
         }
     ];
 
@@ -115,44 +121,44 @@ export const Cuentocora = () => {
         <div className="fondo3 d-flex flex-column justify-content-center align-items-center">
 
             <div style={{
-    position: 'absolute', 
-    top: '20px', 
-    right: '20px', 
-    zIndex: '9999', 
-    width: '350px',
-    height: '152px',
-    borderRadius: '12px', 
-    overflow: 'hidden' 
-}}>
-    <iframe
-    className="h-75 w-100"
-        data-testid="embed-iframe"
-        src="https://open.spotify.com/embed/track/5T4pYDDgrEBU6ELku9rqkD?utm_source=generator&si=145b6c6e4dcf4720"
-        width="100%"
-        height="152"
-        frameBorder="0"
-        allowFullScreen=""
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
-        style={{ borderRadius: '12px', border: 'none' }}
-        title="Spotify Track"
-    ></iframe>
+                position: 'absolute',
+                top: '20px',
+                right: '20px',
+                zIndex: '9999',
+                width: '350px',
+                height: '152px',
+                borderRadius: '12px',
+                overflow: 'hidden'
+            }}>
+                <iframe
+                    className="h-75 w-100"
+                    data-testid="embed-iframe"
+                    src="https://open.spotify.com/embed/track/5T4pYDDgrEBU6ELku9rqkD?utm_source=generator&si=145b6c6e4dcf4720"
+                    width="100%"
+                    height="152"
+                    frameBorder="0"
+                    allowFullScreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                    style={{ borderRadius: '12px', border: 'none' }}
+                    title="Spotify Track"
+                ></iframe>
 
-    <img
-        src="https://imgbb.host/images/MgfCi.png"
-        alt="Overlay"
-        className="img-fluid"
-        style={{ 
-            position: 'absolute', 
-            top: '0', 
-            left: '0', 
-            zIndex: '-1', 
-            width: '100%', 
-            height: '100%',
-            objectFit: 'cover'
-        }}
-    />
-</div>
+                <img
+                    src="https://imgbb.host/images/MgfCi.png"
+                    alt="Overlay"
+                    className="img-fluid"
+                    style={{
+                        position: 'absolute',
+                        top: '0',
+                        left: '0',
+                        zIndex: '-1',
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover'
+                    }}
+                />
+            </div>
 
             <img className="deco position-absolute top-0 start-0" src="recursos/deco3.png" alt="" />
 
@@ -197,8 +203,8 @@ export const Cuentocora = () => {
                     </div>
 
                     <div className="text-center">
-                <img className="w-50 glow-img" src="https://pixelsafari.neocities.org/dividers/animal/bat3.png" alt="Divider" />
-              </div>
+                        <img className="w-50 glow-img" src="https://pixelsafari.neocities.org/dividers/animal/bat3.png" alt="Divider" />
+                    </div>
 
                     <div className="row text-center mb-4">
                         <div className="col-12">
@@ -222,19 +228,41 @@ export const Cuentocora = () => {
 
                             {/* Imagen del personaje */}
                             <div
-                                className="glow-box rounded-pill border border-secondary d-flex align-items-center justify-content-center bg-black overflow-hidden shadow"
-                                style={{ width: '330px', height: '500px', minWidth: '330px', minHeight: '500px' }}
+                                className="glow-box rounded-pill border border-secondary d-flex align-items-center justify-content-center overflow-hidden shadow"
+                                style={{
+                                    width: '330px',
+                                    height: '480px',
+                                    minWidth: '330px',
+                                    minHeight: '480px',
+                                    backgroundColor: 'var(--vinotinto)'
+                                }}
                             >
-                                <img
+                                <img className="w-50"
                                     src={personajeActual.imagen}
                                     alt={personajeActual.nombre}
-                                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                    style={{
+                                        objectFit: 'contain' // Usa 'contain' si prefieres que la ilustración no se recorte nada
+                                    }}
                                 />
                             </div>
 
-                            {/* Información del personaje */}
+                            {/* Información y Expresiones del personaje */}
                             <div className="text-start" style={{ width: '350px', minWidth: '280px' }}>
-                                <h3 className="fontCa mb-2 text-white" style={{ fontSize: '1.8rem' }}>
+
+                                <div className="col-12 col-lg-5 d-flex flex-column h-25 justify-content-center align-items-center gap-3 gap-lg-4  p-2 rounded">
+                                    {personajeActual.expresiones.map((expr, index) => (
+                                        <div key={index}>
+                                            <img
+                                                className="w-50 glow-img"
+                                                src={expr}
+                                                alt={`Expresión ${index + 1}`}
+                                                onError={(e) => { e.target.style.display = 'none'; }}
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <h3 className="p-home glow-text mb-2 text-white mt-3" style={{ fontSize: '2.5rem' }}>
                                     {personajeActual.nombre}
                                 </h3>
                                 <p className="text-white-50 fs-6">
@@ -332,7 +360,7 @@ export const Cuentocora = () => {
                             <span style={{ fontSize: '1.5rem' }}>😲</span>
                             <span className="badge bg-danger rounded-pill">{conteo.sorprendido}</span>
                         </button>
-                        
+
                     </div>
                     <img
                         src="https://64.media.tumblr.com/93495eaaa52b4b5a788e5b952a327a94/54342fb5ebe553f2-11/s500x750/b260af9619e68f4db4d6252b43a4fbd836e49f28.gifv"
