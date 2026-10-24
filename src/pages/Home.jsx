@@ -8,6 +8,7 @@ import dataCrow from "../assets/dataCrow.json"
 import datafrank from "../assets/datafrank.json"
 import dataTakeshi from "../assets/dataTakeshi.json"
 import LottieModule from "lottie-react";
+import { Banda } from '../components/Banda';
 
 
 
@@ -90,18 +91,12 @@ export const Home = () => {
 
         <div className="container-fluid foo">
 
-          <section className="bg-transparent d-flex justify-content-center">
-            <motion.div className="w-25"
-              initial={{ opacity: 0, y: -100 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease: "easeInOut", duration: 1 }}>
-              <div className="banda bg-black d-flex align-items-center justify-content-center me-5 rounded-bottom-5 w-100 h-50 pb-2 pt-2 ">
-                <p className=" p-home text-white fs-6  text-center pt-3">Apoe!</p>
-              </div>
-            </motion.div>
+          <section className="bg-transparent d-flex justify-content-center mb-5">
+            <Banda />
           </section>
           <img className="poe" src="recursos/poe.png" alt="" />
           <div className="row">
+            
             <div className="col p-5 d-flex align-items-center justify-content-center">
               <div className="info-home glow-box d-flex flex-row-reverse w-75 p-5 justify-content-end rounded-5">
                 <div className="info d-flex align-items-center justify-content-center flex-column w-100">
@@ -113,11 +108,19 @@ export const Home = () => {
                     <span className="linea-animada d-block"> cuentos ilustrados e interactivos basados en las</span>
                     <span className="linea-animada d-block"> obras maestras de Edgar Allan Poe.</span>
                   </p>
-                  <button ref={botonRef} className="btn btn-danger glow-btn rounded-5">Leer cuentos</button>
+                  <button ref={botonRef} className="btn btn-danger glow-btn rounded-5 fw-light">Leer cuentos</button>
                 </div>
               </div>
             </div>
+          <div className="text-center z-3">
+                                <img
+                                    src="https://64.media.tumblr.com/93495eaaa52b4b5a788e5b952a327a94/54342fb5ebe553f2-11/s500x750/b260af9619e68f4db4d6252b43a4fbd836e49f28.gifv"
+                                    alt="Animación"
+                                    className="img-fluid rounded-4 glow-img glow-effect"
+                                />
+                            </div>
           </div>
+
 
           <section className='m-5 pt-5 section2 d-flex justify-content-center align-items-center z-3 flex-column h-100'>
 

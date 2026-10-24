@@ -75,10 +75,6 @@ p {
     z-index: 3;
 }
 
-.poe:hover {
-    transform: scale(1.1) scaleX(-1);
-}
-
 .btn:hover {
     transform: scale(1.1);
 }
@@ -535,7 +531,7 @@ p {
     position: absolute;
     z-index: 4;
     left: 51%;
-    top: 1517px;
+    top: 1522px;
     width: 550px;
 }
 
@@ -555,7 +551,7 @@ p {
     position: absolute;
     z-index: 4;
     left: 15%;
-    top: 1517px;
+    top: 1522px;
     width: 550px;
 }
 
@@ -602,8 +598,8 @@ p {
     border: 1px solid rgba(159, 44, 44, 0.4); /* Borde sutil vino tinto */
     padding: 6px 12px;
     border-radius: 8px;
-    font-size: 0.85rem;
-    font-weight: 500;
+    font-size: 1.25rem;
+    font-weight: 100;
     white-space: nowrap; /* Evita que el texto se parta en varias líneas */
     pointer-events: none; /* Asegura que no estorbe los clics del usuario */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6), 0 0 10px rgba(64, 19, 31, 0.5);
@@ -733,7 +729,6 @@ p {
   transition: text-shadow 0.3s ease;
 }
 
-/* 4. Resplandor mejorado para Botones */
 .glow-btn {
   transition: all 0.3s ease;
 }

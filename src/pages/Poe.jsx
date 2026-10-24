@@ -5,6 +5,7 @@ import { Footer } from '../components/Footer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { motion } from "motion/react"
 import HTMLFlipBook from 'react-pageflip'
+import { Banda } from '../components/Banda';
 
 // Componente necesario para que react-pageflip asigne las referencias correctas del DOM
 const Page = React.forwardRef((props, ref) => {
@@ -35,16 +36,7 @@ export const Poe = () => {
 
       <img className="deco position-absolute top-0 start-0" src="recursos/deco3.png" alt="" />
 
-      {/* Franja Superior */}
-      <motion.div className="w-25 position-absolute top-0 start-50 translate-middle-x"
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
-        style={{ zIndex: 10 }}>
-        <div className="banda bg-black rounded-bottom-5 w-100">
-          <p className="p-home text-white fs-6 pt-3 text-center">Apoe!</p>
-        </div>
-      </motion.div>
+      <Banda />
 
       <div className="container mt-5 py-5 w-100 d-flex flex-column align-items-center">
 

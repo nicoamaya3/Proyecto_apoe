@@ -5,7 +5,7 @@ import { motion } from "motion/react"
 export const Footer = () => {
   return (
     <>
-      <motion.div className=" footer bg-black px-5 py-3 w-25 rounded-top-5 d-flex flex-column align-items-center gap-1 shadow pt-4"
+      <motion.div className="glow-box footer bg-black px-5 py-3 w-25 rounded-top-5 d-flex flex-column align-items-center gap-1 shadow pt-4"
       initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeInOut", duration: 1 }}>

@@ -37,7 +37,7 @@ const TooltipLink = ({ to, label, iconSrc, altText }) => {
 
 export const Header = () => {
     return (
-        <div className="menu sidebar-container position-fixed top-0 start-0 d-flex align-items-center justify-content-center h-100 px-3 z-3">
+        <div className="menu sidebar-container position-fixed top-0 start-0 d-flex align-items-center justify-content-center h-100 px-3 z-3 p-home">
             <motion.div 
                 className="header custom-sidebar ms-4 d-flex flex-column align-items-center justify-content-between py-5 h-75 pt-4 pb-4 glow-box glow-effect pb-5"
                 initial={{ opacity: 0, x: -90 }}
@@ -53,21 +53,21 @@ export const Header = () => {
                 
                 <TooltipLink 
                     to="/GatoNegro" 
-                    label="El Gato Negro" 
+                    label="El gato negro" 
                     iconSrc="iconos/gato.svg" 
                     altText="Gato Negro" 
                 />
 
                 <TooltipLink 
                     to="/Delator" 
-                    label="El Corazón Delator" 
+                    label="El corazón delator" 
                     iconSrc="iconos/corazon.svg" 
                     altText="Delator" 
                 />
 
                 <TooltipLink 
                     to="/Nosotros" 
-                    label="Sobre Nosotros" 
+                    label="Sobre nosotros" 
                     iconSrc="iconos/nosotros.svg" 
                     altText="Nosotros" 
                 />

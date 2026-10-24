@@ -26,7 +26,7 @@ export const ContactosFijos = () => {
                         title="Instagram"
                         style={{ cursor: 'pointer', width: '100%', height: '100%' }}
                     >
-                        <img className="iconos glow-img" src="iconos/instagram.svg" alt="Instagram" style={{ width: '26px', height: '26px' }} />
+                        <img className="iconos glow-img" src="iconos/instagram.png" alt="Instagram" style={{ width: '45px', height: '45px' }} />
                     </button>
                 </motion.div>
 
@@ -36,8 +36,8 @@ export const ContactosFijos = () => {
                         <motion.div 
                             className="position-absolute p-3 text-center custom-tooltip-qr glow-box"
                             style={{ 
-                                right: "65px", 
-                                top: "50%", 
+                                right: "80px", 
+                                top: "60%", 
                                 transform: "translateY(-50%)", 
                                 width: "150px", 
                                 backgroundColor: "#120508", 
@@ -50,8 +50,8 @@ export const ContactosFijos = () => {
                             exit={{ opacity: 0, x: -10, scale: 0.9 }}
                             transition={{ duration: 0.2, ease: "easeOut" }}
                         >
-                            <p className="text-light mb-2" style={{ fontSize: "0.75rem", fontWeight: "500" }}>Instagram</p>
-                            <img src="iconos/qr-instagram.png" alt="QR Instagram" className="img-fluid rounded" style={{ width: "120px", height: "120px", objectFit: "contain" }} />
+                            <p className="text-light mb-2 p-home" style={{ fontSize: "1rem", fontWeight: "500" }}>Instagram</p>
+                            <img src="iconos/igqr.png" alt="QR Instagram" className="img-fluid rounded" style={{ width: "120px", height: "120px", objectFit: "contain" }} />
                         </motion.div>
                     )}
                 </AnimatePresence>
@@ -72,7 +72,7 @@ export const ContactosFijos = () => {
                         title="Facebook"
                         style={{ cursor: 'pointer', width: '100%', height: '100%' }}
                     >
-                        <img className="iconos glow-img" src="iconos/facebook.svg" alt="Facebook" style={{ width: '26px', height: '26px' }} />
+                        <img className="iconos glow-img" src="iconos/faacebook.png" alt="Facebook" style={{ width: '25px', height: '48px' }} />
                     </button>
                 </motion.div>
 
@@ -82,8 +82,8 @@ export const ContactosFijos = () => {
                         <motion.div 
                             className="position-absolute p-3 text-center custom-tooltip-qr glow-box"
                             style={{ 
-                                right: "65px", 
-                                top: "50%", 
+                                right: "80px", 
+                                top: "-60%", 
                                 transform: "translateY(-50%)", 
                                 width: "150px", 
                                 backgroundColor: "#120508", 
@@ -96,8 +96,8 @@ export const ContactosFijos = () => {
                             exit={{ opacity: 0, x: -10, scale: 0.9 }}
                             transition={{ duration: 0.2, ease: "easeOut" }}
                         >
-                            <p className="text-light mb-2" style={{ fontSize: "0.75rem", fontWeight: "500" }}>Facebook</p>
-                            <img src="iconos/qr-facebook.png" alt="QR Facebook" className="img-fluid rounded" style={{ width: "120px", height: "120px", objectFit: "contain" }} />
+                            <p className="text-light mb-2 p-home" style={{ fontSize: "1rem", fontWeight: "500" }}>Facebook</p>
+                            <img src="iconos/qrfacebook.png" alt="QR Facebook" className="img-fluid rounded" style={{ width: "120px", height: "120px", objectFit: "contain" }} />
                         </motion.div>
                     )}
                 </AnimatePresence>

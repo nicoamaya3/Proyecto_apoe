@@ -7,6 +7,7 @@ import dataCrow from "../assets/dataCrow.json"
 import LottieModule from "lottie-react";
 import { motion } from "motion/react"
 import datafrankc from "../assets/datafrankc.json"
+import { Banda } from '../components/Banda';
 
 
 const Lottie = LottieModule.default;
@@ -123,14 +124,7 @@ export const Cuentogato = () => {
 
       <img className="deco position-absolute top-0 start-0" src="recursos/deco3.png" alt="" />
 
-      <motion.div className="w-25 position-absolute top-0 start-50 translate-middle-x"
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: "easeInOut", duration: 1 }}>
-        <div className="banda bg-black rounded-bottom-5 w-100">
-          <p className="p-home text-white fs-6 pt-3 text-center">Apoe!</p>
-        </div>
-      </motion.div>
+      <Banda />
 
       <div className="volver container pt-4">
         <div className="row ps-3 justify-content-start">
@@ -250,7 +244,7 @@ export const Cuentogato = () => {
 
         </div>
 
-        <div style={{ position: 'fixed', top: '-120px', right: '-180px', zIndex: '9999', width: '350px' }} className="glow-box">
+        <div style={{ position: 'fixed', top: '-120px', right: '-180px', zIndex: '9999', width: '350px' }} >
           <iframe
             data-testid="embed-iframe"
             src="https://open.spotify.com/embed/track/1CqetFVvQeVIFwjVGk4WGr?utm_source=generator&si=d1a1675989144089"
