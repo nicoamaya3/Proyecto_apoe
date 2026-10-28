@@ -1,0 +1,106 @@
+.gatonegro{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    height: 100vh;
+}
+.escenario{
+    width:910px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+.exterior{
+    position: absolute;
+    width: 100%;
+}
+.arbustosdel{
+    position: absolute;
+    width: 100%;
+    top: 305px;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 6px #c7f12e);
+}
+.nubes{
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 6px #c7f12e);
+}
+.luz{
+    position: absolute;
+    width: 35%;
+    height: 30%;
+    top: 71%;
+    left: 40px;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 6px #c7f12e);
+    cursor: pointer;
+}
+.luz.animada {
+  /* Vincula tu @keyframes: dura 3 segundos, es infinito y suaviza la entrada/salida */
+  animation: latidoLuz 3s infinite ease-in-out;
+}
+@keyframes latidoLuz {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.casa{
+    position: absolute;
+    width: 18%;
+    top: 40%;
+}
+.valla{
+    position: absolute;
+    width: 75%;
+    top: 63%;
+    left: 15%;
+}
+.suelo{
+    position: absolute;
+    width: 100%;
+    top: 351px;
+}
+.arbustostra{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 6px #c7f12e);
+}
+
+.botonesSaa{
+    position: relative;
+}
+
+.botonesSa11{
+    position: absolute;
+    top: 145px;
+    left: 70%;
+}
+
+.botonesSa22{
+    position: absolute;
+    top: 145px;
+    left: 80%;
+}
+
+.iniciar{
+    top: -25px;
+    right: 110px;
+}
+
+.detener{
+    top: -25px;
+    left: 125px;
+}
+
+.pausa{
+    top: 450px;
+}

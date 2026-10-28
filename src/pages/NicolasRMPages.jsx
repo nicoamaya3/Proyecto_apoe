@@ -1,0 +1,132 @@
+import { useEffect, useState } from "react"
+import { motion } from "motion/react"
+
+export const NicolasRMPages = () => {
+  const [character, setCharacter] = useState([])
+  const [pokemon, setPokemon] = useState([])
+
+  const getCharacter = async () => {
+
+    const res = await fetch("https://rickandmortyapi.com/api/character")
+    const data = await res.json()
+    setCharacter(data.results)
+    console.log(data)
+
+  }
+
+  useEffect(() => {
+    getCharacter()
+  }, [])
+
+  const getPokemon = async () => {
+
+    const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=12")
+    const data = await res.json()
+
+    const detallesPokemon = await Promise.all(
+
+
+      data.results.map(async (pokemon) => {
+
+        const res = await fetch(pokemon.url)
+        const detalles = await res.json()
+
+        return {
+
+          id: detalles.id,
+          name: detalles.name,
+          image: detalles.sprites.other["official-artwork"].front_default,
+          type: detalles.types[0].type.name,
+
+        }
+
+      })
+
+
+
+    )
+
+
+
+    setPokemon(detallesPokemon)
+    console.log(data)
+
+  }
+
+  useEffect(() => {
+    getCharacter()
+    getPokemon()
+  }, [])
+
+
+
+
+  return (
+    <>
+
+      <motion.div style={{
+        width: 100,
+        height: 100,
+        backgroundColor: "black",
+        borderRadius: 5,
+      }}
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.4,
+          scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+        }}>
+      </motion.div>
+
+
+
+
+
+
+      <h1>Personajes de Rick and  Morty </h1>
+
+      <motion.div className="container"
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.4,
+          scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+        }}>
+        <div className="row">
+
+          {character.map((char, index) => (
+            <div key={index} className="card m-5 w-25 p-1" style={{ width: "12rem" }}>
+              <img src={char.image} className="card-img-top" alt="..." />
+              <div className="card-body">
+                <h5 className="card-title fw-bold">{char.name}</h5>
+                <p className="card-text ">Status:{char.status}</p>
+                <p className="card-text ">Especies:{char.species}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </motion.div>
+
+      <h1>Tarjetas Pokemon (Nicolás) </h1>
+
+      <div className="container">
+        <div className="row">
+
+          {pokemon.map((poke, index) => (
+            <div key={index} className="card m-5 p-1" style={{ width: "12rem" }}>
+              <img src={poke.image} className="card-img-top" alt="..." />
+              <div className="card-body">
+                <h5 className="card-title">{poke.name}</h5>
+                <p className="card-text">{poke.id}</p>
+                <p className="card-text">{poke.type}</p>
+
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+
+    </>
+  )
+}
