@@ -10,6 +10,7 @@ import datafrankc from "../assets/datafrankc.json"
 import { Banda } from '../components/Banda';
 
 
+
 const Lottie = LottieModule.default;
 
 export const Cuentogato = () => {
